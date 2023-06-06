@@ -1,0 +1,15 @@
+// Tables
+// stylelint-disable max-nesting-depth, selector-no-type, selector-max-type
+
+.table-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  display: table;
+  min-width: 100%;
+  border-collapse: separate;
+}

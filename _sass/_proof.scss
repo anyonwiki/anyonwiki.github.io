@@ -1,0 +1,143 @@
+/*
+ * Proof Theorem Environments
+ * Based on amsthm package: https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html
+ * and https://golem.ph.utexas.edu/wiki/instiki/show/Theorems
+ */
+
+body {
+  counter-reset: section subsection theorem lemma problem proposition conjecture corollary definition example exercise remark note;
+}
+
+// FIXME add starred versions
+.theorem, .lemma, .proposition, .corollary {
+  font-style: italic;
+}
+
+.label {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.label* {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.proof .label {
+  font-style: italic;
+//  font-weight: normal;
+//  font-family: "Playfair Display SC", serif;
+//  font-size: medium;
+}
+
+.proof:after {
+  content: " ■";
+  text-align: right;
+}
+
+@mixin counter($name) {
+  content: " " counter(section) "." counter($name) ".";
+  counter-increment: $name;
+}
+
+.label:after { content: "."; }
+.theorem     .label:after { @include counter(theorem);     }
+.lemma       .label:after { @include counter(lemma);       }
+.problem     .label:after { @include counter(problem);     }
+.proposition .label:after { @include counter(proposition); }
+.conjecture  .label:after { @include counter(conjecture);  }
+.corollary   .label:after { @include counter(corollary);   }
+.definition  .label:after { @include counter(definition);  }
+.example     .label:after { @include counter(example);     }
+.exercise    .label:after { @include counter(exercise);    }
+.remark      .label:after { @include counter(remark);      }
+.note        .label:after { @include counter(note);        }
+
+h2.label:before {
+  margin-right: 1em;
+  content: counter(section) "  ";
+  counter-increment: section;
+  counter-reset: subsection theorem lemma problem proposition conjecture corollary definition example exercise remark note;
+}
+
+h3.label:before {
+  margin-right: 0.8em;
+  content: counter(section) "." counter(subsection) "  ";
+  counter-increment: subsection;
+}
+
+
+/*
+ * ED SPECIAL LAYOUTS, modified
+ * Copyright (c) 2016 Alex Gil.
+ */
+
+.centered {
+  text-align: center;
+}
+
+.larger {
+  font-size: 1.6rem;
+}
+
+.large {
+  font-size: 1.4rem
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+div.toc {
+  margin-bottom: 4rem;
+}
+
+.post .date,
+.post .byline {
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: -.5rem;
+}
+
+/* Footnotes styles*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+.footnotes {
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  letter-spacing: .01rem;
+}
+
+.footnotes .foot-block {
+  display: inline-block;
+  padding: 0 4rem 0 2rem;
+  margin-bottom: .8rem;
+  font-style: italic;
+}
+
+a.footnote {
+  padding-left: .1rem;
+  font-size: .66rem;
+}
+
+/*Bibliography styles*/
+ol.bibliography {
+  list-style-type:none;
+  padding-left: 1rem;
+  text-indent: -1rem;
+}

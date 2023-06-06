@@ -1,0 +1,80 @@
+  <head>
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type"    content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical"     href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/static/favicon.ico" />
+    <link rel="alternate"     type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml" />
+    <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Playfair+Display+SC&amp;display=swap" />
+    <link rel="stylesheet"    href="{{ site.baseurl }}/static/style.css" />
+
+    <title>{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}</title>
+
+    <!-- Dublin Core metadata for Zotero -->
+    <meta name="DC.title"   content="{{ page.title }}" />
+    <meta name="DC.creator" content="{{ page.author }}" />
+    <meta name="DC.date"    content="{{ page.publication-date }}" />
+    <meta name="DC.source"  content="{{ site.title }}" />
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type"           content="article" />
+    <meta property="og:title"          content="{{ page.title }}" />
+    <meta property="og:article:author" content="{{ page.author }}" />
+    <meta property="og:description"    content="{{ site.description }}" />
+    <meta property="og:url"            content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:image"          content="{{ site.url }}{{ site.baseurl }}/static/open-graph-logo.png" />
+    <meta property="og:image:width"    content="200" />
+    <meta property="og:image:height"   content="200" />
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+      integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
+      integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <!-- KaTeX auto-render extention: https://katex.org/docs/autorender.html -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+      var macros = {
+          "\\P": "\\mathbb{P}"
+      }, delimiters = [
+          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "\\[", right: "\\]", display: true},
+          { left: "$",   right: "$",   display: false},
+          { left: "\\(", right: "\\)", display: false}
+      ];
+
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
+
+        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
+        // See: https://github.com/github/pages-gem/pull/545
+        document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
+          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
+        });
+
+        document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
+        });
+      });
+    </script>
+    <style>.katex { font-size: 1.15em; }</style>
+    <!-- KaTeX copy-tex extention: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
+      integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
+
+    {%- if site.gtag %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gtag }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.gtag }}');
+    </script>
+    {%- endif %}
+  </head>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type"    content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical"     href="http://localhost:4000/pages/FRPages/FR_9_1_0_20.html" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="alternate"     type="application/rss+xml" title="RSS" href="/atom.xml" />
+    <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Playfair+Display+SC&amp;display=swap" />
+    <link rel="stylesheet"    href="/static/style.css" />
+
+    <title>$$ \text{Rep(}D_3\text{)$\times $}\text{PSU}(2)_5:\ \text{FR}^{9,0}_{20} $$</title>
+
+    <!-- Dublin Core metadata for Zotero -->
+    <meta name="DC.title"   content="$$ \text{Rep(}D_3\text{)$\times $}\text{PSU}(2)_5:\ \text{FR}^{9,0}_{20} $$" />
+    <meta name="DC.creator" content="" />
+    <meta name="DC.date"    content="" />
+    <meta name="DC.source"  content="AnyonWiki" />
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type"           content="article" />
+    <meta property="og:title"          content="$$ \text{Rep(}D_3\text{)$\times $}\text{PSU}(2)_5:\ \text{FR}^{9,0}_{20} $$" />
+    <meta property="og:article:author" content="" />
+    <meta property="og:description"    content="A wiki for anyons" />
+    <meta property="og:url"            content="http://localhost:4000/pages/FRPages/FR_9_1_0_20.html" />
+    <meta property="og:image"          content="http://localhost:4000/static/open-graph-logo.png" />
+    <meta property="og:image:width"    content="200" />
+    <meta property="og:image:height"   content="200" />
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+      integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
+      integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <!-- KaTeX auto-render extention: https://katex.org/docs/autorender.html -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+      var macros = {
+          "\\P": "\\mathbb{P}"
+      }, delimiters = [
+          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "\\[", right: "\\]", display: true},
+          { left: "$",   right: "$",   display: false},
+          { left: "\\(", right: "\\)", display: false}
+      ];
+
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
+
+        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
+        // See: https://github.com/github/pages-gem/pull/545
+        document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
+          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
+        });
+
+        document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
+        });
+      });
+    </script>
+    <style>.katex { font-size: 1.15em; }</style>
+    <!-- KaTeX copy-tex extention: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
+      integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="theme-base-">
+    
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+    <!-- Toggleable sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item">
+        <p>A wiki for anyons</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/">Home</a>
+        <a class="sidebar-nav-item" href="/manual.html">Manual</a>
+        <a class="sidebar-nav-item" href="/pages/Lists/losmffr.html">List of Small Multiplicity-Free Fusion Rings</a>
+        <a class="sidebar-nav-item" href="/search.html">Search</a>
+
+        <!-- The code below is used for manually entered links -->
+        <a href="https://github.com/mahrud/proof"
+          class="sidebar-nav-item" target="_blank">GitHub Repository</a>
+      </nav>
+
+      <div class="sidebar-item">
+        <p>Distributed under an MIT license.</p>
+      </div>
+    </div>
+
+    <!--
+      Wrap is the content to shift when toggling the sidebar.
+      We wrap the content to avoid any CSS collisions with our real content.
+    -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/">AnyonWiki</a><br />
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content" id="main">
+<!-- ########################################################################################### -->
+<h1 id="textrepd_3texttimes-textpsu2_5-textfr90_20">\(\text{Rep(}D_3\text{)$\times $}\text{PSU}(2)_5:\ \text{FR}^{9,0}_{20}\)</h1>
+
+<h1 id="fusion-rules">Fusion Rules</h1>
+
+\[\begin{array}{|lllllllll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} &amp; \mathbf{3} &amp; \mathbf{4} &amp; \mathbf{5} &amp; \mathbf{6} &amp; \mathbf{7} &amp; \mathbf{8} &amp; \mathbf{9} \\
+ \mathbf{2} &amp; \mathbf{1} &amp; \mathbf{4} &amp; \mathbf{3} &amp; \mathbf{5} &amp; \mathbf{7} &amp; \mathbf{6} &amp; \mathbf{8} &amp; \mathbf{9} \\
+ \mathbf{3} &amp; \mathbf{4} &amp; \mathbf{1}+\mathbf{6} &amp; \mathbf{2}+\mathbf{7} &amp; \mathbf{8} &amp; \mathbf{3}+\mathbf{6} &amp; \mathbf{4}+\mathbf{7} &amp; \mathbf{5}+\mathbf{9} &amp; \mathbf{8}+\mathbf{9} \\
+ \mathbf{4} &amp; \mathbf{3} &amp; \mathbf{2}+\mathbf{7} &amp; \mathbf{1}+\mathbf{6} &amp; \mathbf{8} &amp; \mathbf{4}+\mathbf{7} &amp; \mathbf{3}+\mathbf{6} &amp; \mathbf{5}+\mathbf{9} &amp; \mathbf{8}+\mathbf{9} \\
+ \mathbf{5} &amp; \mathbf{5} &amp; \mathbf{8} &amp; \mathbf{8} &amp; \mathbf{1}+\mathbf{2}+\mathbf{5} &amp; \mathbf{9} &amp; \mathbf{9} &amp; \mathbf{3}+\mathbf{4}+\mathbf{8} &amp; \mathbf{6}+\mathbf{7}+\mathbf{9} \\
+ \mathbf{6} &amp; \mathbf{7} &amp; \mathbf{3}+\mathbf{6} &amp; \mathbf{4}+\mathbf{7} &amp; \mathbf{9} &amp; \mathbf{1}+\mathbf{3}+\mathbf{6} &amp; \mathbf{2}+\mathbf{4}+\mathbf{7} &amp; \mathbf{8}+\mathbf{9} &amp; \mathbf{5}+\mathbf{8}+\mathbf{9} \\
+ \mathbf{7} &amp; \mathbf{6} &amp; \mathbf{4}+\mathbf{7} &amp; \mathbf{3}+\mathbf{6} &amp; \mathbf{9} &amp; \mathbf{2}+\mathbf{4}+\mathbf{7} &amp; \mathbf{1}+\mathbf{3}+\mathbf{6} &amp; \mathbf{8}+\mathbf{9} &amp; \mathbf{5}+\mathbf{8}+\mathbf{9} \\
+ \mathbf{8} &amp; \mathbf{8} &amp; \mathbf{5}+\mathbf{9} &amp; \mathbf{5}+\mathbf{9} &amp; \mathbf{3}+\mathbf{4}+\mathbf{8} &amp; \mathbf{8}+\mathbf{9} &amp; \mathbf{8}+\mathbf{9} &amp; \mathbf{1}+\mathbf{2}+\mathbf{5}+\mathbf{6}+\mathbf{7}+\mathbf{9} &amp; \mathbf{3}+\mathbf{4}+\mathbf{6}+\mathbf{7}+\mathbf{8}+\mathbf{9} \\
+ \mathbf{9} &amp; \mathbf{9} &amp; \mathbf{8}+\mathbf{9} &amp; \mathbf{8}+\mathbf{9} &amp; \mathbf{6}+\mathbf{7}+\mathbf{9} &amp; \mathbf{5}+\mathbf{8}+\mathbf{9} &amp; \mathbf{5}+\mathbf{8}+\mathbf{9} &amp; \mathbf{3}+\mathbf{4}+\mathbf{6}+\mathbf{7}+\mathbf{8}+\mathbf{9} &amp; \mathbf{1}+\mathbf{2}+\mathbf{3}+\mathbf{4}+\mathbf{5}+\mathbf{6}+\mathbf{7}+\mathbf{8}+\mathbf{9} \\
+\hline
+\end{array}\]
+
+<p>The following particles form non-trivial sub fusion rings</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Particles</th>
+      <th style="text-align: left">SubRing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\{\mathbf{1},\mathbf{2}\}\)</td>
+      <td style="text-align: left"><a href="/pages/FRPages/FR_2_1_0_1.html"> \(\mathbb{Z}_2:\ \text{FR}^{2,0}_{1}\) </a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\{\mathbf{1},\mathbf{2},\mathbf{3}\}\)</td>
+      <td style="text-align: left"><a href="/pages/FRPages/FR_3_1_0_2.html"> \(\left.\text{Rep(}D_3\right):\ \text{FR}^{3,0}_{2}\) </a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\{\mathbf{1},\mathbf{6},\mathbf{7}\}\)</td>
+      <td style="text-align: left"><a href="/pages/FRPages/FR_3_1_0_3.html"> \(\text{PSU}(2)_5:\ \text{FR}^{3,0}_{3}\) </a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\{\mathbf{1},\mathbf{2},\mathbf{6},\mathbf{7},\mathbf{8},\mathbf{9}\}\)</td>
+      <td style="text-align: left"><a href="/pages/FRPages/FR_6_1_0_6.html"> \(\text{SU(2})_5:\ \text{FR}^{6,0}_{6}\) </a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="quantum-dimensions">Quantum Dimensions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Particle</th>
+      <th style="text-align: left">Numeric</th>
+      <th style="text-align: left">Symbolic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\mathbf{1}\)</td>
+      <td style="text-align: left">\(1.\)</td>
+      <td style="text-align: left">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{2}\)</td>
+      <td style="text-align: left">\(1.\)</td>
+      <td style="text-align: left">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{3}\)</td>
+      <td style="text-align: left">\(1.80194\)</td>
+      <td style="text-align: left">\(\text{Root}\left[x^3-x^2-2 x+1,3\right]\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{4}\)</td>
+      <td style="text-align: left">\(1.80194\)</td>
+      <td style="text-align: left">\(\text{Root}\left[x^3-x^2-2 x+1,3\right]\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{5}\)</td>
+      <td style="text-align: left">\(2.\)</td>
+      <td style="text-align: left">\(2\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{6}\)</td>
+      <td style="text-align: left">\(2.24698\)</td>
+      <td style="text-align: left">\(\text{Root}\left[x^3-2 x^2-x+1,3\right]\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{7}\)</td>
+      <td style="text-align: left">\(2.24698\)</td>
+      <td style="text-align: left">\(\text{Root}\left[x^3-2 x^2-x+1,3\right]\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{8}\)</td>
+      <td style="text-align: left">\(3.60388\)</td>
+      <td style="text-align: left">\(\text{Root}\left[x^3-2 x^2-8 x+8,3\right]\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{9}\)</td>
+      <td style="text-align: left">\(4.49396\)</td>
+      <td style="text-align: left">\(\text{Root}\left[x^3-4 x^2-4 x+8,3\right]\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
+      <td style="text-align: left">\(55.7754\)</td>
+      <td style="text-align: left">\(2 \text{Root}\left[x^3-x^2-2 x+1,3\right]^2+2 \text{Root}\left[x^3-2 x^2-x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-8 x+8,3\right]^2+\text{Root}\left[x^3-4 x^2-4 x+8,3\right]^2+6\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="characters">Characters</h1>
+
+<p>The symbolic character table is the following</p>
+
+\[\begin{array}{|lllllllll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} &amp; \mathbf{4} &amp; \mathbf{3} &amp; \mathbf{5} &amp; \mathbf{7} &amp; \mathbf{6} &amp; \mathbf{8} &amp; \mathbf{9} \\
+\hline
+ 1 &amp; 1 &amp; \text{Root}\left[x^3-x^2-2 x+1,3\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,3\right] &amp; 2 &amp; \text{Root}\left[x^3-2 x^2-x+1,3\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,3\right] &amp; \text{Root}\left[x^3-2 x^2-8 x+8,3\right] &amp; \text{Root}\left[x^3-4 x^2-4 x+8,3\right] \\
+ 1 &amp; 1 &amp; \text{Root}\left[x^3-x^2-2 x+1,3\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,3\right] &amp; -1 &amp; \text{Root}\left[x^3-2 x^2-x+1,3\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,3\right] &amp; \text{Root}\left[x^3+x^2-2 x-1,1\right] &amp; \text{Root}\left[x^3+2 x^2-x-1,1\right] \\
+ 1 &amp; 1 &amp; \text{Root}\left[x^3-x^2-2 x+1,2\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,2\right] &amp; 2 &amp; \text{Root}\left[x^3-2 x^2-x+1,1\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,1\right] &amp; \text{Root}\left[x^3-2 x^2-8 x+8,2\right] &amp; \text{Root}\left[x^3-4 x^2-4 x+8,1\right] \\
+ 1 &amp; 1 &amp; \text{Root}\left[x^3-x^2-2 x+1,1\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,1\right] &amp; 2 &amp; \text{Root}\left[x^3-2 x^2-x+1,2\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,2\right] &amp; \text{Root}\left[x^3-2 x^2-8 x+8,1\right] &amp; \text{Root}\left[x^3-4 x^2-4 x+8,2\right] \\
+ 1 &amp; 1 &amp; \text{Root}\left[x^3-x^2-2 x+1,2\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,2\right] &amp; -1 &amp; \text{Root}\left[x^3-2 x^2-x+1,1\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,1\right] &amp; \text{Root}\left[x^3+x^2-2 x-1,2\right] &amp; \text{Root}\left[x^3+2 x^2-x-1,3\right] \\
+ 1 &amp; 1 &amp; \text{Root}\left[x^3-x^2-2 x+1,1\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,1\right] &amp; -1 &amp; \text{Root}\left[x^3-2 x^2-x+1,2\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,2\right] &amp; \text{Root}\left[x^3+x^2-2 x-1,3\right] &amp; \text{Root}\left[x^3+2 x^2-x-1,2\right] \\
+ 1 &amp; -1 &amp; \text{Root}\left[x^3+x^2-2 x-1,2\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,2\right] &amp; 0 &amp; \text{Root}\left[x^3+2 x^2-x-1,3\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,1\right] &amp; 0 &amp; 0 \\
+ 1 &amp; -1 &amp; \text{Root}\left[x^3+x^2-2 x-1,3\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,1\right] &amp; 0 &amp; \text{Root}\left[x^3+2 x^2-x-1,2\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,2\right] &amp; 0 &amp; 0 \\
+ 1 &amp; -1 &amp; \text{Root}\left[x^3+x^2-2 x-1,1\right] &amp; \text{Root}\left[x^3-x^2-2 x+1,3\right] &amp; 0 &amp; \text{Root}\left[x^3+2 x^2-x-1,1\right] &amp; \text{Root}\left[x^3-2 x^2-x+1,3\right] &amp; 0 &amp; 0 \\
+\hline
+\end{array}\]
+
+<p>The numeric character table is the following</p>
+
+\[\begin{array}{|lllllllll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} &amp; \mathbf{4} &amp; \mathbf{3} &amp; \mathbf{5} &amp; \mathbf{7} &amp; \mathbf{6} &amp; \mathbf{8} &amp; \mathbf{9} \\
+\hline
+ 1. &amp; 1. &amp; 1.80194 &amp; 1.80194 &amp; 2. &amp; 2.24698 &amp; 2.24698 &amp; 3.60388 &amp; 4.49396 \\
+ 1. &amp; 1. &amp; 1.80194 &amp; 1.80194 &amp; -1. &amp; 2.24698 &amp; 2.24698 &amp; -1.80194 &amp; -2.24698 \\
+ 1. &amp; 1. &amp; 0.445042 &amp; 0.445042 &amp; 2. &amp; -0.801938 &amp; -0.801938 &amp; 0.890084 &amp; -1.60388 \\
+ 1. &amp; 1. &amp; -1.24698 &amp; -1.24698 &amp; 2. &amp; 0.554958 &amp; 0.554958 &amp; -2.49396 &amp; 1.10992 \\
+ 1. &amp; 1. &amp; 0.445042 &amp; 0.445042 &amp; -1. &amp; -0.801938 &amp; -0.801938 &amp; -0.445042 &amp; 0.801938 \\
+ 1. &amp; 1. &amp; -1.24698 &amp; -1.24698 &amp; -1. &amp; 0.554958 &amp; 0.554958 &amp; 1.24698 &amp; -0.554958 \\
+ 1. &amp; -1. &amp; -0.445042 &amp; 0.445042 &amp; 0. &amp; 0.801938 &amp; -0.801938 &amp; 0. &amp; 0. \\
+ 1. &amp; -1. &amp; 1.24698 &amp; -1.24698 &amp; 0. &amp; -0.554958 &amp; 0.554958 &amp; 0. &amp; 0. \\
+ 1. &amp; -1. &amp; -1.80194 &amp; 1.80194 &amp; 0. &amp; -2.24698 &amp; 2.24698 &amp; 0. &amp; 0. \\
+\hline
+\end{array}\]
+
+<h1 id="modular-data">Modular Data</h1>
+
+<p>This fusion ring does not have any matching \(S\)-and \(T\)-matrices.</p>
+
+<h1 id="adjoint-subring">Adjoint Subring</h1>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> adjoint subring </a> is the ring itself.</p>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> upper central series </a> is trivial.</p>
+
+<h1 id="universal-grading">Universal grading</h1>
+
+<p>This fusion ring allows only the trivial grading.</p>
+
+<h1 id="categorifications">Categorifications</h1>
+
+<h1 id="data">Data</h1>
+
+<p>Download links for numeric data:</p>
+
+<ul>
+  <li><a href="/data/FusionRings/FR_9_1_0_20/multtab.csv"> Multiplication Table </a></li>
+  <li><a href="/data/FusionRings/FR_9_1_0_20/qdims.csv"> Quantum Dimensions </a></li>
+  <li><a href="/data/FusionRings/FR_9_1_0_20/chars.csv"> Character Table </a></li>
+</ul>
+
+<!-- ########################################################################################### -->
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+    // Highlight search Query
+    var url = window.location.href;
+    if (url.lastIndexOf("?q=") > 0) {
+      // get the index of the parameter, add three (to account for length)
+      var stringloc = url.lastIndexOf("?q=") + 3;
+      // get the substring (query) and decode
+      var searchquery = decodeURIComponent(url.substr(stringloc));
+      // regex matches at beginning of line, end of line or word boundary, useful for poetry
+      var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+      // get, add mark and then set content
+      var content = document.getElementById("main").innerHTML;
+      document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+    }
+
+    // Toggle sidebar
+    (function(document) {
+      var toggle = document.querySelector('.sidebar-toggle');
+      var sidebar = document.querySelector('#sidebar');
+      var checkbox = document.querySelector('#sidebar-checkbox');
+
+      document.addEventListener('click', function(e) {
+        var target = e.target;
+
+        if(!checkbox.checked ||
+           !sidebar.contains(target) ||
+           (target === checkbox || target === toggle)) return;
+
+        checkbox.checked = false;
+      }, false);
+    })(document);
+    </script>
+
+  </body>
+</html>

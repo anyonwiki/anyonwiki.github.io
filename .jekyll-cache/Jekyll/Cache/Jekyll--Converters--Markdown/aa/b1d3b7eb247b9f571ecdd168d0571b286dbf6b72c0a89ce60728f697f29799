@@ -1,0 +1,106 @@
+I"¥<h1 id="fusion-rules">Fusion Rules</h1>
+
+\[\begin{array}{|ll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} \\
+ \mathbf{2} &amp; \mathbf{1}+\mathbf{2} \\
+\hline
+\end{array}\]
+
+<h2 id="quantum-dimensions">Quantum Dimensions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Particle</th>
+      <th style="text-align: left">Numeric</th>
+      <th style="text-align: left">Symbolic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\mathbf{1}\)</td>
+      <td style="text-align: left">\(1.\)</td>
+      <td style="text-align: left">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{2}\)</td>
+      <td style="text-align: left">\(1.61803\)</td>
+      <td style="text-align: left">\(\frac{1}{2} \left(1+\sqrt{5}\right)\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
+      <td style="text-align: left">\(3.61803\)</td>
+      <td style="text-align: left">\(1+\frac{1}{4} \left(1+\sqrt{5}\right)^2\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="characters">Characters</h2>
+
+<p>The symbolic character table is the following</p>
+
+\[\begin{array}{|ll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} \\
+\hline
+ 1 &amp; \frac{1}{2} \left(1+\sqrt{5}\right) \\
+ 1 &amp; \frac{1}{2} \left(1-\sqrt{5}\right) \\
+\hline
+\end{array}\]
+
+<p>The numeric character table is the following</p>
+
+\[\begin{array}{|ll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} \\
+\hline
+ 1. &amp; 1.61803 \\
+ 1. &amp; -0.618034 \\
+\hline
+\end{array}\]
+
+<h2 id="modular-data">Modular Data</h2>
+
+<p>The matching <a href="/pages/Concepts/S-Matrix.html"> \(S\)-matrices </a> and <a href="/pages/Concepts/TwistFactors.html"> twist factors </a> are the following</p>
+
+<div class="table-wrapper">
+
+  <table>
+    <thead>
+      <tr>
+        <th>\(S\)-matrix</th>
+        <th>Twist factors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>\(\frac{1}{\sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2}}\left(\begin{array}{cc}\sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,3\right] &amp; \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,4\right] \\ \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,4\right] &amp; \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,2\right] \\ \end{array} \right)\)</td>
+        <td>\(\begin{array}{l} \left(0,-\frac{2}{5}\right) \\[4pt]\left(0,\frac{2}{5}\right)\end{array}\)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h2 id="adjoint-subring">Adjoint Subring</h2>
+
+<p>Particles \(\mathbf{1}\), \(\mathbf{2}\), form the <a href="/pages/Concepts/AdjointBasedSubring.html"> adjoint subring </a>\(\text{Fib}:\ \text{FR}^{2,0}_{2}\).</p>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> upper central series </a> is the following:</p>
+
+\[\text{Fib}\]
+
+<h2 id="universal-grading">Universal grading</h2>
+
+<p>Each particle can be graded as follows: \(\text{deg}(\mathbf{1}) = \mathbf{1}', \text{deg}(\mathbf{2}) = \mathbf{1}'\), where the degrees form the group \(\text{Trivial}\) with multiplication table:</p>
+
+\[\begin{array}{|l|}
+\hline
+ \mathbf{1}' \\
+\hline
+\end{array}\]
+
+<h2 id="categorifications">Categorifications</h2>
+
+:ET

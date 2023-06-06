@@ -1,0 +1,37 @@
+# Setup
+title:               AnyonWiki
+  # tagline:             a Jekyll Theme for Mathematical Writings
+description:         >- # this means to ignore newlines until "url:"
+  A wiki for anyons
+url:                 https://anyonwiki.github.io
+  #gtag:                UA-131373039-2 # Google Analytics Tag
+
+# Color scheme. Options: red, orange, magenta, cyan, blue, brown
+color-scheme:
+
+# Set encoding to UTF-8
+encoding: utf-8
+
+# Collections for entries
+collections:
+  posts:
+    output: true
+
+# Markdown specs
+markdown: kramdown
+
+kramdown:
+  footnote_backlink: "&#x21a9;&#xfe0e;"
+  enable_coderay: false
+#  math_engine: null # pending https://github.com/github/pages-gem/pull/545
+
+# Exclusions from the final site
+exclude:
+  - vendor
+  - README.md
+  - LICENSE.md
+  - Gemfile*
+  - proof.gemspec
+
+# Theme
+remote_theme: "mahrud/proof"
