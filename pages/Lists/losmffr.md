@@ -1,5 +1,7 @@
 The list below contains all multiplicity free fusion rings up to 9 particles. Clicking on a name will redirect you to the page of the respective fusion ring. For more information on the formal names \text{FR}_m^{r,n} see the page on formal fusion ring names. Here the categorifiability is considered over the complex field. For the last 5 columns a value of True indicates that there exists at least 1 way to categorify the fusion ring to a category with the respective structure. There can be multiple categories stemming from the same fusion ring with multiple (possibly disjunct) properties. The abreviations FC, PFC, UFC, BFC, MFC respectively stand for Fusion Category, Pivotal Fusion Category, Braided Fusion Category, Modular Fusion Category. 
 
+**NOTE THAT THE INFO ON CATEGORIFICATION IS WRONG ATM. I'LL FIX THIS ASAP **
+
 ---
 layout: page
 title: List of Small Multiplicity-Free Fusion Rings
@@ -362,5 +364,5 @@ title: List of Small Multiplicity-Free Fusion Rings
 
 # References 
 
-* [ Z. Liu, S. Palcoux, Y. Ren, Classification of Grothendieck rings of complex fusion categories of multiplicity one up to rank six, Lett Math Phys 112, 54 (2022). ]({% link https://link.springer.com/content/pdf/10.1007/s11005-022-01542-1.pdf %})
-* [J. Slingerland, G. Vercleyen, On Low Rank Fusion Rings, arXiv:2205.15637.]({% link  https://arxiv.org/abs/2205.15637 %})
+* [ Z. Liu, S. Palcoux, Y. Ren, Classification of Grothendieck rings of complex fusion categories of multiplicity one up to rank six, Lett Math Phys 112, 54 (2022). ](https://link.springer.com/content/pdf/10.1007/s11005-022-01542-1.pdf)
+* [J. Slingerland, G. Vercleyen, On Low Rank Fusion Rings, arXiv:2205.15637.](https://arxiv.org/abs/2205.15637)
