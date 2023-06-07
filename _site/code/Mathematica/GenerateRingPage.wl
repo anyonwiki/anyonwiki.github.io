@@ -365,9 +365,6 @@ ParticlesString[ ind_List ] :=
 	];
 
 
-sectionAdjointFusionRing[FRL[[8]]]
-
-
 (*====================================================================*)
 sectionUniversalGrading[ ring_ ] :=
 	Module[ { map, grp, mapString, groupName, multTab },

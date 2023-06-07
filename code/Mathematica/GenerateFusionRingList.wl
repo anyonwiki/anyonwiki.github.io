@@ -121,3 +121,6 @@ STData[ modularData_ ] := With[{
 		exportMatrixString[ N[ #["TwistFactors"], 16 ] ]& /@ modularData
 	]
 ]
+
+
+exportRingData["~/Projects/anyonwiki.github.io/data/FusionRings"] /@ FRL;
