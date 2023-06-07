@@ -1,5 +1,5 @@
 ---
-title: AdjointBasedSubring.md
+title: Adjoint Based Subring
 ---
 
 # Adjoint Based Subring
