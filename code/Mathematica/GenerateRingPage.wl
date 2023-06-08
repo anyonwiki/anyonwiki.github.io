@@ -3,8 +3,9 @@
 Quit[]
 
 
-<<Anyonica`
 Needs[ "WikiTools`", FileNameJoin[{NotebookDirectory[],"WikiTools.wl"}] ]
+PacletDirectoryLoad["~/Projects"]
+<<Anyonica`
 
 
 Options[RingPage] = {
@@ -143,7 +144,7 @@ With[{qds = QD[ring],tqds = TQDS[ring]},
 			prependParticles @
 			Map[ 
 				math @* ToString @* TeXForm,
-				Transpose[ { N @ Append[ tqds ] @ qds, Append[stqds] @ sqds } ],
+				Transpose[ { N[ Append[ tqds ], 4 ] @ qds, Append[stqds] @ sqds } ],
 				{2}
 			]
 		]
@@ -176,11 +177,11 @@ Module[{
 		texTable[ 
 			EchoFunction[ "Characters", MatrixForm ][ simplerChars ], 
 			"Header" -> assoTab["Header"],
-			"Alignment" -> "l" 
+			"Alignment" -> "c" 
 			], 
 		"\n\nThe numeric character table is the following\n\n",
-		texTable[ N[assoTab["Table"]], "Header" -> assoTab["Header"],"Alignment"->"l"]
-	]  
+		texTable[ N[assoTab["Table"],4], "Header" -> assoTab["Header"],"Alignment"->"r"]
+	] // StringReplace["0.\\, +"~~x__ ~~" i":> x <> " i" ]
 ];
 
 (* First sorts rows (characters) 
@@ -326,7 +327,7 @@ sectionAdjointFusionRing[ ring_FusionRing ] :=
 			link["upper central series", alink ],
 			" is ",
 			If[
-				Length[ucs] == 2,
+				Length[ucs[[1]]] == 2,
 				"trivial.",
 				"the following:\n"<> ucsString[ucs]
 			]
@@ -469,6 +470,9 @@ sectionData[ring_FusionRing] := Module[{ dir, mtLink, qdsLink, characterLink, sm
 ]
 
 
+RingPage[FRBC[{4,1,2,1}]]
+
+
 QuietEcho[ 
 	Export[ 
 		"/home/gertvercleyen/Projects/anyonwiki.github.io/pages/FRPages/"<>ringFileName[#],
@@ -482,6 +486,4 @@ QuietEcho@Table[
 Print[r];
 RingPage[r],
 {r,Cases[FRL,r_/;Mult[r]===1]}];
-
-
 
