@@ -1,6 +1,6 @@
 ---
-title: Categorifiability Criteria
 layout: page
+title: Categorifiability Criteria
 ---
 
 The following criteria are listed in https://link.springer.com/content/pdf/10.1007/s11005-022-01542-1.pdf. 
