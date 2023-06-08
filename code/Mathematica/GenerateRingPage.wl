@@ -361,7 +361,7 @@ ucsString[ ucs_ ] :=
 	
 ParticlesString[ ind_List ] :=
 	StringRiffle[
-		math["\\mathbf{"<>ToString[#]<>"}"]& /@ ind,
+		"\\mathbf{"<>ToString[#]<>"}"& /@ ind,
 		", "
 	];
 
@@ -468,9 +468,6 @@ sectionData[ring_FusionRing] := Module[{ dir, mtLink, qdsLink, characterLink, sm
 		]
 	]
 ]
-
-
-RingPage[FRBC[{4,1,2,1}]]
 
 
 QuietEcho[ 
