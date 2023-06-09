@@ -1,0 +1,117 @@
+I"><h1 id="textpsu2_5-textfr30_3">\(\text{PSU}(2)_5:\ \text{FR}^{3,0}_{3}\)</h1>
+
+<h1 id="fusion-rules">Fusion Rules</h1>
+
+\[\begin{array}{|lll|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} &amp; \mathbf{3} \\
+ \mathbf{2} &amp; \mathbf{1}+\mathbf{3} &amp; \mathbf{2}+\mathbf{3} \\
+ \mathbf{3} &amp; \mathbf{2}+\mathbf{3} &amp; \mathbf{1}+\mathbf{2}+\mathbf{3} \\
+\hline
+\end{array}\]
+
+<h1 id="quantum-dimensions">Quantum Dimensions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Particle</th>
+      <th style="text-align: left">Numeric</th>
+      <th style="text-align: left">Symbolic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\mathbf{1}\)</td>
+      <td style="text-align: left">\(1.\)</td>
+      <td style="text-align: left">\(\sin\frac{\pi}{7}/\sin\frac{\pi}{7}\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{2}\)</td>
+      <td style="text-align: left">\(1.80194\)</td>
+      <td style="text-align: left">\(\sin\frac{5\pi}{7}/\sin\frac{\pi}{7}\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathbf{3}\)</td>
+      <td style="text-align: left">\(2.24698\)</td>
+      <td style="text-align: left">\(\sin\frac{3\pi}{7}/\sin\frac{\pi}{7}\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
+      <td style="text-align: left">\(9.2959\)</td>
+      <td style="text-align: left">\(\frac{ \left(\sin\frac{\pi}{7}\right)^2 \left(\sin\frac{3\pi}{7}\right)^2 + \left(\sin\frac{5\pi}{7}\right)^2}{\left(\sin\frac{\pi}{7}}\right)^2\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="characters">Characters</h1>
+
+<p>The symbolic character table is the following</p>
+
+\[\begin{array}{|ccc|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} &amp; \mathbf{3} \\
+\hline
+ 1 &amp; r_3  &amp; r'_3 \\
+ 1 &amp; r_2 &amp; r'_2 \\
+ 1 &amp; r_1 &amp; r'_1 \\
+\hline
+\end{array}\]
+
+<p>where \(r_i\) is the \(i\)‘th root of \(x^3-x^2-2 x+1\) and \(r'_i\) the i’th root of \(x^2-2x^2-x+1\)</p>
+
+<p>The numeric character table is the following</p>
+
+\[\begin{array}{|rrr|}
+\hline
+ \mathbf{1} &amp; \mathbf{2} &amp; \mathbf{3} \\
+\hline
+ 1.000 &amp; 1.802 &amp; 2.247 \\
+ 1.000 &amp; 0.4450 &amp; -0.8019 \\
+ 1.000 &amp; -1.247 &amp; 0.5550 \\
+\hline
+\end{array}\]
+
+<h1 id="modular-data">Modular Data</h1>
+
+<p>The matching <a href="/pages/Concepts/S-Matrix.html"> \(S\)-matrices </a> and <a href="/pages/Concepts/TwistFactors.html"> twist factors </a> are the following</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\(S\)-matrix</th>
+      <th style="text-align: left">Twist factors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\frac{1}{\sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1}}\left(\begin{array}{ccc} \text{Root}\left[7 x^3+7 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} &amp; \text{Root}\left[7 x^3-7 x^2+1,2\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} &amp; \text{Root}\left[7 x^3-7 x^2+1,3\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} \\ \text{Root}\left[7 x^3-7 x^2+1,2\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} &amp; \text{Root}\left[7 x^3+7 x^2-1,1\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} &amp; \text{Root}\left[7 x^3+7 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} \\ \text{Root}\left[7 x^3-7 x^2+1,3\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} &amp; \text{Root}\left[7 x^3+7 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} &amp; \text{Root}\left[7 x^3+7 x^2-1,2\right] \sqrt{\text{Root}\left[x^3-x^2-2 x+1,3\right]^2+\text{Root}\left[x^3-2 x^2-x+1,3\right]^2+1} \\\end{array}\right)\)</td>
+      <td style="text-align: left">\(\begin{array}{l}\left(0,\frac{1}{7},-\frac{2}{7}\right) \\\left(0,-\frac{1}{7},\frac{2}{7}\right)\end{array}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="adjoint-subring">Adjoint Subring</h1>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> adjoint subring </a> is the ring itself.</p>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> upper central series </a> is the following:
+\(\text{PSU}(2)_5\)</p>
+
+<h1 id="universal-grading">Universal grading</h1>
+
+<p>This fusion ring allows only the trivial grading.</p>
+
+<h1 id="categorifications">Categorifications</h1>
+
+<h1 id="data">Data</h1>
+
+<p>Download links for numeric data:</p>
+
+<ul>
+  <li><a href="/data/FusionRings/FR_3_1_0_3/multtab.csv"> Multiplication Table </a></li>
+  <li><a href="/data/FusionRings/FR_3_1_0_3/qdims.csv"> Quantum Dimensions </a></li>
+  <li><a href="/data/FusionRings/FR_3_1_0_3/chars.csv"> Character Table </a></li>
+  <li><a href="/data/FusionRings/FR_3_1_0_3/smat_1.csv"> S-Matrix 1 </a>, <a href="/data/FusionRings/FR_3_1_0_3/twistfactors_1.csv"> Twist Factors1 </a></li>
+</ul>
+:ET
