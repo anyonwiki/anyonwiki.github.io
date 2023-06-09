@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type"    content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical"     href="http://localhost:4000/pages/Concepts/CategorifiabilityCriteria.html" />
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <link rel="alternate"     type="application/rss+xml" title="RSS" href="/atom.xml" />
+    <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Playfair+Display+SC&amp;display=swap" />
+    <link rel="stylesheet"    href="/static/style.css" />
+
+    <title>Categorifiability Criteria</title>
+
+    <!-- Dublin Core metadata for Zotero -->
+    <meta name="DC.title"   content="Categorifiability Criteria" />
+    <meta name="DC.creator" content="" />
+    <meta name="DC.date"    content="" />
+    <meta name="DC.source"  content="AnyonWiki" />
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type"           content="article" />
+    <meta property="og:title"          content="Categorifiability Criteria" />
+    <meta property="og:article:author" content="" />
+    <meta property="og:description"    content="A wiki for anyons" />
+    <meta property="og:url"            content="http://localhost:4000/pages/Concepts/CategorifiabilityCriteria.html" />
+    <meta property="og:image"          content="http://localhost:4000/static/open-graph-logo.png" />
+    <meta property="og:image:width"    content="200" />
+    <meta property="og:image:height"   content="200" />
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+      integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
+      integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <!-- KaTeX auto-render extention: https://katex.org/docs/autorender.html -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+      var macros = {
+          "\\P": "\\mathbb{P}"
+      }, delimiters = [
+          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "\\[", right: "\\]", display: true},
+          { left: "$",   right: "$",   display: false},
+          { left: "\\(", right: "\\)", display: false}
+      ];
+
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
+
+        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
+        // See: https://github.com/github/pages-gem/pull/545
+        document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
+          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
+        });
+
+        document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
+        });
+      });
+    </script>
+    <style>.katex { font-size: 1.15em; }</style>
+    <!-- KaTeX copy-tex extention: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
+      integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="theme-base-">
+    
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+    <!-- Toggleable sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item">
+        <p>A wiki for anyons</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/">Home</a>
+        <a class="sidebar-nav-item" href="/manual.html">Manual</a>
+        <a class="sidebar-nav-item active" href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a>
+        <a class="sidebar-nav-item" href="/pages/Lists/losmffr.html">List of Small Multiplicity-Free Fusion Rings</a>
+        <a class="sidebar-nav-item" href="/search.html">Search</a>
+
+        <!-- The code below is used for manually entered links -->
+        <a href="https://github.com/mahrud/proof"
+          class="sidebar-nav-item" target="_blank">GitHub Repository</a>
+      </nav>
+
+      <div class="sidebar-item">
+        <p>Distributed under an MIT license.</p>
+      </div>
+    </div>
+
+    <!--
+      Wrap is the content to shift when toggling the sidebar.
+      We wrap the content to avoid any CSS collisions with our real content.
+    -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/">AnyonWiki</a><br />
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content" id="main">
+<!-- ########################################################################################### -->
+<div class="page">
+  <h1 class="page-title">Categorifiability Criteria</h1>
+  <p>The following criteria are listed in https://link.springer.com/content/pdf/10.1007/s11005-022-01542-1.pdf.</p>
+
+<h1 id="criteria-for-pivotal-categorification">Criteria for Pivotal Categorification</h1>
+
+<h2 id="pivotal-version-of-drinfeld-center-criterion">Pivotal Version of Drinfeld Center Criterion</h2>
+
+<p class="theorem">Let \(R\) be a commutative fusion ring of basis \(\left(b_i\right)\). Let \(\left(X_i\right)\) be the corresponding fusion matrices. Let \(A\) be \(\sum_i X_i X_i^*\), and \(\left(c_j\right)\) its eigenvalues. The fusion matrices commute over each other and are normal (because \(X_i^*=X_{i^*}\) ), so are simultaneously diagonalizable, say as \(\left(\lambda_{i, j}\right)\), called the character table of \(R\). Then \(c_j=\sum_i\left|\lambda_{i, j}\right|^2\).
+<strong class="label" id="PVDCC">Theorem</strong>
+ <em>(Pivotal version of Drinfeld center criterion)</em> 
+If \(R\) admits a complex pivotal categorification \(\mathcal{C}\), then there exists \(j\) such that for all \(i, c_j / c_i\) is an algebraic integer.</p>
+
+<h1 id="criteria-for-unitary-categorification">Criteria for Unitary Categorification</h1>
+
+<h2 id="schur-product-criterion">Schur Product Criterion</h2>
+
+<p>Let \(R\) be a commutative fusion ring. Let \(\Lambda=\left(\lambda_{i, j}\right)\) be the table coming from the simultaneous diagonalization of its fusion matrices, with \(\lambda_{i, 1}=\max _j\left(\left|\lambda_{i, j}\right|\right)\). 
+The commutative Schur product criterion <a href="https://www.sciencedirect.com/science/article/pii/S0001870821003443">(corollary 8.5)</a> is the following:</p>
+
+<p><strong class="label" id="CSPC">Theorem</strong>
+  <em>(commutative Schur product criterion)</em>
+If \(R\) admits a unitary categorification, then for all triples \(\left(j_1, j_2, j_3\right)\) we have</p>
+
+<div class="theorem">\[\sum_i \frac{\lambda_{i, j_1} \lambda_{i, j_2} \lambda_{i, j_3}}{\lambda_{i, 1}} \geq 0\]
+</div>
+
+<p>Note that <a href="#CSPC">Theorem</a> is the corollary of a (less tractable) noncommutative version <a href="https://www.sciencedirect.com/science/article/pii/S0001870821003443">(Proposition 8.3)</a> which states</p>
+
+<p><strong class="label" id="NCSPC">Theorem</strong> (Non-commutative Schur product criterion). A fusion ring \(R\)  with basis \(\left\{x_1=1, \ldots, x_r\right\}\) is unitarily categorifiable if and only if for all triples of irreducible unital \(*\)-representations \(\left(\pi_s, V_s\right)_{s=1,2,3}\) of the fusion ring/algebra \(R\) over \(\mathbb{C}\), and for all \(v_s \in V_s\), we have</p>
+
+<div class="theorem">\[\sum_i \frac{1}{d\left(x_i\right)} \prod_{s=1}^3\left(v_s^* \pi_s\left(x_i\right) v_s\right) \geq 0\]
+</div>
+
+<h1 id="references">References</h1>
+
+</div>
+
+<!-- ########################################################################################### -->
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+    // Highlight search Query
+    var url = window.location.href;
+    if (url.lastIndexOf("?q=") > 0) {
+      // get the index of the parameter, add three (to account for length)
+      var stringloc = url.lastIndexOf("?q=") + 3;
+      // get the substring (query) and decode
+      var searchquery = decodeURIComponent(url.substr(stringloc));
+      // regex matches at beginning of line, end of line or word boundary, useful for poetry
+      var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
+      // get, add mark and then set content
+      var content = document.getElementById("main").innerHTML;
+      document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
+    }
+
+    // Toggle sidebar
+    (function(document) {
+      var toggle = document.querySelector('.sidebar-toggle');
+      var sidebar = document.querySelector('#sidebar');
+      var checkbox = document.querySelector('#sidebar-checkbox');
+
+      document.addEventListener('click', function(e) {
+        var target = e.target;
+
+        if(!checkbox.checked ||
+           !sidebar.contains(target) ||
+           (target === checkbox || target === toggle)) return;
+
+        checkbox.checked = false;
+      }, false);
+    })(document);
+    </script>
+
+  </body>
+</html>
