@@ -143,15 +143,17 @@
     <tr>
       <td style="text-align: left">\(\mathbf{2}\)</td>
       <td style="text-align: left">\(1.61803\)</td>
-      <td style="text-align: left">\(\frac{1}{2} \left(1+\sqrt{5}\right)\)</td>
+      <td style="text-align: left">\(\phi\)</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
       <td style="text-align: left">\(3.61803\)</td>
-      <td style="text-align: left">\(1+\frac{1}{4} \left(1+\sqrt{5}\right)^2\)</td>
+      <td style="text-align: left">\(2 + \phi\)</td>
     </tr>
   </tbody>
 </table>
+
+<p>The quantum dimension of the non-trivial particle equals the golden ratio \(\phi = \frac{1+\sqrt{5}}{2}\) and appears in a lot of the formulas. To save space we will keep using the abbreviation \phi in what follows.</p>
 
 <h1 id="characters">Characters</h1>
 
@@ -161,8 +163,8 @@
 \hline
  \mathbf{1} &amp; \mathbf{2} \\
 \hline
- 1 &amp; \frac{1}{2} \left(1+\sqrt{5}\right) \\
- 1 &amp; \frac{1}{2} \left(1-\sqrt{5}\right) \\
+ 1 &amp; \phi \\
+ 1 &amp; -\phi^{-1} \\
 \hline
 \end{array}\]
 
@@ -190,7 +192,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">\(\frac{1}{\sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2}}\left(\begin{array}{cc} \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,3\right] &amp; \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,4\right] \\ \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,4\right] &amp; \sqrt{1+\frac{1}{4} \left(1+\sqrt{5}\right)^2} \text{Root}\left[5 x^4-5 x^2+1,2\right] \\\end{array}\right)\)</td>
+      <td style="text-align: left">\(\frac{1}{\sqrt{2 + \phi}}\left(\begin{array}{cc} 1 &amp; \phi  \\ \phi  &amp; -1 \\\end{array}\right)\)</td>
       <td style="text-align: left">\(\begin{array}{l}\left(0,-\frac{2}{5}\right) \\\left(0,\frac{2}{5}\right)\end{array}\)</td>
     </tr>
   </tbody>
@@ -208,6 +210,57 @@
 <p>This fusion ring allows only the trivial grading.</p>
 
 <h1 id="categorifications">Categorifications</h1>
+<p>There are two Galois conjugate solutions to the pentagon equations, one unitary, one not unitary. 
+Each of these gives rise to a mirror pair of hexagon solutions. 
+Both pairs are modular and the pair corresponding to the unitary pentagon solution is unitary. We give a table for one representative of each pair. The quantities for the mirror theory are also easily obtained from these tables; quantum dimensions and Frobenius-Schur indicators are invariant, central charge and weights get a minus sign and the S-matrix must be complex conjugated.</p>
+
+\[\begin{array}{|l|c|}
+\hline
+c=\frac{14}{5}
+&amp;
+\mathcal{D}=\sqrt{\frac{1}{2} \left(5+\sqrt{5}\right)} ~~~~~\mathbf{(G_2)_{1}}
+\\ \hline ~&amp;~ \\ 
+\begin{array}{|l|rr|}
+\hline
+  &amp; \psi_0 &amp; \psi_1 \\ \hline
+ d &amp; 1 &amp; \phi \\
+ h &amp; 0 &amp; \frac{2}{5} \\
+ \kappa  &amp; 1 &amp; 1
+\\ \hline
+\end{array}
+&amp;
+\mathcal{D} S=\left(
+      \begin{array}{rr}
+       1 &amp; \phi \\
+       \phi &amp; -1
+      \end{array}
+      \right)
+\\~&amp;~\\\hline 
+\end{array}\]
+
+\[\begin{array}{|l|c|}
+\hline
+c=-\frac{2}{5}
+&amp;
+\mathcal{D}^2=\frac{1}{2} \left(5-\sqrt{5}\right) ~~~~~\mathbf{\textstyle Yang-Lee}
+\\ \hline ~&amp;~ \\ 
+\begin{array}{|l|rr|}
+\hline
+  &amp; \psi_0 &amp; \psi_1 \\ \hline
+ d &amp; 1 &amp; -\phi^{-1} \\
+ h &amp; 0 &amp; \frac{4}{5} \\
+ \kappa  &amp; 1 &amp; 1
+\\ \hline
+\end{array}
+&amp;
+\mathcal{D} S=\left(
+      \begin{array}{rr}
+       1 &amp; -\phi^{-1} \\
+       -\phi^{-1} &amp; -1
+      \end{array}
+      \right)
+\\~&amp;~\\\hline 
+\end{array}\]
 
 <h1 id="data">Data</h1>
 
