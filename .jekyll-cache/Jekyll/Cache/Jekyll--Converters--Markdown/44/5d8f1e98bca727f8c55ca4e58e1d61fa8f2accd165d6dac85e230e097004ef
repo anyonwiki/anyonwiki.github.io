@@ -1,0 +1,125 @@
+I"� <p>This manual is based on a documentation written by <a href="http://laic.columbia.edu/author/2728293031/">Alex Gil</a> with beginners in mind, but has the necessary information for more seasoned conspirators. We will walk through writing a sample blog post titled <em>The Twisted Cubic</em>.</p>
+
+<h2 id="background">Background</h2>
+
+<p>The AnyonWiki is backed by <a href="https://jekyllrb.com/">Jekyll</a>, the static site generator, and uses the minimal <a href="https://github.com/minicomp/ed">Ed</a> theme and <a href="https://katex.org">\(\KaTeX\)</a> for displaying math. The content of the site is hosted on its own GitHub <a href="https://github.com/mahrud/proof">repository</a>, so in order to collude you will need a GitHub account. While this process is a bit more involved than Wordpress and other similar tools, the payoff in the long term is worth the effort to learn it.</p>
+
+<hr />
+
+<h2 id="write">Write!</h2>
+
+<p>Each blog post is written in Markdown and is stored in the <a href="https://github.com/mahrud/proof/tree/master/_posts"><code class="language-plaintext highlighter-rouge">_posts</code></a> directory on GitHub. If you are familiar with \(\LaTeX\) then learning Markdown will be a piece of cake; just open your favorite plain-text editor and start with the front matter:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">The Twisted Cubic</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">David Hilbert</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">algebraic</span><span class="nv"> </span><span class="s">geometry"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">examples"</span><span class="pi">]</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">1900-01-01</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Typically, an easy way to write a new entry is to copy an existing one, replace the content and rename the file. Referring to older entries to remember how to add blockquotes, bibliographies, tables, etc. is also very helpful. Here we go over a few common styling formats:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Section 1</span>
+
+<span class="gu">## Subsection 1.1</span>
+You can write stuff in _italics_, <span class="gs">**bold**</span>, or even ~~strikethrough~~.
+
+Next paragraph should start like this. Do not indent.
+</code></pre></div></div>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">$$ .. $$</code> to write mathematical formulas:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The function $$<span class="se">\n</span>u$$ is written inline, but can also be in a block:
+
+$$ <span class="se">\n</span>u: <span class="se">\m</span>athbb{P}^{1} <span class="se">\t</span>o <span class="se">\m</span>athbb{P}^{3} $$
+</code></pre></div></div>
+
+<p>To add footnotes, use the following format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- O Captain! my Captain! rise up and hear the bells;
+- Rise up—for you the flag is flung—for you the bugle[^fn1] trills,
+
+[^fn1]:
+	The bugle is a small trumpet implicated in the military industrial complex.
+</code></pre></div></div>
+
+<p>Looks about ready to submit, so save the file as <code class="language-plaintext highlighter-rouge">the-twisted-cubic.md</code> to match the title. We will have many chances to perfect it later.</p>
+
+<p>There are two routes for submitting a post:</p>
+
+<h3 id="simple">Simple</h3>
+
+<p>This option is useful if you don’t need anything beyond basic Markdown:</p>
+<ul>
+  <li>open <a href="https://github.com/mahrud/proof/tree/master/_posts"><code class="language-plaintext highlighter-rouge">_posts</code></a></li>
+  <li>click <a href="https://github.com/mahrud/proof/upload/master/_posts">upload file</a></li>
+  <li>upload <code class="language-plaintext highlighter-rouge">the-twisted-cubic.md</code></li>
+  <li>write a commit title, e.g. <code class="language-plaintext highlighter-rouge">New Entry: The Twisted Cubic</code></li>
+  <li>choose “Create a <strong>new branch</strong> for this commit and start a pull request”</li>
+  <li>write <code class="language-plaintext highlighter-rouge">post/the-twisted-cubic</code> as the branch name</li>
+  <li>click “Propose new file”</li>
+</ul>
+
+<p>This process creates a new <a href="https://github.com/mahrud/proof/pulls">pull request</a>, which allows you to keep working on the post.</p>
+
+<h3 id="advanced">Advanced</h3>
+
+<p>This method is useful for more involved posts, and a working knowledge of your operating system’s terminal is assumed.</p>
+
+<p>First, follow the guide for your operating system <a href="https://jekyllrb.com/docs/installation/">here</a> to install a Ruby on your computer. Then, using the terminal’s <code class="language-plaintext highlighter-rouge">cd</code> command, switch to the directory where you want to have your writing environment. Once inside the folder, enter the following commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/mahrud/proof.git proof
+<span class="nv">$ </span><span class="nb">cd </span>proof
+<span class="nv">$ </span>make <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>If everything works without an error, you can now build a local version of the site by entering:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make serve
+</code></pre></div></div>
+
+<p>If the site was rendered fine, copy the url from your terminal log and paste it into your browser. This url usually looks something like <a href="http://127.0.0.1:4000/proof/"><code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/proof/</code></a>. At this point you should be looking at your very own working version of the AnyonWiki.</p>
+
+<p>Once the writing environment is set up:</p>
+<ul>
+  <li>save <code class="language-plaintext highlighter-rouge">the-twisted-cubic.md</code> in the <code class="language-plaintext highlighter-rouge">_posts</code> directory</li>
+  <li>open <a href="http://127.0.0.1:4000/proof/the-twisted-cubic/"><code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/proof/the-twisted-cubic/</code></a></li>
+  <li>check that everything rendered correctly</li>
+  <li>enter the following commands to make a new branch:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nt">-b</span> post/the-twisted-cubic
+<span class="nv">$ </span>git add _posts/the-twisted-cubic.md
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"New Entry: The Twisted Cubic"</span>
+<span class="nv">$ </span>git push origin
+</code></pre></div>    </div>
+  </li>
+  <li>open <a href="https://github.com/mahrud/proof/compare/master...master">this page</a> in a browser</li>
+  <li>change the second drop down menu to <code class="language-plaintext highlighter-rouge">compare: post/the-twisted-cubic</code></li>
+  <li>make a new pull request</li>
+</ul>
+
+<hr />
+
+<h2 id="review">Review</h2>
+
+<p><strong>FIXME</strong></p>
+
+<hr />
+
+<h2 id="publish">Publish</h2>
+
+<p><strong>FIXME</strong></p>
+
+<hr />
+
+<p>If you would like to learn more, use these references to learn more about:
+<a href="https://minicomp.github.io/ed/documentation/">Ed</a>,
+<a href="https://guides.github.com/features/mastering-markdown/">basic</a>
+<a href="https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Markdown</a>,
+<a href="https://guides.github.com/introduction/flow/">GitHub</a> 
+<a href="https://guides.github.com/features/pages/">Pages</a>, 
+or <a href="https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages">Jekyll</a>.</p>
+
+<p>Happy colluding!</p>
+:ET

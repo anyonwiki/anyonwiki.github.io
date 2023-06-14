@@ -1,0 +1,100 @@
+I"�<p>Proof supports $\LaTeX$ with [AMS] extensions, which provide various features
+to facilitate writing math formulas and to give the general structure and 
+appearance of a mathematics article or book.</p>
+
+<p>In particular, theorem styles including <code class="language-plaintext highlighter-rouge">definition</code>, <code class="language-plaintext highlighter-rouge">theorem</code>, <code class="language-plaintext highlighter-rouge">lemma</code>, 
+<code class="language-plaintext highlighter-rouge">proof</code>, and a few more<sup id="fnref:fn1" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">1</a></sup> can be declared as an environment using this 
+template:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gs">**Theorem**</span>{:.label #Lagrange}
+  _(Lagrange's Theorem)_
+  Let $$G$$ be a finite group, and let $$H$$ be a subgroup
+  of $$G$$.  Then the order of $$H$$ divides the order of $$G$$.
+{:.theorem}
+</code></pre></div></div>
+
+<p>Various components of this template can be skipped or customized, so experiment
+with them. For instance, to use your own enumeration, use <code class="language-plaintext highlighter-rouge">{:.label*}</code> instead.</p>
+
+<h2 class="label" id="an-example">An Example</h2>
+
+<p>The following exposition is taken from [here].
+Note the minimal changes required</p>
+
+<h3 class="label" id="lagranges-theorem">Lagrange’s Theorem</h3>
+
+<p class="definition*"><strong class="label">Definition</strong>
+  Let \(H\) be a subgroup of a group \(G\).  A <em>left coset</em>
+  of \(H\) in \(G\) is a subset of \(G\) that is of the form \(xH\),
+  where \(x \in G\) and \(xH = \{ xh : h \in H \}\).
+  Similarly a <em>right coset</em> of \(H\) in \(G\) is a subset
+  of \(G\) that is of the form \(Hx\), where
+  \(Hx = \{ hx : h \in H \}\)</p>
+
+<p>Note that a subgroup \(H\) of a group \(G\) is itself a
+left coset of \(H\) in \(G\).</p>
+
+<p class="lemma"><strong class="label" id="LeftCosetsDisjoint">Lemma</strong>
+  Let \(H\) be a subgroup of a group \(G\), and let \(x\) and \(y\) be
+  elements of \(G\).  Suppose that \(xH \cap yH\) is non-empty.
+  Then \(xH = yH\).</p>
+
+<p class="proof"><strong class="label">Proof</strong>
+  Let \(z\) be some element of \(xH \cap yH\).  Then \(z = xa\)
+  for some \(a \in H\), and \(z = yb\) for some \(b \in H\).
+  If \(h\) is any element of \(H\) then \(ah \in H\) and
+  \(a^{-1}h \in H\), since \(H\) is a subgroup of \(G\).
+  But \(zh = x(ah)\) and \(xh = z(a^{-1}h)\) for all \(h \in H\).
+  Therefore \(zH \subset xH\) and \(xH \subset zH\), and thus
+  \(xH = zH\).  Similarly \(yH = zH\), and thus \(xH = yH\),
+  as required.</p>
+
+<p class="lemma"><strong class="label" id="SizeOfLeftCoset">Lemma</strong>
+  Let \(H\) be a finite subgroup of a group \(G\).  Then each left
+  coset of \(H\) in \(G\) has the same number of elements as \(H\).</p>
+
+<p class="proof"><strong class="label">Proof</strong>
+  Let \(H = \{ h_1, h_2,\ldots, h_m\}\), where
+  \(h_1, h_2,\ldots, h_m\) are distinct, and let \(x\) be an
+  element of \(G\).  Then the left coset \(xH\) consists of
+  the elements \(x h_j\) for \(j = 1,2,\ldots,m\).
+  Suppose that \(j\) and \(k\) are integers between
+  \(1\) and \(m\) for which \(x h_j = x h_k\).  Then
+  \(h_j = x^{-1} (x h_j) = x^{-1} (x h_k) = h_k\),
+  and thus \(j = k\), since \(h_1, h_2,\ldots, h_m\)
+  are distinct.  It follows that the elements
+  \(x h_1, x h_2,\ldots, x h_m\) are distinct.
+  We conclude that the subgroup \(H\) and the left
+  coset \(xH\) both have \(m\) elements,
+  as required.</p>
+
+<p class="theorem"><strong class="label" id="Lagrange">Theorem</strong>
+<em><strong>(Lagrange’s Theorem)</strong></em>
+  Let \(G\) be a finite group, and let \(H\) be a subgroup
+  of \(G\).  Then the order of \(H\) divides the order of \(G\).</p>
+
+<p class="proof"><strong class="label">Proof</strong>
+  Each element \(x\) of \(G\) belongs to at least one left coset
+  of \(H\) in \(G\) (namely the coset \(xH\)), and no element
+  can belong to two distinct left cosets of \(H\) in \(G\)
+  (see <a href="#LeftCosetsDisjoint">Lemma</a>).  Therefore every
+  element of \(G\) belongs to exactly one left coset of \(H\).
+  Moreover each left coset of \(H\) contains \(|H|\) elements
+  (see <a href="#SizeOfLeftCoset">Lemma</a>).  Therefore \(|G| = n |H|\),
+  where \(n\) is the number of left cosets of \(H\) in \(G\).
+  The result follows.</p>
+
+<p><!--  fix lemma reference numberings  --></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:fn1" role="doc-endnote">
+
+      <p>The full list is: <code class="language-plaintext highlighter-rouge">theorem lemma problem proposition conjecture
+corollary definition example exercise remark note</code>.
+[AMS]: (http://www.ams.org/publications/authors/tex/amslatex)
+[here]: (https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html) <a href="#fnref:fn1" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

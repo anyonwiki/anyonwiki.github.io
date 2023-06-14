@@ -1,0 +1,81 @@
+I"”<p>In the criteria on this page we use the following notation:</p>
+
+<ul>
+  <li>\(R\): a fusion ring with basis \(\left(b_i\right)\) and structure constants \(N_{ij}^k\)</li>
+  <li>\(X_i\): the fusion matrices, i.e. \([X_i]^k_j = N_{ij}^k\)</li>
+  <li>\(A := \sum_i X_i X_i^*\) (with \(X_i^* := X_{i^*}\)), and with eigenvalues \((c_j)\). These are also called the formal codegrees of a fusion ring.</li>
+  <li>\(\lambda\): the matrix that simultaneously diagonalizes all \(X_i\) (if it exists), i.e. \([\lambda]^i_j\) are the characters of \(R\).</li>
+</ul>
+
+<h2 class="label" id="criteria-for-general-categorification">Criteria for General Categorification</h2>
+
+<h2 class="label" id="criteria-for-complex-categorification">Criteria for Complex Categorification</h2>
+
+<h3 class="label" id="d-number-criterion">d-number criterion</h3>
+
+<p><strong>Definition</strong>
+<em>(\(d\)-number)</em> An algebraic integer \(\alpha\) is called a \(d\)-number if its minimal polynomial \(p(x) = x^n + a_1x^n-1+\cdots+a_n\) (where \(a_i \in \mathbb{Z}\)) satsifies that \((a_n)^i\) divides \((a_i)^n\) for all \(i\).</p>
+
+<hr />
+
+<p><strong>Theorem</strong>
+<em>(\(d\)-number criterion)</em>
+Let \(R\) be commutative. If \(R\) admits a complex fusion category, then the formal codegrees \((c_j)\) of \(R\) are \(d\)-numbers.</p>
+
+<hr />
+
+<h3 class="label" id="extended-cyclotomic-criterion">Extended Cyclotomic Criterion</h3>
+
+<hr />
+
+<p><strong class="label" id="ECC">Theorem</strong>
+<em>(Extended Cyclotomic Criterion)</em>
+Let \(R\) be commutative. If there is a fusion matrix such that the splitting field of its minimal polynomial is a non-abelian extension of \(\mathbb{Q}\) then \(R\) admits no complex categorification.</p>
+
+<hr />
+
+<h2 class="label" id="criteria-for-pivotal-categorification">Criteria for Pivotal Categorification</h2>
+
+<h3 class="label" id="pivotal-version-of-drinfeld-center-criterion">Pivotal Version of Drinfeld Center Criterion</h3>
+
+<hr />
+
+<p><strong class="label" id="PVDCC">Theorem</strong>
+ <em>(Pivotal version of Drinfeld center criterion)</em> 
+Let \(R\) be commutative. If \(R\) admits a complex pivotal categorification, then there exists \(j\) such that for all \(i, c_j / c_i\) is an algebraic integer.</p>
+
+<hr />
+
+<h2 class="label" id="criteria-for-unitary-categorification">Criteria for Unitary Categorification</h2>
+
+<h3 class="label" id="schur-product-criterion">Schur Product Criterion</h3>
+
+<p>The commutative Schur product criterion <a href="https://www.sciencedirect.com/science/article/pii/S0001870821003443">(corollary 8.5)</a> is the following:</p>
+
+<hr />
+
+<p><strong class="label" id="CSPC">Theorem</strong>
+ <em>(commutative Schur product criterion)</em>
+Let \(R\) be commutative with \([\lambda]^i_1=\max _j\left(\left|\lambda_{i, j}\right|\right)\). 
+If \(R\) admits a unitary categorification, then for all triples \(\left(j_1, j_2, j_3\right)\) we have</p>
+
+\[\sum_i \frac{ [\lambda]^i_{j_1} [\lambda]^i_{j_2} [\lambda]^i_{j_3} }{[\lambda]^i_1} \geq 0\]
+
+<hr />
+
+<p>Note that <a href="#CSPC">Theorem</a> is the corollary of a (less tractable) noncommutative version <a href="https://www.sciencedirect.com/science/article/pii/S0001870821003443">(Proposition 8.3)</a> which states</p>
+
+<hr />
+
+<p><strong class="label" id="NCSPC">Theorem</strong> 
+ <em>(Non-commutative Schur product criterion)</em>  A (possibly non-commutative) fusion ring \(R\) is unitarily categorifiable if and only if for all triples of irreducible unital \(*\)-representations \(\left(\pi_s, V_s\right)_{s=1,2,3}\) of \(R\) over \(\mathbb{C}\), and for all \(v_s \in V_s\), we have</p>
+
+\[\sum_i \frac{1}{d\left(x_i\right)} \prod_{s=1}^3\left(v_s^* \pi_s\left(b_i\right) v_s\right) \geq 0\]
+
+<hr />
+
+<h1 id="references">References</h1>
+
+<p>Many of these cirteria are listed in <a href="https://link.springer.com/content/pdf/10.1007/s11005-022-01542-1.pdf">Classification of Grothendieck rings of complex fusion categories of multiplicity one up to rank six</a></p>
+
+:ET
