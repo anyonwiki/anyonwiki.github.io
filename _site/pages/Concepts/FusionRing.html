@@ -7,26 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Canonical link to help search engines -->
-    <link rel="canonical"     href="http://localhost:4000/" />
+    <link rel="canonical"     href="http://localhost:4000/pages/Concepts/FusionRing.html" />
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
     <link rel="alternate"     type="application/rss+xml" title="RSS" href="/atom.xml" />
     <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Playfair+Display+SC&amp;display=swap" />
     <link rel="stylesheet"    href="/static/style.css" />
 
-    <title>AnyonWiki</title>
+    <title>Fusion Ring</title>
 
     <!-- Dublin Core metadata for Zotero -->
-    <meta name="DC.title"   content="Home" />
+    <meta name="DC.title"   content="Fusion Ring" />
     <meta name="DC.creator" content="" />
     <meta name="DC.date"    content="" />
     <meta name="DC.source"  content="AnyonWiki" />
 
     <!-- Open Graph metadata -->
     <meta property="og:type"           content="article" />
-    <meta property="og:title"          content="Home" />
+    <meta property="og:title"          content="Fusion Ring" />
     <meta property="og:article:author" content="" />
     <meta property="og:description"    content="A wiki for anyons" />
-    <meta property="og:url"            content="http://localhost:4000/" />
+    <meta property="og:url"            content="http://localhost:4000/pages/Concepts/FusionRing.html" />
     <meta property="og:image"          content="http://localhost:4000/static/open-graph-logo.png" />
     <meta property="og:image:width"    content="200" />
     <meta property="og:image:height"   content="200" />
@@ -84,7 +84,7 @@
         <a class="sidebar-nav-item" href="/">Home</a>
         <a class="sidebar-nav-item" href="/manual.html">Manual</a>
         <a class="sidebar-nav-item" href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a>
-        <a class="sidebar-nav-item" href="/pages/Concepts/FusionRing.html">Fusion Ring</a>
+        <a class="sidebar-nav-item active" href="/pages/Concepts/FusionRing.html">Fusion Ring</a>
         <a class="sidebar-nav-item" href="/pages/Lists/losmffr.html">List of Small Multiplicity-Free Fusion Rings</a>
         <a class="sidebar-nav-item" href="/search.html">Search</a>
 
@@ -114,15 +114,70 @@
 
       <div class="container content" id="main">
 <!-- ########################################################################################### -->
-<p>Welcome to AnyonWiki. We are migrating content from <a href="http://www.thphys.nuim.ie/AnyonWiki/index.php/Main_Page">the old wiki</a> to this wiki at the moment. Hold tight :)</p>
+<div class="page">
+  <h1 class="page-title">Fusion Ring</h1>
+  <h1 id="definition">Definition</h1>
+<p>There are multiple definitions of the concept fusion ring in the literature, often with subtle differences. On the AnyonWiki the following definition is used.</p>
 
-<p>Some pages that are currently being worked on:</p>
+<p><strong class="label">Definition</strong>
+A <strong>fusion ring</strong> \((R,+,\cdot)\) is a ring with unit \(\psi_1\) for which the following axioms are fulfilled:</p>
 
 <ul>
-  <li><a href="/pages/Concepts/FusionRing.html">Fusion Ring</a></li>
-  <li><a href="/pages/Lists/losmffr.html">List of Small Multiplicity Free Fusion Rings</a></li>
-  <li><a href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a></li>
+  <li>The underlying abelian group \((R,+)\) is a free abelian group.</li>
+  <li>There exists a finite set \(B = \{\psi_i\}_{i \in I} \subset R\) such that \(\psi_1\in B\) and \(R=\mathbb{Z}B\).</li>
+  <li>For all \(i,j \in I\)
+    <center>
+$$
+\psi_i \times \psi_j  = \sum_{k\in I} N_{i,j}^{k}\psi_k, \quad N_{i,j}^{k} \in \mathbb{N}
+$$
+</center>
+  </li>
+  <li>There exists an involution \(i  \mapsto i^*\)  such that \(N_{i,j}^{k} = N_{i^*,k}^{j} = N_{k,j^*}^{i}\) (Frobenius reciprocity).</li>
 </ul>
+
+<p>Immediate consequences:</p>
+
+<ul>
+  <li>The fact that \(\psi_1\) is a unit reformulates as \(N_{i,1}^j = N_{1,i}^j = \delta_i^j\) for all \(i,j \in I\), which reformulates as \(N_{i^*,j}^1 = N_{j,i^*}^1 = \delta_{i,j}\) by Frobenius reciprocity.</li>
+  <li>The associativity of the ring reformulates as: for all \(i,j,k \in I\)</li>
+</ul>
+<center>
+$$ \sum_{s \in I} N_{i,j}^s N_{s,k}^t = \sum_{s \in I} N_{j,k}^s N_{i,s}^t$$
+</center>
+
+<h1 id="frobenius-perron-dimension">Frobenius-Perron Dimension</h1>
+
+<p>The involution \(*\) provides a \(*\)-algebra structure on \(\mathbb{C}B\), given by \(\psi_i^* =  \psi_{i^*}\).</p>
+
+<p><strong class="label">Theorem</strong>
+<em>(Frobenius-Perron theorem)</em>: there is a unique \(*\)-homomorphism \(d: \mathbb{C}B \to  \mathbb{C}\), with \(d(P) \subset \mathbb{R}_{&gt;0}\).</p>
+
+<p>The number \(d(\psi_i)\) is called the <strong>Frobenius-Perron dimension</strong> of \(\psi_i\), and is noted \(\mathrm{FPdim}(\psi_i)\). The Frobenius-Perron dimension of \(R\) is the number \(\mathrm{FPdim}(R):= \sum_i \mathrm{FPdim}(\psi_i)^2\).</p>
+
+<h1 id="general-constructions-of-fusion-rings">General Constructions of Fusion Rings</h1>
+<p>There are multiple classes of fusion rings that can be constructed according to a fixed set of rules. Here we list some of these.</p>
+
+<h2 id="group-rings">Group Rings</h2>
+<p>The group ring of any finite group \(G\) is a fusion ring.</p>
+
+<h2 id="textrepg">\(\text{Rep}(G)\)</h2>
+<p>The irreducible representations of any finite group with the tensor product as ring product form a fusion ring.</p>
+
+<h2 id="quantum-double-constructions">Quantum Double Constructions</h2>
+
+<h2 id="fusion-rings-coming-from-lie-theory">Fusion Rings Coming From Lie Theory</h2>
+
+<h3 id="metaplectic-fusion-rings">Metaplectic Fusion Rings</h3>
+
+<h2 id="quadratic-fusion-rings">Quadratic Fusion Rings</h2>
+
+<h3 id="songs">Songs</h3>
+
+<h3 id="tambara-yamagami-fusion-rings">Tambara-Yamagami Fusion Rings</h3>
+
+<h3 id="haagerup-izumi-fusion-rings">Haagerup-Izumi Fusion Rings</h3>
+
+</div>
 
 <!-- ########################################################################################### -->
       </div>
