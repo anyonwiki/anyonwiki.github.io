@@ -7,26 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Canonical link to help search engines -->
-    <link rel="canonical"     href="http://localhost:4000/" />
+    <link rel="canonical"     href="http://localhost:4000/pages/FRPagesLists/FR_series_z_n.html" />
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
     <link rel="alternate"     type="application/rss+xml" title="RSS" href="/atom.xml" />
     <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Playfair+Display+SC&amp;display=swap" />
     <link rel="stylesheet"    href="/static/style.css" />
 
-    <title>AnyonWiki</title>
+    <title>$$ \mathbb{Z}_n$$</title>
 
     <!-- Dublin Core metadata for Zotero -->
-    <meta name="DC.title"   content="Home" />
+    <meta name="DC.title"   content="$$ \mathbb{Z}_n$$" />
     <meta name="DC.creator" content="" />
     <meta name="DC.date"    content="" />
     <meta name="DC.source"  content="AnyonWiki" />
 
     <!-- Open Graph metadata -->
     <meta property="og:type"           content="article" />
-    <meta property="og:title"          content="Home" />
+    <meta property="og:title"          content="$$ \mathbb{Z}_n$$" />
     <meta property="og:article:author" content="" />
     <meta property="og:description"    content="A wiki for anyons" />
-    <meta property="og:url"            content="http://localhost:4000/" />
+    <meta property="og:url"            content="http://localhost:4000/pages/FRPagesLists/FR_series_z_n.html" />
     <meta property="og:image"          content="http://localhost:4000/static/open-graph-logo.png" />
     <meta property="og:image:width"    content="200" />
     <meta property="og:image:height"   content="200" />
@@ -115,15 +115,152 @@
 
       <div class="container content" id="main">
 <!-- ########################################################################################### -->
-<p>Welcome to AnyonWiki. We are migrating content from <a href="http://www.thphys.nuim.ie/AnyonWiki/index.php/Main_Page">the old wiki</a> to this wiki at the moment. Hold tight :)</p>
+<h1 id="mathbbz_n">\(\mathbb{Z}_n\)</h1>
 
-<p>Some pages that are currently being worked on:</p>
+<h1 id="particle-labels">Particle labels</h1>
 
-<ul>
-  <li><a href="/pages/Concepts/FusionRing.html">Fusion Ring</a></li>
-  <li><a href="/pages/Lists/losmffr.html">List of Small Multiplicity Free Fusion Rings</a></li>
-  <li><a href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a></li>
-</ul>
+<p>The particles are labelelled \(\phi_i\) with \(i=0,1,2,\ldots, n-1\).</p>
+
+<h1 id="fusion-rules">Fusion Rules</h1>
+
+\[\begin{array}{|l|}
+\hline
+ \phi_i \times \phi_j = \phi_{i+j\bmod n} \\
+\hline
+\end{array}\]
+
+<h1 id="quantum-dimensions">Quantum Dimensions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Particle</th>
+      <th style="text-align: left">Numeric</th>
+      <th style="text-align: left">Symbolic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\phi_i\)</td>
+      <td style="text-align: left">\(1.\)</td>
+      <td style="text-align: left">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
+      <td style="text-align: left">\(\)</td>
+      <td style="text-align: left">\(n\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+# Characters
+-->
+
+<h1 id="modular-data">Modular Data</h1>
+
+<p>We provide two sets of solutions for the modular data.</p>
+
+<h2 id="case-1">Case 1</h2>
+
+<p>For case 1, the <a href="/pages/Concepts/S-Matrix.html"> \(S\)-matrices</a> and <a href="/pages/Concepts/TwistFactors.html"> twist factors</a> depend on the parameter \(p = 0, 1, \ldots n-1\). These theories are modular, provided that \(n\) is odd, and \(\gcd(p,n)=1\). Thus, the central charge is only defined under these conditions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\(S\)-matrix elements</th>
+      <th style="text-align: left">Twist factors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(S_{j,k} = \frac{1}{\sqrt{n}}e^{2 \pi i \frac{2p j k}{n}}\)</td>
+      <td style="text-align: left">\(\theta_j = e^{2 \pi i \frac{p j^2}{n}}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The central charge modulo 8 is given by</p>
+
+\[c = \begin{cases}
+0 &amp; \text{for $n=1 \bmod4 \wedge (\frac{p}{n}) = 1$} \\
+2 &amp; \text{for $n=3 \bmod4 \wedge (\frac{p}{n}) = 1$} \\
+4 &amp; \text{for $n=1 \bmod4 \wedge (\frac{p}{n}) = -1$} \\
+6 &amp; \text{for $n=3 \bmod4 \wedge (\frac{p}{n}) = -1$} \ .
+\end{cases}\]
+
+<p>Here, \((\frac{a}{n})\) denotes the Jacobi symbol, which arises in the study of quadratic Gauss sums, which naturally appear when calculating the central charge modulo 8.</p>
+
+<p>We note that the cases with \(n\) odd and \(p = (n-1)/2\) correspond to \(su(n)_1\), which has central charge \(c = n-1\).</p>
+
+<h2 id="case-2">Case 2</h2>
+
+<p>For case 2, the <a href="/pages/Concepts/S-Matrix.html"> \(S\)-matrices</a> and <a href="/pages/Concepts/TwistFactors.html"> twist factors</a> again depend on \(p = 0, 1, \ldots n-1\). These theories are modular, provided that \(\gcd(2p+1,n)=1\), in which case the central charge is defined.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\(S\)-matrix elements</th>
+      <th style="text-align: left">Twist factors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(S_{j,k} = \frac{1}{\sqrt{n}}e^{2 \pi i \frac{(2p+1) j k}{2n}}\)</td>
+      <td style="text-align: left">\(\theta_j = e^{2 \pi i \bigl(\frac{(2p+1) j^2}{2n} + \frac{n j}{2}\bigr)}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For \(n\) odd, the central charge modulo 8 is given by</p>
+
+\[c = \begin{cases}
+(1-n) \bmod 8 &amp; \text{for $(\frac{2p+1}{n}) = 1$} \\
+(5-n) \bmod 8 &amp; \text{for $(\frac{2p+1}{n}) = -1$} \ .
+\end{cases}\]
+
+<p>For \(n\) even, the central charge modulo 8 is given by</p>
+
+\[c = \begin{cases}
+1 &amp; \text{for $2p+1 = 1 \bmod 4 \wedge (\frac{2n}{2p+1}) = 1$} \\
+3 &amp; \text{for $2p+1 = 3 \bmod 4 \wedge (\frac{2n}{2p+1}) = -1$} \\
+5 &amp; \text{for $2p+1 = 1 \bmod 4 \wedge (\frac{2n}{2p+1}) = -1$} \\
+7 &amp; \text{for $2p+1 = 3 \bmod 4 \wedge (\frac{2n}{2p+1}) = 1$} \ .
+\end{cases}\]
+
+<p>Again, \((\frac{a}{n})\) denotes the Jacobi symbol.</p>
+
+<p>The cases with \(n\) even and \(p = \frac{n}{2}-1\) correspond to \(su(n)_1\), which has central charge \(c = n-1\).</p>
+
+<p>The cases with \(n\) even and \(p=1\) correspond to \(u(1)_n\) (that is, the compactified boson cft with \(n\) primary fields), which has central charge \(c=1\).</p>
+
+<p>NOTE: I need to check if \(n\) is allowed to be odd in case 2 !</p>
+
+<!-- old stuff from a different page
+# Adjoint Subring
+
+The [ adjoint subring ](/pages/Concepts/AdjointBasedSubring.html) is the ring itself.
+
+The [ upper central series ](/pages/Concepts/AdjointBasedSubring.html) is the following:
+$$ \text{Trivial} $$
+
+# Universal grading
+
+This fusion ring allows only the trivial grading.
+
+# Categorifications
+This ring has 1 categorification: the trivial Fusion Category.
+
+
+# Data
+
+Download links for numeric data:
+
+* [ Multiplication Table ](/data/FusionRings/FR_1_1_0_1/multtab.csv)
+* [ Quantum Dimensions ](/data/FusionRings/FR_1_1_0_1/qdims.csv)
+* [ Character Table ](/data/FusionRings/FR_1_1_0_1/chars.csv)
+* [ S-Matrix 1 ](/data/FusionRings/FR_1_1_0_1/smat_1.csv), [ Twist Factors1 ](/data/FusionRings/FR_1_1_0_1/twistfactors_1.csv)
+-->
 
 <!-- ########################################################################################### -->
       </div>
