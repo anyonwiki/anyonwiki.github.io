@@ -7,7 +7,7 @@ title: Fusion Ring
 There are multiple definitions of the concept fusion ring in the literature, often with subtle differences. On the AnyonWiki the following definition is used.
 
 **Definition**{:.label}
-A **fusion ring** $$ (R,+,\cdot) $$ is a ring with unit $$\psi_1$$ for which the following axioms are fulfilled:
+A **fusion ring** $$ (R,+,\times) $$ is a ring with unit $$\psi_1$$ for which the following axioms are fulfilled:
 
 * The underlying abelian group $$ (R,+) $$ is a free abelian group.
 * There exists a finite set $$B = \{\psi_i\}_{i \in I} \subset R$$ such that $$\psi_1\in B$$ and $$R=\mathbb{Z}B$$.
@@ -37,24 +37,7 @@ _(Frobenius-Perron theorem)_: there is a unique $$ * $$-homomorphism $$ d: \math
 The number $$ d(\psi_i) $$ is called the **Frobenius-Perron dimension** of $$ \psi_i $$, and is noted $$ \mathrm{FPdim}(\psi_i) $$. The Frobenius-Perron dimension of $$ R $$ is the number $$  \mathrm{FPdim}(R):= \sum_i \mathrm{FPdim}(\psi_i)^2 $$.
 
 # General Constructions of Fusion Rings
-There are multiple classes of fusion rings that can be constructed according to a fixed set of rules. Here we list some of these.
+There are multiple classes of fusion rings that can be constructed according to a fixed set of rules. Some of the more common ones are listed [here]({% pages/Concepts/Constructions.md%}).
 
-## Group Rings
-The group ring of any finite group $$G$$ is a fusion ring.
-
-## $$\text{Rep}(G)$$
-The irreducible representations of any finite group with the tensor product as ring product form a fusion ring.
 
 ## Quantum Double Constructions
-
-## Fusion Rings Coming From Lie Theory
-
-### Metaplectic Fusion Rings
-
-## Quadratic Fusion Rings
-
-### Songs
-
-### Tambara-Yamagami Fusion Rings
-
-### Haagerup-Izumi Fusion Rings
