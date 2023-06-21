@@ -7,26 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Canonical link to help search engines -->
-    <link rel="canonical"     href="http://localhost:4000/" />
+    <link rel="canonical"     href="http://localhost:4000/pages/FRPages/FR_series_zn.html" />
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
     <link rel="alternate"     type="application/rss+xml" title="RSS" href="/atom.xml" />
     <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Playfair+Display+SC&amp;display=swap" />
     <link rel="stylesheet"    href="/static/style.css" />
 
-    <title>AnyonWiki</title>
+    <title>$$ \mathbb{Z}_N$$</title>
 
     <!-- Dublin Core metadata for Zotero -->
-    <meta name="DC.title"   content="Home" />
+    <meta name="DC.title"   content="$$ \mathbb{Z}_N$$" />
     <meta name="DC.creator" content="" />
     <meta name="DC.date"    content="" />
     <meta name="DC.source"  content="AnyonWiki" />
 
     <!-- Open Graph metadata -->
     <meta property="og:type"           content="article" />
-    <meta property="og:title"          content="Home" />
+    <meta property="og:title"          content="$$ \mathbb{Z}_N$$" />
     <meta property="og:article:author" content="" />
     <meta property="og:description"    content="A wiki for anyons" />
-    <meta property="og:url"            content="http://localhost:4000/" />
+    <meta property="og:url"            content="http://localhost:4000/pages/FRPages/FR_series_zn.html" />
     <meta property="og:image"          content="http://localhost:4000/static/open-graph-logo.png" />
     <meta property="og:image:width"    content="200" />
     <meta property="og:image:height"   content="200" />
@@ -115,14 +115,113 @@
 
       <div class="container content" id="main">
 <!-- ########################################################################################### -->
-<p>Welcome to AnyonWiki. We are migrating content from <a href="http://www.thphys.nuim.ie/AnyonWiki/index.php/Main_Page">the old wiki</a> to this wiki at the moment. Hold tight :)</p>
+<h1 id="mathbbz_n">\(\mathbb{Z}_N\)</h1>
 
-<p>Some pages that are currently being worked on:</p>
+<h1 id="particle-labels">Particle labels</h1>
+
+<p>The particles are labelelled \(\phi_i\) with \(i=0,1,2,\ldots, N-1\).</p>
+
+<h1 id="fusion-rules">Fusion Rules</h1>
+
+\[\begin{array}{|l|}
+\hline
+ \phi_i \times \phi_j = \phi_{i+j\bmod N} \\
+\hline
+\end{array}\]
+
+<h1 id="quantum-dimensions">Quantum Dimensions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Particle</th>
+      <th style="text-align: left">Numeric</th>
+      <th style="text-align: left">Symbolic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\phi_i\)</td>
+      <td style="text-align: left">\(1.\)</td>
+      <td style="text-align: left">\(1\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
+      <td style="text-align: left">\(\)</td>
+      <td style="text-align: left">\(N\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="characters">Characters</h1>
+
+<!--
+The symbolic character table is the following
+
+$$
+\begin{array}{|c|}
+\hline
+ \mathbf{1} \\
+\hline
+ 1 \\
+\hline
+\end{array}
+$$
+
+The numeric character table is the following
+
+$$
+\begin{array}{|r|}
+\hline
+ \mathbf{1} \\
+\hline
+ 1.000 \\
+\hline
+\end{array}
+$$
+-->
+<h1 id="modular-data">Modular Data</h1>
+
+<p>The matching <a href="/pages/Concepts/S-Matrix.html"> \(S\)-matrices </a> and <a href="/pages/Concepts/TwistFactors.html"> twist factors </a> are the following</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">\(S\)-matrix</th>
+      <th style="text-align: left">Twist factors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">\(\left(\begin{array}{c} 1 \\\end{array}\right)\)</td>
+      <td style="text-align: left">\(\begin{array}{l}(0)\end{array}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="adjoint-subring">Adjoint Subring</h1>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> adjoint subring </a> is the ring itself.</p>
+
+<p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> upper central series </a> is the following:
+\(\text{Trivial}\)</p>
+
+<h1 id="universal-grading">Universal grading</h1>
+
+<p>This fusion ring allows only the trivial grading.</p>
+
+<h1 id="categorifications">Categorifications</h1>
+<p>This ring has 1 categorification: the trivial Fusion Category.</p>
+
+<h1 id="data">Data</h1>
+
+<p>Download links for numeric data:</p>
 
 <ul>
-  <li><a href="/pages/Concepts/FusionRing.html">Fusion Ring</a></li>
-  <li><a href="/pages/Lists/losmffr.html">List of Small Multiplicity Free Fusion Rings</a></li>
-  <li><a href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a></li>
+  <li><a href="/data/FusionRings/FR_1_1_0_1/multtab.csv"> Multiplication Table </a></li>
+  <li><a href="/data/FusionRings/FR_1_1_0_1/qdims.csv"> Quantum Dimensions </a></li>
+  <li><a href="/data/FusionRings/FR_1_1_0_1/chars.csv"> Character Table </a></li>
+  <li><a href="/data/FusionRings/FR_1_1_0_1/smat_1.csv"> S-Matrix 1 </a>, <a href="/data/FusionRings/FR_1_1_0_1/twistfactors_1.csv"> Twist Factors1 </a></li>
 </ul>
 
 <!-- ########################################################################################### -->
