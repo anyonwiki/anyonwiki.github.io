@@ -41,7 +41,8 @@
       integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
       var macros = {
-          "\\P": "\\mathbb{P}"
+          "\\fpdim": "\\text{FPDim}",
+          "\\conj": "{#1}^{*}"
       }, delimiters = [
           { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
           { left: "\\[", right: "\\]", display: true},
@@ -84,6 +85,8 @@
         <a class="sidebar-nav-item" href="/">Home</a>
         <a class="sidebar-nav-item" href="/manual.html">Manual</a>
         <a class="sidebar-nav-item" href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a>
+        <a class="sidebar-nav-item" href="/pages/Concepts/Constructions.html">General Constructions</a>
+        <a class="sidebar-nav-item" href="/pages/Concepts/FusionRing.html">Fusion Ring</a>
         <a class="sidebar-nav-item" href="/pages/Lists/losmffr.html">List of Small Multiplicity-Free Fusion Rings</a>
         <a class="sidebar-nav-item" href="/search.html">Search</a>
 
@@ -145,22 +148,22 @@
     <tr>
       <td style="text-align: left">\(\mathbf{2}\)</td>
       <td style="text-align: left">\(1.87939\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^3-3 x-1,3\right]\)</td>
+      <td style="text-align: left">$ \sin( 7 \pi/9)/\sin(\pi/9) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{3}\)</td>
       <td style="text-align: left">\(2.53209\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^3-3 x^2+3,3\right]\)</td>
+      <td style="text-align: left">$ \sin( 3 \pi/9)/\sin(\pi/9) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{4}\)</td>
       <td style="text-align: left">\(2.87939\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^3-3 x^2+1,3\right]\)</td>
+      <td style="text-align: left">$ \sin( 5 \pi/9)/\sin(\pi/9) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
       <td style="text-align: left">\(19.2344\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1\)</td>
+      <td style="text-align: left">$ \frac{\sum_{k}^4 \sin( (2k-1)\pi)^2}{\sin(\pi/9)} $</td>
     </tr>
   </tbody>
 </table>
@@ -197,21 +200,24 @@
 
 <p>The matching <a href="/pages/Concepts/S-Matrix.html"> \(S\)-matrices </a> and <a href="/pages/Concepts/TwistFactors.html"> twist factors </a> are the following</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">\(S\)-matrix</th>
-      <th style="text-align: left">Twist factors</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">\(\frac{1}{\sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}\left(\begin{array}{cccc} \text{Root}\left[243 x^6-162 x^4+27 x^2-1,4\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,5\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,6\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} \\ \text{Root}\left[243 x^6-162 x^4+27 x^2-1,5\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,1\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} \\ \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; 0 &amp; -\frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} \\ \text{Root}\left[243 x^6-162 x^4+27 x^2-1,6\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; -\frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,5\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} \\\end{array}\right)\)</td>
-      <td style="text-align: left">\(\begin{array}{l}\left(0,\frac{1}{3},\frac{2}{9},-\frac{1}{3}\right) \\\left(0,-\frac{1}{3},-\frac{2}{9},\frac{1}{3}\right)\end{array}\)</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrapper">
 
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">\(S\)-matrix</th>
+        <th style="text-align: left">Twist factors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">\(\frac{1}{\sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}\left(\begin{array}{cccc} \text{Root}\left[243 x^6-162 x^4+27 x^2-1,4\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,5\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,6\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} \\ \text{Root}\left[243 x^6-162 x^4+27 x^2-1,5\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,1\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} \\ \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; 0 &amp; -\frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} \\ \text{Root}\left[243 x^6-162 x^4+27 x^2-1,6\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,3\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} &amp; -\frac{1}{\sqrt{\frac{3}{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1}}} &amp; \text{Root}\left[243 x^6-162 x^4+27 x^2-1,5\right] \sqrt{\text{Root}\left[x^3-3 x-1,3\right]^2+\text{Root}\left[x^3-3 x^2+3,3\right]^2+\text{Root}\left[x^3-3 x^2+1,3\right]^2+1} \\\end{array}\right)\)</td>
+        <td style="text-align: left">\(\begin{array}{l}\left(0,\frac{1}{3},\frac{2}{9},-\frac{1}{3}\right) \\\left(0,-\frac{1}{3},-\frac{2}{9},\frac{1}{3}\right)\end{array}\)</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
 <h1 id="adjoint-subring">Adjoint Subring</h1>
 
 <p>The <a href="/pages/Concepts/AdjointBasedSubring.html"> adjoint subring </a> is the ring itself.</p>

@@ -41,7 +41,8 @@
       integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
       var macros = {
-          "\\P": "\\mathbb{P}"
+          "\\fpdim": "\\text{FPDim}",
+          "\\conj": "{#1}^{*}"
       }, delimiters = [
           { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
           { left: "\\[", right: "\\]", display: true},
@@ -84,6 +85,7 @@
         <a class="sidebar-nav-item" href="/">Home</a>
         <a class="sidebar-nav-item" href="/manual.html">Manual</a>
         <a class="sidebar-nav-item" href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a>
+        <a class="sidebar-nav-item" href="/pages/Concepts/Constructions.html">General Constructions</a>
         <a class="sidebar-nav-item active" href="/pages/Concepts/FusionRing.html">Fusion Ring</a>
         <a class="sidebar-nav-item" href="/pages/Lists/losmffr.html">List of Small Multiplicity-Free Fusion Rings</a>
         <a class="sidebar-nav-item" href="/search.html">Search</a>
@@ -120,7 +122,7 @@
 <p>There are multiple definitions of the concept fusion ring in the literature, often with subtle differences. On the AnyonWiki the following definition is used.</p>
 
 <p><strong class="label">Definition</strong>
-A <strong>fusion ring</strong> \((R,+,\cdot)\) is a ring with unit \(\psi_1\) for which the following axioms are fulfilled:</p>
+A <strong>fusion ring</strong> \((R,+,\times)\) is a ring with unit \(\psi_1\) for which the following axioms are fulfilled:</p>
 
 <ul>
   <li>The underlying abelian group \((R,+)\) is a free abelian group.</li>

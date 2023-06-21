@@ -21,7 +21,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 html {
@@ -112,7 +112,7 @@ ul, ol {
 
 .wrap {
   position: relative;
-  width: 100%;
+  width: 75%;
 }
 
 
@@ -123,7 +123,7 @@ ul, ol {
  */
 
 .container {
-  max-width: 38rem;
+  max-width: auto;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -213,6 +213,7 @@ table {
   width: 100%;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 td,

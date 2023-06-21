@@ -41,7 +41,8 @@
       integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
       var macros = {
-          "\\P": "\\mathbb{P}"
+          "\\fpdim": "\\text{FPDim}",
+          "\\conj": "{#1}^{*}"
       }, delimiters = [
           { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
           { left: "\\[", right: "\\]", display: true},
@@ -84,6 +85,8 @@
         <a class="sidebar-nav-item" href="/">Home</a>
         <a class="sidebar-nav-item" href="/manual.html">Manual</a>
         <a class="sidebar-nav-item" href="/pages/Concepts/CategorifiabilityCriteria.html">Categorifiability Criteria</a>
+        <a class="sidebar-nav-item" href="/pages/Concepts/Constructions.html">General Constructions</a>
+        <a class="sidebar-nav-item" href="/pages/Concepts/FusionRing.html">Fusion Ring</a>
         <a class="sidebar-nav-item" href="/pages/Lists/losmffr.html">List of Small Multiplicity-Free Fusion Rings</a>
         <a class="sidebar-nav-item" href="/search.html">Search</a>
 
@@ -144,47 +147,47 @@
     <tr>
       <td style="text-align: left">\(\mathbf{1}\)</td>
       <td style="text-align: left">\(1.\)</td>
-      <td style="text-align: left">\(1\)</td>
+      <td style="text-align: left">$ 1 $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{2}\)</td>
       <td style="text-align: left">\(1.96595\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-x^7-7 x^6+6 x^5+15 x^4-10 x^3-10 x^2+4 x+1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 3\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{3}\)</td>
       <td style="text-align: left">\(2.86494\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-7 x^7+14 x^6+x^5-25 x^4+9 x^3+12 x^2-3 x-1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 5\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{4}\)</td>
       <td style="text-align: left">\(3.66638\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-2 x^7-11 x^6+14 x^5+19 x^4-14 x^3-11 x^2+2 x+1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 7\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{5}\)</td>
       <td style="text-align: left">\(4.34296\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-6 x^7+3 x^6+21 x^5-8 x^4-19 x^3+5 x^2+5 x-1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 9\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{6}\)</td>
       <td style="text-align: left">\(4.87165\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-3 x^7-12 x^6+9 x^5+25 x^4+x^3-14 x^2-7 x-1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 11\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{7}\)</td>
       <td style="text-align: left">\(5.23444\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-5 x^7-5 x^6+19 x^5+8 x^4-21 x^3-3 x^2+6 x-1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 13\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathbf{8}\)</td>
       <td style="text-align: left">\(5.41898\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-4 x^7-10 x^6+10 x^5+15 x^4-6 x^3-7 x^2+x+1,8\right]\)</td>
+      <td style="text-align: left">$ \sin( 15\pi/17)/\sin(\pi/17) $</td>
     </tr>
     <tr>
       <td style="text-align: left">\(\mathcal{D}_{FP}^2\)</td>
       <td style="text-align: left">\(125.874\)</td>
-      <td style="text-align: left">\(\text{Root}\left[x^8-x^7-7 x^6+6 x^5+15 x^4-10 x^3-10 x^2+4 x+1,8\right]^2+\text{Root}\left[x^8-7 x^7+14 x^6+x^5-25 x^4+9 x^3+12 x^2-3 x-1,8\right]^2+\text{Root}\left[x^8-2 x^7-11 x^6+14 x^5+19 x^4-14 x^3-11 x^2+2 x+1,8\right]^2+\text{Root}\left[x^8-6 x^7+3 x^6+21 x^5-8 x^4-19 x^3+5 x^2+5 x-1,8\right]^2+\text{Root}\left[x^8-3 x^7-12 x^6+9 x^5+25 x^4+x^3-14 x^2-7 x-1,8\right]^2+\text{Root}\left[x^8-5 x^7-5 x^6+19 x^5+8 x^4-21 x^3-3 x^2+6 x-1,8\right]^2+\text{Root}\left[x^8-4 x^7-10 x^6+10 x^5+15 x^4-6 x^3-7 x^2+x+1,8\right]^2+1\)</td>
+      <td style="text-align: left">$ \frac{\sum\limits_{k = 1}^7 \sin( (2k - 1)\pi/17 )^2}{\sin(\pi/17)^2}  $</td>
     </tr>
   </tbody>
 </table>
