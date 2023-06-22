@@ -7,6 +7,7 @@ keywords: Fusion Ring, Series
 
 # Particle labels
 
+
 # Fusion Rules
 
 # Quantum Dimensions

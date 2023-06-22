@@ -37,7 +37,7 @@ _(Frobenius-Perron theorem)_: there is a unique $$ * $$-homomorphism $$ d: \math
 The number $$ d(\psi_i) $$ is called the **Frobenius-Perron dimension** of $$ \psi_i $$, and is noted $$ \mathrm{FPdim}(\psi_i) $$. The Frobenius-Perron dimension of $$ R $$ is the number $$  \mathrm{FPdim}(R):= \sum_i \mathrm{FPdim}(\psi_i)^2 $$.
 
 # General Constructions of Fusion Rings
-There are multiple classes of fusion rings that can be constructed according to a fixed set of rules. Some of the more common ones are listed [here]({% pages/Concepts/Constructions.md%}).
+There are multiple classes of fusion rings that can be constructed according to a fixed set of rules. Some of the more common ones are listed [here]({% link pages/Concepts/Constructions.md%}).
 
 
 ## Quantum Double Constructions
