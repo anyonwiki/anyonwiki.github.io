@@ -119,6 +119,7 @@ $c = 2p(\lambda+2p)−2+2(r|2p+1) \bmod 8$.
 
 The $so(2p+1)_2$ CFTs correspond to the following values, $r=1$,
 $\kappa = (2p+1\|2) = (-1)^{p(p+1)/2}$ and $\lambda = -1$.
+These CFTs have central charge $2p$, in agreement with the fomula above.
 
 # References
 
