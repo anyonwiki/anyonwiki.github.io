@@ -47,15 +47,15 @@ For case 1, the [ $$ S $$-matrices]({% link pages/Concepts/S-Matrix.md %}) and [
 The central charge modulo 8 is given by
 
 $$
-c = \begin{cases}
-0 & \text{for $n=1 \bmod4 \wedge (\frac{p}{n}) = 1$} \\
-2 & \text{for $n=3 \bmod4 \wedge (\frac{p}{n}) = 1$} \\
-4 & \text{for $n=1 \bmod4 \wedge (\frac{p}{n}) = -1$} \\
-6 & \text{for $n=3 \bmod4 \wedge (\frac{p}{n}) = -1$} \ .
-\end{cases}
+\begin{array}{l}
+c = 0 \quad \text{for $n=1 \bmod4 \wedge (p|n) = 1$} \\
+c = 2 \quad \text{for $n=3 \bmod4 \wedge (p|n) = 1$} \\
+c = 4 \quad \text{for $n=1 \bmod4 \wedge (p|n) = -1$} \\
+c = 6 \quad \text{for $n=3 \bmod4 \wedge (p|n) = -1$}
+\end{array}
 $$
 
-Here, $$(\frac{a}{n})$$ denotes the Jacobi symbol, which arises in the study of quadratic Gauss sums, which naturally appear when calculating the central charge modulo 8.
+Here, $(a\|n)$ denotes the Jacobi symbol, which arises in the study of quadratic Gauss sums, which naturally appear when calculating the central charge modulo 8.
 
 We note that the cases with $$n$$ odd and $$p = (n-1)/2$$ correspond to $$su(n)_1$$, which has central charge $$c = n-1$$.
 
@@ -70,25 +70,34 @@ For case 2, the [ $$ S $$-matrices]({% link pages/Concepts/S-Matrix.md %}) and [
 For $$n$$ odd, the central charge modulo 8 is given by
 
 $$
+\begin{array}{l}
+c = (1-n) \bmod 8 \quad \text{for $(2p+1|n) = 1$} \\
+c = (5-n) \bmod 8 \quad \text{for $(2p+1|n) = 1$} 
+\end{array}
+$$
+
+<!--
+$$
 c = \begin{cases}
 (1-n) \bmod 8 & \text{for $(\frac{2p+1}{n}) = 1$} \\
 (5-n) \bmod 8 & \text{for $(\frac{2p+1}{n}) = -1$} \ .
 \end{cases}
 $$
+-->
 
 
 For $$n$$ even, the central charge modulo 8 is given by
 
 $$
-c = \begin{cases}
-1 & \text{for $2p+1 = 1 \bmod 4 \wedge (\frac{2n}{2p+1}) = 1$} \\
-3 & \text{for $2p+1 = 3 \bmod 4 \wedge (\frac{2n}{2p+1}) = -1$} \\
-5 & \text{for $2p+1 = 1 \bmod 4 \wedge (\frac{2n}{2p+1}) = -1$} \\
-7 & \text{for $2p+1 = 3 \bmod 4 \wedge (\frac{2n}{2p+1}) = 1$} \ .
-\end{cases}
+\begin{array}{l}
+c = 1 \quad \text{for $2p+1 = 1 \bmod 4 \wedge (2n|2p+1) = 1$} \\
+c = 3 \quad \text{for $2p+1 = 3 \bmod 4 \wedge (2n|2p+1) = -1$} \\
+c = 5 \quad \text{for $2p+1 = 1 \bmod 4 \wedge (2n|2p+1) = -1$} \\
+c = 7 \quad \text{for $2p+1 = 3 \bmod 4 \wedge (2n|2p+1) = 1$} \ .
+\end{array}
 $$
 
-Again, $$(\frac{a}{n})$$ denotes the Jacobi symbol.
+Again, $(a\|n)$ denotes the Jacobi symbol.
 
 The cases with $$n$$ even and $$p = \frac{n}{2}-1$$ correspond to $$su(n)_1$$, which has central charge $$c = n-1$$.
 
