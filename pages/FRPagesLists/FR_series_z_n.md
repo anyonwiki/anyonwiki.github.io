@@ -44,14 +44,14 @@ For case 1, the [ $$ S $$-matrices]({% link pages/Concepts/S-Matrix.md %}) and [
 | :------ | :------ |
 | $$ S_{j,k} = \frac{1}{\sqrt{n}}e^{2 \pi i \frac{2p j k}{n}}  $$ | $$ \theta_j = e^{2 \pi i \frac{p j^2}{n}}$$ |
 
-The central charge modulo 8 is given by
+The topological central charge, which is defined modulo 8, is given by
 
 $$
 \begin{array}{l}
-c = 0 \quad \text{for $n=1 \bmod4 \wedge (p|n) = 1$} \\
-c = 2 \quad \text{for $n=3 \bmod4 \wedge (p|n) = 1$} \\
-c = 4 \quad \text{for $n=1 \bmod4 \wedge (p|n) = -1$} \\
-c = 6 \quad \text{for $n=3 \bmod4 \wedge (p|n) = -1$}
+c_{\rm top} = 0 \quad \text{for $n=1 \bmod4 \wedge (p|n) = 1$} \\
+c_{\rm top} = 2 \quad \text{for $n=3 \bmod4 \wedge (p|n) = 1$} \\
+c_{\rm top} = 4 \quad \text{for $n=1 \bmod4 \wedge (p|n) = -1$} \\
+c_{\rm top} = 6 \quad \text{for $n=3 \bmod4 \wedge (p|n) = -1$}
 \end{array}
 $$
 
@@ -67,12 +67,12 @@ For case 2, the [ $$ S $$-matrices]({% link pages/Concepts/S-Matrix.md %}) and [
 | :------ | :------ |
 | $$ S_{j,k} = \frac{1}{\sqrt{n}}e^{2 \pi i \frac{(2p+1) j k}{2n}}  $$ | $$ \theta_j = e^{2 \pi i \bigl(\frac{(2p+1) j^2}{2n} + \frac{n j}{2}\bigr)}$$ |
 
-For $$n$$ odd, the central charge modulo 8 is given by
+For $$n$$ odd, the topological central charge is given by
 
 $$
 \begin{array}{l}
-c = (1-n) \bmod 8 \quad \text{for $(2p+1|n) = 1$} \\
-c = (5-n) \bmod 8 \quad \text{for $(2p+1|n) = 1$} 
+c_{\rm top} = (1-n) \bmod 8 \quad \text{for $(2p+1|n) = 1$} \\
+c_{\rm top} = (5-n) \bmod 8 \quad \text{for $(2p+1|n) = 1$} 
 \end{array}
 $$
 
@@ -86,14 +86,14 @@ $$
 -->
 
 
-For $$n$$ even, the central charge modulo 8 is given by
+For $$n$$ even, the topological central charge is given by
 
 $$
 \begin{array}{l}
-c = 1 \quad \text{for $2p+1 = 1 \bmod 4 \wedge (2n|2p+1) = 1$} \\
-c = 3 \quad \text{for $2p+1 = 3 \bmod 4 \wedge (2n|2p+1) = -1$} \\
-c = 5 \quad \text{for $2p+1 = 1 \bmod 4 \wedge (2n|2p+1) = -1$} \\
-c = 7 \quad \text{for $2p+1 = 3 \bmod 4 \wedge (2n|2p+1) = 1$} \ .
+c_{\rm top} = 1 \quad \text{for $2p+1 = 1 \bmod 4 \wedge (2n|2p+1) = 1$} \\
+c_{\rm top} = 3 \quad \text{for $2p+1 = 3 \bmod 4 \wedge (2n|2p+1) = -1$} \\
+c_{\rm top} = 5 \quad \text{for $2p+1 = 1 \bmod 4 \wedge (2n|2p+1) = -1$} \\
+c_{\rm top} = 7 \quad \text{for $2p+1 = 3 \bmod 4 \wedge (2n|2p+1) = 1$} \ .
 \end{array}
 $$
 
