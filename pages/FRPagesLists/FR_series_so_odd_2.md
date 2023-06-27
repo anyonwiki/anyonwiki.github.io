@@ -11,7 +11,7 @@ These fusion rings are called metaplectic fusion rings. We assume that $p\geq 1$
 
 The fusion ring has the following basis
 \\[
-  ( \mathbf{1}, \epsilon, \psi_+, \psi_-, \phi_0, \ldots, \phi_{p-1}),
+  ( \mathbf{1}, \epsilon, \psi_+, \psi_-, \phi_1, \ldots, \phi_{p}),
 \\]
 of $p + 4$ elements. The particles have the following quantum dimensions
 
@@ -56,13 +56,13 @@ $$
 \begin{array}{l}
 \phi_i \times \phi_i =
 \begin{cases}
-\mathbf{1} + \epsilon + \phi_{2i+1} & \text{if $2i \leq p-2$}\\
-\mathbf{1} + \epsilon + \phi_{2p-2-2i} & \text{if $2i > p-2$}\\
+\mathbf{1} + \epsilon + \phi_{2i} & \text{if $2i \leq p$}\\
+\mathbf{1} + \epsilon + \phi_{2p-2i} & \text{if $2i > p$}\\
 \end{cases} \\
 \phi_i \times \phi_{j\neq i} =
 \begin{cases}
-\phi_{|i-j|-1} +  \phi_{i+j+1} & \text{if $i+j \leq p-2$}\\
-\phi_{|i-j|-1} +  \phi_{2p-i-j-2} & \text{if $i+j > p-2$}
+\phi_{|i-j|} +  \phi_{i+j} & \text{if $i+j \leq p$}\\
+\phi_{|i-j|} +  \phi_{2p-i-j} & \text{if $i+j > p$}
 \end{cases}
 \end{array}
 $$
@@ -83,15 +83,15 @@ $\lambda = +1 \leftrightarrow \lambda = -1$ merely inverts the $R$-symbols.
 ## $S$-matrix
 
 To specify the modular $S$-matrix, we state the elements of
-$\check{S} = 2\sqrt{2p+1} S$.
+$\tilde{S} = 2\sqrt{2p+1} S$.
 
 $$
 \begin{array}{llll}
-\check{S}_{\mathbf{1},\mathbf{1}} = 1 \\
-\check{S}_{\mathbf{1},\epsilon} = 1 & \check{S}_{\epsilon,\epsilon} = 1\\
-\check{S}_{\mathbf{1},\psi_\pm} = \sqrt{2p+1} & \check{S}_{\epsilon,\psi_\pm} = -\sqrt{2p+1} & \check{S}_{\psi_\pm,\psi_\pm} = -\kappa \sqrt{2p+1} (2|2p+1) \\
-& & \check{S}_{\psi_\pm,\psi_\mp} = \kappa \sqrt{2p+1} (2|2p+1)\\
-\check{S}_{\mathbf{1},\phi_i} = 2 & \check{S}_{\epsilon,\phi_i} = 2 & \check{S}_{\psi_\pm,\phi_i} = 0 & \check{S}_{\phi_i,\phi_j} = 4 \cos\bigl(\frac{2 \pi (i+1)(j+1)r}{2p+1}\bigr)
+\tilde{S}_{\mathbf{1},\mathbf{1}} = 1 \\
+\tilde{S}_{\mathbf{1},\epsilon} = 1 & \tilde{S}_{\epsilon,\epsilon} = 1\\
+\tilde{S}_{\mathbf{1},\psi_\pm} = \sqrt{2p+1} & \tilde{S}_{\epsilon,\psi_\pm} = -\sqrt{2p+1} & \tilde{S}_{\psi_\pm,\psi_\pm} = -\kappa \sqrt{2p+1} (2|2p+1) \\
+& & \tilde{S}_{\psi_\pm,\psi_\mp} = \kappa \sqrt{2p+1} (2|2p+1)\\
+\tilde{S}_{\mathbf{1},\phi_i} = 2 & \tilde{S}_{\epsilon,\phi_i} = 2 & \check{S}_{\psi_\pm,\phi_i} = 0 & \tilde{S}_{\phi_i,\phi_j} = 4 \cos\bigl(\frac{2 \pi ijr}{2p+1}\bigr)
 \end{array}
 $$
 
@@ -106,20 +106,20 @@ $$
 \theta_{\mathbf{1}} = 1 \\
 \theta_{\epsilon} = 1 \\
 \theta_{\psi_\pm} = \mp (-1)^{\frac{\kappa \lambda r}{2}} e^{\frac{i \pi \lambda r}{4}( (2p+1|r) + \kappa(2|2p+1) -p)} \\
-\theta_{\phi_j} = (-1)^{j+1} e^{i \pi \frac{\lambda r (j+1)^2}{2p+1}}
+\theta_{\phi_j} = (-1)^{j} e^{i \pi \frac{\lambda r j^2}{2p+1}}
 \end{array}
 $$
 
 ## Central charge
 
 The topological central charge is given by
-$c = 2p(\lambda+2p)−2+2(r|2p+1) \bmod 8$.
+$c_{\rm top} = 2p(\lambda+2p)−2+2(r|2p+1) \bmod 8$.
 
 ## $so(2p+1)_2$ CFT
 
 The $so(2p+1)_2$ CFTs correspond to the following values, $r=1$,
 $\kappa = (2p+1\|2) = (-1)^{p(p+1)/2}$ and $\lambda = -1$.
-These CFTs have central charge $2p$, in agreement with the fomula above.
+These CFTs have central charge $c=2p$, in agreement with the fomula above.
 
 # References
 
