@@ -181,6 +181,7 @@ blockquote {
 }
 
 blockquote p:last-child {
+  font-size: 0.8em;
   margin-bottom: 0;
 }
 
@@ -210,6 +211,7 @@ img {
 
 /* Tables*/
 table {
+  font-size: 0.8em;
   margin-bottom: 1rem;
   width: 100%;
   border: 1px solid #e5e5e5;
