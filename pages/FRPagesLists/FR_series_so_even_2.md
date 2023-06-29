@@ -15,17 +15,7 @@ $$
 (\mathbf{1}, \epsilon, \eta_+, \eta_-, \psi_+, \psi_-, \bar\psi_+, \bar\psi_-, \phi_1, \ldots, \phi_p )
 $$
 
-<!--
-\\[
-  ( \mathbf{1}, \Theta, \Phi^1, \Phi^2, \sigma^1, \sigma^2, \tau^1, \tau^2, \phi_1, \ldots, \phi_{p - 1}),
-\\]
--->
-
 of $p + 7$ elements.
-
-<!--
-To specify the fusion rules, we make use of an alternative notation for the fields, namely
--->
 
 The particles have the following quantum dimensions
 
@@ -56,77 +46,42 @@ In both cases the multiplication is commutative, and can more easily be describe
 * $\mathbf{1}, \epsilon, \eta_+,$ and $\eta_-$ form a $\bbz_4$ fusion ring where $\epsilon$ squares to the unit.
 * The action of this $\bbz_4$ fusion ring permutes the particles within their blocks as follows:
 
-<!--
-$$
-\begin{array}{lll}
-\Theta \times \sigma^i = \tau^i         & \Phi^1 \times \sigma^1  = \sigma^2  & \Phi^2 \times \sigma^1=\tau^2 \\
-\Theta \times \tau^i   = \sigma^i       & \Phi^1 \times \sigma^2  = \tau^1    & \Phi^2 \times \sigma^2=\sigma^1 \\
-\Theta \times \phi_\lambda=\phi_\lambda & \Phi^1 \times \tau^1    = \tau^2    & \Phi^2 \times \tau^1=\sigma^2 \\
-\Phi^i \times \phi_\lambda  = \phi_{p-\lambda} & \Phi^1 \times \tau^2 = \sigma^1  & \Phi^2 \times \tau^2=\tau^1
-\end{array}
-$$
-
-In terms of the other notation, these fusion rules read
--->
-
 $$
 \begin{array}{lll}
 \epsilon \times \psi_\pm = \bar\psi_\pm & \eta_+ \times \psi_+ = \psi_- & \eta_- \times \psi_+ = \bar\psi_- \\
 \epsilon \times \bar\psi_\pm = \psi_\pm & \eta_+ \times \psi_- = \bar\psi_+ & \eta_- \times \psi_- = \psi_+ \\
-\epsilon \times \phi_\lambda = \phi_\lambda & \eta_+ \times \bar\psi_+ = \bar\psi_- & \eta_- \times \psi_+ = \bar\psi_- \\
+\epsilon \times \phi_j = \phi_j & \eta_+ \times \bar\psi_+ = \bar\psi_- & \eta_- \times \bar\psi_+ = \psi_- \\
 \eta_{\pm} \times \phi_j = \phi_{p-j} & \eta_+ \times \bar\psi_- = \psi_+ & \eta_- \times \bar\psi_- = \bar\psi_+ 
 \end{array}
 $$
 
 * The particles $\psi_+, \psi_-, \bar\psi_+$ and $\bar\psi_-$ multiply among each other as follows
 
-<!--
 $$
 \begin{array}{ll}
-\sigma^1 \times \sigma^1=\tau^1 \times \tau^1=\Phi^2+\sum_{\lambda \text { odd }} \phi_\lambda &
-\sigma^1 \times \tau^1=\Phi^1+\sum_{\lambda \text { odd }} \phi_\lambda \\
-\sigma^2 \times \sigma^2=\tau^2 \times \tau^2=\Phi^1+\sum_{\lambda \text { odd }} \phi_\lambda &
-\sigma^2 \times \tau^2=\Phi^2+\sum_{\lambda \text { odd }} \phi_\lambda \\
-\sigma^1 \times \sigma^2=\tau^1 \times \tau^2=\mathbf{1}+\sum_{\lambda \text { even }} \phi_\lambda &
-\sigma^1 \times \tau^2=\sigma^2 \times \tau^1=\Theta+\sum_{\lambda \text { even }} \phi_\lambda \\
-\end{array}
-$$
--->
-
-$$
-\begin{array}{ll}
-\psi_\pm \times \psi_\pm = \bar\psi_\pm \times \bar\psi_\pm = \eta_\mp + \sum_{j \text { odd }} \phi_j & 
-\psi_\pm \times \bar\psi_\pm = \eta_\pm + \sum_{j \text { odd }} \phi_j \\
-\psi_\pm \times \psi_\mp = \bar\psi_\pm \times \bar\psi_\mp = \mathbf{1} + \sum_{j \text { even }} \phi_j &
-\psi_\pm \times \bar\psi_\mp = \epsilon + \sum_{j \text { even }} \phi_j
+\psi_\pm \times \psi_\pm = \bar\psi_\pm \times \bar\psi_\pm = \eta_\mp + \sum_{j, \text{odd}} \phi_j & 
+\psi_\pm \times \bar\psi_\pm = \eta_\pm + \sum_{j, \text{odd}} \phi_j \\
+\psi_\pm \times \psi_\mp = \bar\psi_\pm \times \bar\psi_\mp = \mathbf{1} + \sum_{j, \text{even}} \phi_j &
+\psi_\pm \times \bar\psi_\mp = \epsilon + \sum_{j, \text{even}} \phi_j
 \end{array}
 $$
 
-* and they multiply with the $\phi_\lambda$ particles according to the following rules
-
-<!--
-$$
-\begin{array}{l}
-\sigma^1 \times \phi_{\lambda, \text { odd }}=\tau^1 \times \phi_{\lambda, \text { odd }}=\sigma^2 \times \phi_{\lambda, \text { even }}=\tau^2 \times \phi_{\lambda, \text { even }}=\sigma^2+\tau^2 \\
-\sigma^1 \times \phi_{\lambda, \text { even }}=\tau^1 \times \phi_{\lambda, \text { even }}=\sigma^2 \times \phi_{\lambda, \text { odd }}=\tau^2 \times \phi_{\lambda, \text { odd }}=\sigma^1+\tau^1 \\
-\end{array}
-$$
--->
+* and they multiply with the $\phi_j$ particles according to the following rules
 
 $$
 \begin{array}{l}
-\psi_+ \times \phi_{j, \text { odd }} =
-\bar\psi_+ \times \phi_{j, \text { odd }} =
-\psi_- \times \phi_{j, \text { even }} =
-\bar\psi_- \times \phi_{j, \text { even }} = \psi_- + \bar\psi_- \\
-\psi_+ \times \phi_{j, \text { even }} =
-\bar\psi_+ \times \phi_{j, \text { even }} =
-\psi_- \times \phi_{j, \text { odd }} =
-\bar\psi_- \times \phi_{j, \text { odd }} = \psi_+ + \bar\psi_+
+\psi_+ \times \phi_{j, \text{odd}} =
+\bar\psi_+ \times \phi_{j, \text{odd}} =
+\psi_- \times \phi_{j, \text{even}} =
+\bar\psi_- \times \phi_{j, \text{even}} = \psi_- + \bar\psi_- \\
+\psi_+ \times \phi_{j, \text{even}} =
+\bar\psi_+ \times \phi_{j, \text{even}} =
+\psi_- \times \phi_{j, \text{odd}} =
+\bar\psi_- \times \phi_{j, \text{odd}} = \psi_+ + \bar\psi_+
 \end{array}
 $$
 
-* The $\phi_\lambda$ particles multiply among themselves according to the following rules (recall that $p$ is odd)
+* The $\phi_j$ particles multiply among themselves according to the following rules (recall that $p$ is odd)
 
 $$
 \begin{array}{l}
@@ -148,61 +103,124 @@ $$
 
 ## $p$ even
 
-*  $\mathbf{1}, \Theta, \Phi^1,$ and $\Phi^2$ form a $\bbz_2 \times \bbz_2$ fusion ring.
+*  $\mathbf{1}, \epsilon, \eta_+,$ and $\eta_-$ form a $\bbz_2 \times \bbz_2$ fusion ring.
 * The action of this $\bbz_2 \times \bbz_2$ fusion ring permutes the particles within their blocks as follows:
 
 $$
 \begin{array}{lll}
-\Theta \times \sigma^{i}    = \tau^{i}      & \Phi^{1} \times \sigma^{1} = \tau^{1}   & \Phi^{2} \times \sigma^{1} = \sigma^{1} \\
-\Theta \times \tau^{i}      = \sigma^{i}    & \Phi^{1} \times \sigma^{2} = \sigma^{2} & \Phi^{2} \times \sigma^{2} = \tau^{2} \\
-\Theta \times \phi_\lambda  = \phi_\lambda  & \Phi^{1} \times \tau^{1} = \sigma^{1} & \Phi^{2} \times \tau^{1} = \tau^{1} \\
-\Phi^{i} \times \phi_\lambda = \phi_{p-\lambda} & \Phi^{1} \times \tau^{2} = \tau^{2} & \Phi^{2} \times \tau^{2} = \sigma^{2}
+\epsilon \times \psi_\pm = \bar\psi_\pm & \eta_+ \times \psi_+ = \bar\psi_+ & \eta_- \times \psi_+ = \psi_+ \\
+\epsilon \times \bar\psi_\pm = \psi_\pm & \eta_+ \times \psi_- = \psi_- & \eta_- \times \psi_- = \bar\psi_- \\
+\epsilon \times \phi_j  = \phi_j  & \eta_+ \times \bar\psi_+ = \psi_+ & \eta_- \times \bar\psi_+ = \bar\psi_+ \\
+\eta_\pm \times \phi_j = \phi_{p-j} & \eta_+ \times \bar\psi_- = \bar\psi_- & \eta_- \times \bar\psi_- = \psi_-
 \end{array}
 $$
 
-* The particles $\sigma^1, \sigma^2, \tau^1,$ and $ \tau^2$ multiply among each other as follows
+* The particles $\psi_+, \psi_-, \bar\psi_+$ and $\bar\psi_-$ multiply among each other as follows
 
 $$
 \begin{array}{ll}
-\sigma^{1} \times \sigma^{1} = \tau^{1} \times \tau^{1} = \mathbf{1} + \Phi^{2} + \sum_{\lambda\;{\rm even}} \phi_\lambda &
-\sigma^{1} \times \tau^{1} = \Theta + \Phi^{1} + \sum_{\lambda\;{\rm even}} \phi_\lambda \\
-\sigma^{2} \times \sigma^{2} = \tau^{2} \times \tau^{2} = \mathbf{1} + \Phi^{1} + \sum_{\lambda\;{\rm even}} \phi_\lambda &
-\sigma^{2} \times \tau^{2} = \Theta + \Phi^{2} + \sum_{\lambda\;{\rm even}} \phi_\lambda \\
-\sigma^{1} \times \sigma^{2} = \tau^{1} \times \tau^{2} = \sum_{\lambda\;{\rm odd}} \phi_\lambda &
-\sigma^{1} \times \tau^{2} = \sigma^{2} \times \tau^{1} = \sum_{\lambda\;{\rm odd}} \phi_\lambda \end{array}
-$$
-
-* and they act on the $\phi_\lambda$ particles as follows
-
-$$
-\begin{array}{l}
-\sigma^{1} \times \phi_{\lambda,\, {\rm odd}} = \tau^{1} \times \phi_{\lambda,\, {\rm odd}} = \sigma^{2} \times \phi_{\lambda,\, {\rm even}} = \tau^{2} \times \phi_{\lambda,\, {\rm even}} =  \sigma^{2} + \tau^{2} \\
-\sigma^{1} \times \phi_{\lambda,\, {\rm even}} =  \tau^{1} \times \phi_{\lambda,\, {\rm even}} = \sigma^{2} \times \phi_{\lambda,\, {\rm odd}} =  \tau^{2} \times \phi_{\lambda,\, {\rm odd}} =  \sigma^{1} + \tau^{1}
+\psi_\pm \times \psi_\pm = \bar\psi_\pm \times \bar\psi_\pm = \mathbf{1} + \eta_\mp + \sum_{j, \text{even}} \phi_j &
+\psi_\pm \times \bar\psi_\pm = \epsilon + \eta_\pm + \sum_{j, \text{even}} \phi_j \\
+\psi_\pm \times \psi_\mp = \bar\psi_\pm \times \bar\psi_\mp = \sum_{j, \text{odd}} \phi_j &
+\psi_\pm \times \bar\psi_\mp = \sum_{j, \text{odd}} \phi_j
 \end{array}
 $$
 
-* Finally, the last fusion rules between the fields $\phi_\lambda$ read
+* and they act on the $\phi_j$ particles as follows
 
 $$
 \begin{array}{l}
-\phi_\lambda \times \phi_\lambda =
+\psi_+ \times \phi_{j, \text{odd}} = \bar\psi_+ \times \phi_{j, \text{odd}} = \psi_- \times \phi_{j, \text{even}} = \bar\psi_- \times \phi_{j, \text{even}} =  \psi_- + \bar\psi_- \\
+\psi_+ \times \phi_{j, \text{even}} =  \bar\psi_+ \times \phi_{j, \text{even}} = \psi_- \times \phi_{j, \text{odd}} =  \bar\psi_- \times \phi_{j, \text{odd}} =  \psi_+ + \bar\psi_+
+\end{array}
+$$
+
+* Finally, the last fusion rules between the fields $\phi_j$ read
+
+$$
+\begin{array}{l}
+\phi_j \times \phi_j =
 \begin{cases}
-\mathbf{1} + \Theta + \phi_{2\lambda} & \text{if $2\lambda < p$}\\
-\mathbf{1} + \Theta + \Phi^{1} + \Phi^{2} & \text{if $2\lambda = p$}\\
-\mathbf{1} + \Theta + \phi_{2(p-\lambda)} & \text{if $2\lambda > p$}\\
+\mathbf{1} + \epsilon + \phi_{2j} & \text{if $2j < p$}\\
+\mathbf{1} + \epsilon + \eta_+ + \eta_- & \text{if $2j = p$}\\
+\mathbf{1} + \epsilon + \phi_{2p-2j} & \text{if $2j > p$}\\
 \end{cases} \\
-\phi_\lambda \times \phi_\mu =
+\phi_j \times \phi_{k\neq j} =
 \begin{cases}
-\phi_{|\lambda-\mu|} +  \phi_{\lambda+\mu} & \text{if $\lambda + \mu < p$}\\
-\phi_{|\lambda-\mu|} +  \phi_{2p-\lambda-\mu} & \text{if $\lambda + \mu > p$}
-\end{cases} \\
-\phi_\lambda \times \phi_{p-\lambda} = \Phi^{1} + \Phi^{2} + \phi_{|p-2\lambda|} \\
+\phi_{|j-k|} +  \phi_{j + k} & \text{if $j + k < p$}\\
+\phi_{|j-k|} +  \eta_+ + \eta_- & \text{if $j + k = p$}\\
+\phi_{|j-k|} +  \phi_{2p - j - k} & \text{if $j + k > p$}
+\end{cases}
 \end{array}
 $$
 
 
 # Modular Data
-The modular $S$-matrix can be written in a compact way in the following form.
+
+We concentrate (for now) on a particular example of the modular data,
+namely the case corresponding to the $c=1$ $\mathbf{Z}_2$ orbifold models.
+For these models, we give the elements of the matrix $\tilde{S} = \sqrt{8p} S$,
+where $S$ is the modular $S$-matrix.
+
+$$
+\begin{array}{llllll}
+\tilde{S}_{\mathbf{1},\mathbf{1}} = 1
+\\
+\tilde{S}_{\mathbf{1},\epsilon} = 1 &
+\tilde{S}_{\epsilon,\epsilon} = 1 
+\\
+\tilde{S}_{\mathbf{1},\eta_\pm} = 1 &
+\tilde{S}_{\epsilon,\eta_\pm} = 1 &
+\tilde{S}_{\eta_\pm,\eta_\pm} = (-1)^p 
+\\
+& & \tilde{S}_{\eta_\pm,\eta_\mp} = (-1)^p
+\\
+\tilde{S}_{\mathbf{1},\psi_\pm} = \sqrt{p} &
+\tilde{S}_{\epsilon,\psi_\pm} = -\sqrt{p} &
+\tilde{S}_{\eta_\pm,\psi_\pm} = -\sqrt{p} e^{-i\pi p/2} &
+\tilde{S}_{\psi_\pm,\psi_\pm} = \sqrt{p/2} (1 + e^{-i\pi p/2})
+\\
+& & \tilde{S}_{\eta_\pm,\psi_\mp} = \sqrt{p} e^{-i\pi p/2} &
+\tilde{S}_{\psi_\pm,\psi_\mp} = \sqrt{p/2} (1 - e^{-i\pi p/2})
+\\
+\tilde{S}_{\mathbf{1},\bar\psi_\pm} = \sqrt{p} &
+\tilde{S}_{\epsilon,\bar\psi_\pm} = -\sqrt{p} &
+\tilde{S}_{\eta_\pm,\bar\psi_\pm} = -\sqrt{p} e^{-i\pi p/2} &
+\tilde{S}_{\psi_\pm,\bar\psi_\pm} = -\sqrt{p/2} (1 + e^{-i\pi p/2}) &
+\tilde{S}_{\bar\psi_\pm,\bar\psi_\pm} = \sqrt{p/2} (1 + e^{-i\pi p/2}) &
+\\
+& & \tilde{S}_{\eta_\pm,\bar\psi_\mp} = \sqrt{p} e^{-i\pi p/2} &
+\tilde{S}_{\psi_\pm,\bar\psi_\mp} = -\sqrt{p/2} (1 - e^{-i\pi p/2}) &
+\tilde{S}_{\bar\psi_\pm,\bar\psi_\mp} = \sqrt{p/2} (1 - e^{-i\pi p/2})
+\\
+\tilde{S}_{\mathbf{1},\phi_j} = 2 & 
+\tilde{S}_{\epsilon,\phi_j} = 2 &
+\tilde{S}_{\eta_\pm,\phi_j} = (-1)^j \ 2 &
+\tilde{S}_{\psi_\pm,\phi_j} = 0 &
+\tilde{S}_{\bar\psi_\pm,\phi_j} = 0 &
+\tilde{S}_{\phi_j,\phi_k} = 4 \cos(\pi j k/p) 
+\end{array}
+$$
+
+We state the twist factors in terms of the scaling dimensions $h_X$ of the
+orbifold models, via $\theta_X = e^{2\pi i h_X}$. The scaling dimensions are
+given by
+
+$$
+\begin{array}{llllll}
+h_\mathbf{1} = 0 &
+h_\epsilon = 1 &
+h_{\eta_\pm} = \frac{p}{4} &
+h_{\psi_\pm} = \frac{1}{16} &
+h_{\bar\psi_\pm} = \frac{9}{16} &
+h_{\phi_j} = \frac{j^2}{4p}
+\end{array}
+$$
+
+The corresponding topological central charge is given by $c_{\rm top} = 1$, which
+direclty corresponds to the central charge $c=1$ of the orbifold models.
+
+The $S$-matrix takes the form
 
 $$
 [S] = \frac{1}{\sqrt{8p}}
@@ -220,7 +238,7 @@ where the matrices coresponding to $a,b,c$ have entries
 
 $$
 \begin{array}{l}
-[a]^i_j = \sqrt{\frac{p}{2}} (1+(2\delta^i_j-1)) e^{-\pi i p/2} \\
+[a]^i_j = \sqrt{\frac{p}{2}} (1+(2\delta^i_j-1) e^{-\pi i p/2}) \\
 [b]^i_j = (-1)^{p+\delta^i_j} \sqrt{p} e^{\pi i p/2} \\
 [c]^\lambda_\mu = 4\cos\frac{\pi \lambda\mu}{p}
 \end{array}
