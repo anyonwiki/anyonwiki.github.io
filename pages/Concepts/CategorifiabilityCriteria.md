@@ -3,12 +3,12 @@ layout: page
 title: Categorifiability Criteria
 ---
 
-In the criteria on this page we use the following notation: 
+In the criteria on this page we use the following notation:
 
 * $$R$$: a fusion ring with basis $$\left(b_i\right)$$ and structure constants $$N_{ij}^k$$
 * $$X_i$$: the fusion matrices, i.e. $$[X_i]^k_j = N_{ij}^k$$
 * $$A := \sum_i X_i X_i^* $$ (with $$X_i^* := X_{i^*} $$), and with eigenvalues $$(c_j)$$. These are also called the formal codegrees of a fusion ring.
-* $$\lambda$$: the matrix that simultaneously diagonalizes all $$X_i$$ (if it exists), i.e. $$[\lambda]^i_j$$ are the characters of $$R$$. 
+* $$\lambda$$: the matrix that simultaneously diagonalizes all $$X_i$$ (if it exists), i.e. $$[\lambda]^i_j$$ are the characters of $$R$$.
 
 
 ## Criteria for General Categorification
@@ -55,7 +55,7 @@ ___
 ___
 
 **Theorem**{:.label #PVDCC}
- _(Pivotal version of Drinfeld center criterion)_ 
+ _(Pivotal version of Drinfeld center criterion)_
 Let $$R$$ be commutative. If $$R$$ admits a complex pivotal categorification, then there exists $$j$$ such that for all $$i, c_j / c_i$$ is an algebraic integer.
 
 ___
@@ -72,11 +72,11 @@ ___
 
 **Theorem**{:.label #CSPC}
  _(commutative Schur product criterion)_
-Let $$R$$ be commutative with $$[\lambda]^i_1=\max _j\left(\left|\lambda_{i, j}\right|\right)$$. 
-If $$R$$ admits a unitary categorification, then for all triples $$\left(j_1, j_2, j_3\right)$$ we have 
+Let $$R$$ be commutative with $$[\lambda]^i_1=\max _j\left(\left|\lambda_{i, j}\right|\right)$$.
+If $$R$$ admits a unitary categorification, then for all triples $$\left(j_1, j_2, j_3\right)$$ we have
 
 $$
-\sum_i \frac{ [\lambda]^i_{j_1} [\lambda]^i_{j_2} [\lambda]^i_{j_3} }{[\lambda]^i_1} \geq 0 
+\sum_i \frac{ [\lambda]^i_{j_1} [\lambda]^i_{j_2} [\lambda]^i_{j_3} }{[\lambda]^i_1} \geq 0
 $$
 
 ___
@@ -86,7 +86,7 @@ Note that [Theorem](#CSPC) is the corollary of a (less tractable) noncommutative
 
 ___
 
-**Theorem**{:.label #NCSPC} 
+**Theorem**{:.label #NCSPC}
  _(Non-commutative Schur product criterion)_  A (possibly non-commutative) fusion ring $$R$$ is unitarily categorifiable if and only if for all triples of irreducible unital $$*$$-representations $$\left(\pi_s, V_s\right)_{s=1,2,3}$$ of $$R$$ over $$\mathbb{C}$$, and for all $$v_s \in V_s$$, we have
 
 $$
@@ -98,4 +98,3 @@ ___
 # References
 
 Many of these cirteria are listed in [Classification of Grothendieck rings of complex fusion categories of multiplicity one up to rank six](https://link.springer.com/content/pdf/10.1007/s11005-022-01542-1.pdf)
-
