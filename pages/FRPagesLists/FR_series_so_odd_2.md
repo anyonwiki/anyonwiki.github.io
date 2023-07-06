@@ -20,7 +20,7 @@ of $p + 4$ elements. The particles have the following quantum dimensions
 |$\mathbf{1}$| $1$ |
 |$\epsilon    $| $1$ |
 |$\psi_\pm  $| $\sqrt{2p+1}$|
-|$\phi_i    $| $2$ |
+|$\phi_j    $| $2$ |
 
 Thus we have $\mathcal{D}_{FP}^2 = 4(2p+1)$.
 
@@ -34,7 +34,7 @@ $$
 \begin{array}{l}
 \epsilon \times \epsilon = \mathbf{1} \\
 \epsilon \times \psi_\pm =\psi_\mp \\
-\epsilon \times \phi_i = \phi_i
+\epsilon \times \phi_j = \phi_j
 \end{array}
 $$
 
@@ -42,11 +42,11 @@ $$
 
 $$
 \begin{array}{l}
-\psi_\pm \times \psi_\pm = \mathbf{1} + \sum_i \phi_i 
+\psi_\pm \times \psi_\pm = \mathbf{1} + \sum_j \phi_j 
 \\
-\psi_\pm \times \psi_\mp = \epsilon + \sum_i \phi_i
+\psi_\pm \times \psi_\mp = \epsilon + \sum_j \phi_j
 \\
-\psi_\pm \times \phi_i = \psi_\pm + \psi_\mp
+\psi_\pm \times \phi_j = \psi_+ + \psi_-
 \end{array}
 $$
 
@@ -54,15 +54,15 @@ $$
 
 $$
 \begin{array}{l}
-\phi_i \times \phi_i =
+\phi_j \times \phi_j =
 \begin{cases}
-\mathbf{1} + \epsilon + \phi_{2i} & \text{if $2i \leq p$}\\
-\mathbf{1} + \epsilon + \phi_{2p-2i} & \text{if $2i > p$}\\
+\mathbf{1} + \epsilon + \phi_{2j} & \text{if $2j \leq p$}\\
+\mathbf{1} + \epsilon + \phi_{2p-2j} & \text{if $2j > p$}\\
 \end{cases} \\
-\phi_i \times \phi_{j\neq i} =
+\phi_j \times \phi_{k \neq j} =
 \begin{cases}
-\phi_{|i-j|} +  \phi_{i+j} & \text{if $i+j \leq p$}\\
-\phi_{|i-j|} +  \phi_{2p-i-j} & \text{if $i+j > p$}
+\phi_{|j-k|} +  \phi_{j+k} & \text{if $j+k \leq p$}\\
+\phi_{|j-k|} +  \phi_{2p-j-k} & \text{if $j+k > p$}
 \end{cases}
 \end{array}
 $$
@@ -91,7 +91,7 @@ $$
 \tilde{S}_{\mathbf{1},\epsilon} = 1 & \tilde{S}_{\epsilon,\epsilon} = 1\\
 \tilde{S}_{\mathbf{1},\psi_\pm} = \sqrt{2p+1} & \tilde{S}_{\epsilon,\psi_\pm} = -\sqrt{2p+1} & \tilde{S}_{\psi_\pm,\psi_\pm} = -\kappa \sqrt{2p+1} (2|2p+1) \\
 & & \tilde{S}_{\psi_\pm,\psi_\mp} = \kappa \sqrt{2p+1} (2|2p+1)\\
-\tilde{S}_{\mathbf{1},\phi_i} = 2 & \tilde{S}_{\epsilon,\phi_i} = 2 & \check{S}_{\psi_\pm,\phi_i} = 0 & \tilde{S}_{\phi_i,\phi_j} = 4 \cos\bigl(\frac{2 \pi ijr}{2p+1}\bigr)
+\tilde{S}_{\mathbf{1},\phi_j} = 2 & \tilde{S}_{\epsilon,\phi_j} = 2 & \tilde{S}_{\psi_\pm,\phi_j} = 0 & \tilde{S}_{\phi_j,\phi_k} = 4 \cos\bigl(\frac{2 \pi jkr}{2p+1}\bigr)
 \end{array}
 $$
 
