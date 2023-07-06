@@ -11,3 +11,4 @@ Some pages that are currently being worked on:
 * [List of Small Multiplicity Free Fusion Rings]({% link pages/Lists/losmffr.md %})
 * [List of Series of Fusion Rings]({% link pages/Lists/lofrseries.md %})
 * [Categorifiability Criteria]({% link pages/Concepts/CategorifiabilityCriteria.md %})
+* [Software]({% link pages/Lists/Software.md %})
