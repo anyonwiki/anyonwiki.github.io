@@ -8,11 +8,11 @@ The list below contains series of interesting fusion rings, mainly associated wi
 
 | Name | Condition | Rank    | $$\mathcal{D}_{FP}^2$$ | FC      | PFC     | UFC     | BFC     | MFC     |
 | :------ | :------ | :------ | :------ | :------ | :------ | :------ | :------ | :------ | 
-| [ $$ \mathbb{Z}_n$$ ]({% link pages/FRPagesLists/FR_series_z_n.md %}) | $$ n\geq 1 $$ |  $$n$$       | $$n$$ | True    | True    | True    | True    | True    |
-| [$$ su(2)_k $$]({% link pages/FRPagesLists/FR_series_su_2_k.md %}) |  $$ k\geq 1 $$ | $$ k+1 $$ | $$ \frac{k+2}{2\sin^2(\frac{\pi}{k+2})} $$ | True    | True    | True    | True    | True    |
-| [$$ su(n)_2$$]({% link pages/FRPagesLists/FR_series_su_n_2.md %}) | $$ n \geq 2 $$ | $$ \frac{n(n+1)}{2}$$| $$ \frac{n(n+2)}{4\sin^2(\frac{\pi}{n+2})} $$ | True | True | True | True | True
-| [$$ so(2p+1)_2 $$]({% link pages/FRPagesLists/FR_series_so_odd_2.md %}) |  $$ p\geq 1 $$ | $$ p+4 $$ | $$ 8p+4 $$ | True    | True    | True    | True    | True    |
-| [$$ so(2p)_2 $$]({% link pages/FRPagesLists/FR_series_so_even_2.md %}) | $$ p\geq 1 $$ |  $$ p+7 $$ | $$ 8p $$ | True    | True    | True    | True    | True    |
+| [ $$ \mathbb{Z}_n$$ ]({% link pages/FRPagesLists/FR_series_z_n.md %}) | $$ n\geq 1 $$ |  $$n$$       | $$n$$ | ✓    | ✓    | ✓    | ✓    | ✓    |
+| [$$ su(2)_k $$]({% link pages/FRPagesLists/FR_series_su_2_k.md %}) |  $$ k\geq 1 $$ | $$ k+1 $$ | $$ \frac{k+2}{2\sin^2(\frac{\pi}{k+2})} $$ | ✓    | ✓    | ✓    | ✓    | ✓    |
+| [$$ su(n)_2$$]({% link pages/FRPagesLists/FR_series_su_n_2.md %}) | $$ n \geq 2 $$ | $$ \frac{n(n+1)}{2}$$| $$ \frac{n(n+2)}{4\sin^2(\frac{\pi}{n+2})} $$ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [$$ so(2p+1)_2 $$]({% link pages/FRPagesLists/FR_series_so_odd_2.md %}) |  $$ p\geq 1 $$ | $$ p+4 $$ | $$ 8p+4 $$ | ✓    | ✓    | ✓    | ✓    | ✓    |
+| [$$ so(2p)_2 $$]({% link pages/FRPagesLists/FR_series_so_even_2.md %}) | $$ p\geq 1 $$ |  $$ p+7 $$ | $$ 8p $$ | ✓    | ✓    | ✓    | ✓    | ✓    |
 
 
  
