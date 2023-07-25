@@ -4,7 +4,6 @@ Quit[]
 
 
 Needs[ "WikiTools`", FileNameJoin[{NotebookDirectory[],"WikiTools.wl"}] ]
-PacletDirectoryLoad["~/Projects"]
 <<Anyonica`
 
 
@@ -225,6 +224,9 @@ sortedCharacterTable[ ring_ ] := Module[{
 ]
 
 
+sectionModularData[r, "SimplifyBy" -> ToRadicals@*RootReduce]
+
+
 (*====================================================================*)
 Options[sectionModularData] = Options[sectionCharacters];
 sectionModularData[ ring_, opts:OptionsPattern[] ] := 
@@ -287,114 +289,6 @@ twistFactorsToString[ mat_ ] :=
 ]
 
 
-sectionModularData[FRBC[{4,1,0,5}],"SimplifyBy"->(RootReduce[#]/.{1/2 (1+Sqrt[5])->p} &)]
-
-
-(* ::Input:: *)
-(*"# Modular Data\n\nThe matching [ $$ S $$-matrices ]({% link pages/Concepts/S-Matrix.md %}) and [ twist factors ]({% link pages/Concepts/TwistFactors.md %}) are the following\n\n| $$ S $$-matrix | Twist factors |\n| :------ | :------ |\n| $$ \\frac{2}{5+\\sqrt{5}}\\left(\\begin{array}{cccc} 1 & \\frac{1}{2} \\left(1+\\sqrt{5}\\right) & \\frac{1}{2} \\left(1+\\sqrt{5}\\right) & \\frac{1}{2} \\left(3+\\sqrt{5}\\right) \\\\ \\frac{1}{2} \\left(1+\\sqrt{5}\\right) & -1 & \\frac{1}{2} \\left(3+\\sqrt{5}\\right) & \\frac{1}{2} \\left(-1-\\sqrt{5}\\right) \\\\ \\frac{1}{2} \\left(1+\\sqrt{5}\\right) & \\frac{1}{2} \\left(3+\\sqrt{5}\\right) & -1 & \\frac{1}{2} \\left(-1-\\sqrt{5}\\right) \\\\ \\frac{1}{2} \\left(3+\\sqrt{5}\\right) & \\frac{1}{2} \\left(-1-\\sqrt{5}\\right) & \\frac{1}{2} \\left(-1-\\sqrt{5}\\right) & 1 \\\\\\end{array}\\right) $$ | $$ \\begin{array}{l}\\left(0,-\\frac{2}{5},\\frac{2}{5},0\\right) \\\\\\left(0,\\frac{2}{5},-\\frac{2}{5},0\\right) \\\\\\left(0,\\frac{2}{5},\\frac{2}{5},-\\frac{1}{5}\\right) \\\\\\left(0,-\\frac{2}{5},-\\frac{2}{5},\\frac{1}{5}\\right)\\end{array} $$ |"*)
-
-
-\!\(\*
-TagBox[
-RowBox[{"(", "", GridBox[{
-{"1", 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"1", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"1", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"3", "+", 
-SqrtBox["5"]}], ")"}]}]},
-{
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"1", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{"-", "1"}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"3", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{
-RowBox[{"-", "1"}], "-", 
-SqrtBox["5"]}], ")"}]}]},
-{
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"1", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"3", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{"-", "1"}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{
-RowBox[{"-", "1"}], "-", 
-SqrtBox["5"]}], ")"}]}]},
-{
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{"3", "+", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{
-RowBox[{"-", "1"}], "-", 
-SqrtBox["5"]}], ")"}]}], 
-RowBox[{
-FractionBox["1", "2"], " ", 
-RowBox[{"(", 
-RowBox[{
-RowBox[{"-", "1"}], "-", 
-SqrtBox["5"]}], ")"}]}], "1"}
-},
-GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
-GridBoxSpacings->{"Columns" -> {Offset[0.27999999999999997`], {Offset[0.7]}, Offset[0.27999999999999997`]}, "Rows" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}}], "", ")"}],
-Function[BoxForm`e$, MatrixForm[BoxForm`e$]]]\)/.\!\(\*
-TagBox[
-StyleBox[
-RowBox[{"Times", "[", 
-RowBox[{
-RowBox[{"Rational", "[", 
-RowBox[{"1", ",", "2"}], "]"}], ",", 
-RowBox[{"Plus", "[", 
-RowBox[{"1", ",", 
-RowBox[{"Power", "[", 
-RowBox[{"5", ",", 
-RowBox[{"Rational", "[", 
-RowBox[{"1", ",", "2"}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-ShowSpecialCharacters->False,
-ShowStringCharacters->True,
-NumberMarks->True],
-FullForm]\)->p
-
-
-1/2 (1+Sqrt[5])//FullForm
-
-
-"| $$ \frac{2}{5+\sqrt{5}}\left(\begin{array}{cccc} 1 & \frac{1}{2} \left(1+\sqrt{5}\right) & \frac{1}{2} \left(1+\sqrt{5}\right) & \frac{1}{2} \left(3+\sqrt{5}\right) \\ \frac{1}{2} \left(1+\sqrt{5}\right) & -1 & \frac{1}{2} \left(3+\sqrt{5}\right) & \frac{1}{2} \left(-1-\sqrt{5}\right) \\ \frac{1}{2} \left(1+\sqrt{5}\right) & \frac{1}{2} \left(3+\sqrt{5}\right) & -1 & \frac{1}{2} \left(-1-\sqrt{5}\right) \\ \frac{1}{2} \left(3+\sqrt{5}\right) & \frac{1}{2} \left(-1-\sqrt{5}\right) & \frac{1}{2} \left(-1-\sqrt{5}\right) & 1 \\\end{array}\right) $$ | $$ \begin{array}{l}\left(0,-\frac{2}{5},\frac{2}{5},0\right) \\\left(0,\frac{2}{5},-\frac{2}{5},0\right) \\\left(0,\frac{2}{5},\frac{2}{5},-\frac{1}{5}\right) \\\left(0,-\frac{2}{5},-\frac{2}{5},\frac{1}{5}\right)\end{array} $$ |""
-
-
 (*====================================================================*)
 sectionAdjointFusionRing[ ring_FusionRing ] := 
 	Module[ { adjRing, particlesString, ringName, alink, ucs },
@@ -424,7 +318,7 @@ sectionAdjointFusionRing[ ring_FusionRing ] :=
 				True,
 				StringJoin[
 					"Particles ", 
-					particlesString, 
+					math[ particlesString ], 
 					", form the ", 
 					link[ "adjoint subring", alink ], 
 					link[ ringName, "pages/FRPages/"<>ringFileName[adjRing[[2]]] ], 
@@ -435,7 +329,7 @@ sectionAdjointFusionRing[ ring_FusionRing ] :=
 			link["upper central series", alink ],
 			" is ",
 			If[
-				Length[ucs[[1]]] == 2,
+				Length[ucs[[1]]] == 1,
 				"trivial.",
 				"the following:\n"<> ucsString[ucs]
 			]
@@ -458,7 +352,7 @@ ucsString[ ucs_ ] :=
 			wikiName[#,"Short"->True]& /@ 
 			subRings;
 		
-		math[
+		nmath[
 		StringJoin@@
 		Riffle[
 			subRingStrings,
@@ -578,6 +472,7 @@ sectionData[ring_FusionRing] := Module[{ dir, mtLink, qdsLink, characterLink, sm
 ]
 
 
+
 QuietEcho[ 
 	Export[ 
 		"/home/gertvercleyen/Projects/anyonwiki.github.io/pages/FRPages/"<>ringFileName[#],
@@ -592,3 +487,40 @@ Print[r];
 RingPage[r],
 {r,Cases[FRL,r_/;Mult[r]===1]}];
 
+
+
+(* Fix sections on Adjoint subring table *)
+filenames = FileNames[ All, "/Users/gertvercleyen/Projects/anyonwiki.github.io/pages/FRPages"];
+
+fnToRing[fn_]:= FRBC @ ToExpression@StringReplace[fn, __~~"FR_"~~x__~~".md":> "{"<>StringReplace[x,"_"->","]<>"}"];
+Monitor[
+Do[
+	str = Import[fn,"Text"];
+	str2 = 
+		StringReplace[
+			str,
+			"# Adjoint Subring" ~~ __ ~~ "# Universal" :> sectionAdjointFusionRing[SortedRing[fnToRing[fn]]] <> "\n\n# Universal"
+		];
+	Export[fn, str2, "Text" ]
+	, { fn, filenames }
+],
+fn
+]
+
+
+sectionAdjointFusionRing[SortedRing @ FRBC @ {5,1,0,3}]
+
+
+upperCentralSeries[ ring_FusionRing?FusionRingQ ] :=
+  DeleteDuplicatesBy[
+  Most @
+  FixedPointList[
+    AdjointFusionRing @* Last,
+    { Range @ Rank @ ring, ring }
+  ],Last
+  ];
+
+
+
+
+upperCentralSeries[ SortedRing @ FRBC @ {5,1,0,3} ]

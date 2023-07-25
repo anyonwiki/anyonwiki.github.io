@@ -13,9 +13,9 @@ _($S$-matrix of a fusion ring)_
 An $S$-matrix associated to a fusion ring $R$ is a square, symmetric, unitary matrix that diagonalises the set of matrices $[N_i]_{i=1}^r$, and satisfies
 
   * $ \left[ S^2\right]^i_j =  N_{ij}^1 $,  
-  * $ \left[ S \right]^1_i  =  d_i,\quad i = 1,\ldots,r $,
+  * $ \left[ S \right]^1_i  =  \frac{\fpdim(N_i)}{\sqrt{\fpdim(R)}},\quad i = 1,\ldots,r $.
 
-where $d_i$ is the Frobenius-Perron eigenvalue of $[N_i]$.
+Here $\fpdim$ stands for the [quantum dimension]({% link pages/Concepts/FrobeniusPerronDimension.md %}).
 
 Not every fusion ring has an associated $S$-matrix and the existence of an $S$-matrix for a fusion ring does not guarantee that the ring is categorifiable into a modular fusion category. In constrast to the $S$-matrix of a category a fusion ring can have multiple $S$-matrices.
 
