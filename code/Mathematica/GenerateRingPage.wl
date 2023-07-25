@@ -315,7 +315,7 @@ sectionAdjointFusionRing[ ring_FusionRing ] :=
 				True,
 				StringJoin[
 					"Particles ", 
-					particlesString, 
+					math[ particlesString ], 
 					", form the ", 
 					link[ "adjoint subring", alink ], 
 					link[ ringName, "pages/FRPages/"<>ringFileName[adjRing[[2]]] ], 
@@ -326,7 +326,7 @@ sectionAdjointFusionRing[ ring_FusionRing ] :=
 			link["upper central series", alink ],
 			" is ",
 			If[
-				Length[ucs[[1]]] == 2,
+				Length[ucs[[1]]] == 1,
 				"trivial.",
 				"the following:\n"<> ucsString[ucs]
 			]
@@ -349,7 +349,7 @@ ucsString[ ucs_ ] :=
 			wikiName[#,"Short"->True]& /@ 
 			subRings;
 		
-		math[
+		nmath[
 		StringJoin@@
 		Riffle[
 			subRingStrings,
@@ -486,21 +486,39 @@ RingPage[r],
 
 
 
-(* Fix sections on multiplication table *)
+(* Fix sections on Adjoint subring table *)
 filenames = FileNames[ All, "/Users/gertvercleyen/Projects/anyonwiki.github.io/pages/FRPages"];
 
 fnToRing[fn_]:= FRBC @ ToExpression@StringReplace[fn, __~~"FR_"~~x__~~".md":> "{"<>StringReplace[x,"_"->","]<>"}"];
-
+Monitor[
 Do[
 	str = Import[fn,"Text"];
 	str2 = 
 		StringReplace[
 			str,
-			"# Fusion Rules" ~~ __ ~~ "# Quantum" :> sectionMultTable[SortedRing[fnToRing[fn]]] <> "\n# Quantum"
+			"# Adjoint Subring" ~~ __ ~~ "# Universal" :> sectionAdjointFusionRing[SortedRing[fnToRing[fn]]] <> "\n\n# Universal"
 		];
-	Print[str2]
-	, { fn, filenames[[5;;8]]}
+		Print[str2]
+	(*Export[fn, str2, "Text" ] *)
+	, { fn, filenames }
+],
+fn
 ]
 
 
+sectionAdjointFusionRing[SortedRing @ FRBC @ {5,1,0,3}]
 
+
+upperCentralSeries[ ring_FusionRing?FusionRingQ ] :=
+  DeleteDuplicatesBy[
+  Most @
+  FixedPointList[
+    AdjointFusionRing @* Last,
+    { Range @ Rank @ ring, ring }
+  ],Last
+  ];
+
+
+
+
+upperCentralSeries[ SortedRing @ FRBC @ {5,1,0,3} ]
