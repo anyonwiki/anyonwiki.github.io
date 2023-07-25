@@ -224,6 +224,9 @@ sortedCharacterTable[ ring_ ] := Module[{
 ]
 
 
+sectionModularData[r, "SimplifyBy" -> ToRadicals@*RootReduce]
+
+
 (*====================================================================*)
 Options[sectionModularData] = Options[sectionCharacters];
 sectionModularData[ ring_, opts:OptionsPattern[] ] := 
@@ -498,8 +501,7 @@ Do[
 			str,
 			"# Adjoint Subring" ~~ __ ~~ "# Universal" :> sectionAdjointFusionRing[SortedRing[fnToRing[fn]]] <> "\n\n# Universal"
 		];
-		Print[str2]
-	(*Export[fn, str2, "Text" ] *)
+	Export[fn, str2, "Text" ]
 	, { fn, filenames }
 ],
 fn
