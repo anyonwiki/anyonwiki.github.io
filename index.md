@@ -12,3 +12,4 @@ Some pages that are currently being worked on:
 * [List of Series of Fusion Rings]({% link pages/Lists/lofrseries.md %})
 * [Categorifiability Criteria]({% link pages/Concepts/CategorifiabilityCriteria.md %})
 * [Software]({% link pages/Lists/Software.md %})
+* [Conventions Used on this Wiki]({% link pages/Lists/Conventions.md %})
