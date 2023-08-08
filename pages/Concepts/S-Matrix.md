@@ -24,11 +24,13 @@ In the [EGNO](https://math.mit.edu/~etingof/egnobookfinal.pdf) one finds the fol
 
 **Definition**
 _($S$-matrix of a braided spherical category)_
-Let $\mathcal{C}$ be a braided spherical category with braiding $c_{X,Y}: X \otimes Y \rightarrow Y \otimes X $ then the $S$-matrix of $\mathcal{C}$ is defined as
+Let $\mathcal{C}$ be a braided spherical category with braiding $c_{X,Y}: X \otimes Y \rightarrow Y \otimes X $ then the $\mathcal{S}$-matrix of $\mathcal{C}$ is defined as
 \\[
-  S_{X,Y} := \tr (c_{Y,X}c_{X,Y}).
+  \mathcal{S}_{X,Y} := \tr (c_{Y,X}c_{X,Y}).
 \\]
 
-From the definition it follows that the $S$-matrix is a square, symmetric matrix with $S_{\mathbf{1},Y} = \fpdim (Y)$. In contrast to the definition for an $S$-matrix of a fusion ring above the $S$-matrix of a category need not be invertible. If it is then the category $\mathcal{C}$ is called a [**modular category**]({% link pages/Concepts/ModularCategory.md %}).
+From the definition it follows that the $\mathcal{S}$-matrix is a square, symmetric matrix with $\mathcal{S}_{\mathbf{1},Y} = \fpdim (Y)$. The definition from the EGNO and the one used on this site differs in a factor $\frac{1}{\fpdim{\mathcal{C}}} = \frac{1}{\fpdim{R}}$ which we have added to make the matrix unitary.
+
+In contrast to the definition for an $S$-matrix of a fusion ring above the $S$-matrix of a category need not be invertible. If it is then the category $\mathcal{C}$ is called a [**modular category**]({% link pages/Concepts/ModularCategory.md %}).
 
 _Note: There is also a more general definition of an $S$-matrix, defined in 8.19 of the EGNO_
