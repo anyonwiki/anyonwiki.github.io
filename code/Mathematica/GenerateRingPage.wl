@@ -421,9 +421,9 @@ With[{
 		"# Categorifications\n\n",
 		Which[ 
 			(MemberQ[ fc ] @ notcat) && CommutativeQ[ring],
-				"This fusion ring has no categorifications because of the [[Zero spectrum criterion|zero spectrum criterion]]",
+				"This fusion ring has no categorifications because of the [Zero spectrum criterion]({% link pages/Concepts/CategorifiabilityCriteria.md %})",
 			(MemberQ[ fc ] @ notuncat) && CommutativeQ[ring],
-				"This fusion ring has no unitary categorifications because of the [[Commutative Schur product criterion|commutative Schur product criterion]]",
+				"This fusion ring has no unitary categorifications because of the [commutative Schur product criterion]({% link pages/Concepts/CategorifiabilityCriteria.md %})",
 			True,
 				""
 		]
