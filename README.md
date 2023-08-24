@@ -1,3 +1,4 @@
+# AnyonWiki
 The website is styled using the "Proof" style files. Some remnants of this style (such as the "manual" page in the side bar) still remain but will disappear later on. Below is the README of the stylefile:
 
 Proof
