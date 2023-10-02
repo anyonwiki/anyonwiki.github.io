@@ -1,7 +1,9 @@
 ---
 layout: page
 title: List of Small Multiplicity-Free Fusion Rings
+datatable: true
 ---
+
 The list below contains all multiplicity free fusion rings up to 9 particles. Clicking on a name will redirect you to the page of the respective fusion ring. For more information on the formal names $$\text{FR}_m^{r,n}$$ see the page on [formal fusion ring names]({% link pages/Concepts/FormalFusionRingNames.md%}). Here the categorifiability is considered over the complex field. For the last 5 columns a value of ✓ indicates that there exists at least 1 way to categorify the fusion ring to a category with the respective structure. There can be multiple categories stemming from the same fusion ring with multiple (possibly disjunct) properties. The abreviations FC, PFC, UFC, BFC, MFC respectively stand for Fusion Category, Pivotal Fusion Category, Unitary Fusion Category, Braided Fusion Category, Modular Fusion Category.
 
 
@@ -144,7 +146,7 @@ The list below contains all multiplicity free fusion rings up to 9 particles. Cl
 | [ $$ \text{FR}^{8,0}_{20} $$ ]({% link pages/FRPages/FR_8_1_0_20.md %})                                                                             | 8       | 52.6491                | ✗   | ✗   | ✗   | ✗   | ✗   |
 | [ $$ \text{FR}^{8,0}_{21} $$ ]({% link pages/FRPages/FR_8_1_0_21.md %})                                                                             | 8       | 52.6491                | ✗   | ✗   | ✗   | ✗   | ✗   |
 | [ $$ \text{FR}^{8,0}_{22} :\  \text{Fib} \times \text{Fib} \times \text{Fib} $$ ]({% link pages/FRPages/FR_8_1_0_22.md %})                          | 8       | 47.3607                | ✓    | ✓    | ✓    | ✓    | ✓    |
-| [ $$ \text{FR}^{8,0}_{23} :\  \left.\text{HI}(\bbz_2\times \bbz_2\right) $$ ]({% link pages/FRPages/FR_8_1_0_23.md %})                              | 8       | 75.7771                |         |         |         |         | ✗ |
+| [ $$ \text{FR}^{8,0}_{23} :\  \left.\text{HI}(\bbz_2\times \bbz_2\right) $$ ]({% link pages/FRPages/FR_8_1_0_23.md %})                              | 8       |  75.7771                |        |         |         |         | ✗ |
 | [ $$ \text{FR}^{8,0}_{24} $$ ]({% link pages/FRPages/FR_8_1_0_24.md %})                                                                             | 8       | 48.0685                | ✗   | ✗   | ✗   | ✗   | ✗   |
 | [ $$ \text{FR}^{8,0}_{25} $$ ]({% link pages/FRPages/FR_8_1_0_25.md %})                                                                             | 8       | 58.1168                | ✗   | ✗   | ✗   | ✗   | ✗   |
 | [ $$ \text{FR}^{8,0}_{26} $$ ]({% link pages/FRPages/FR_8_1_0_26.md %})                                                                             | 8       | 58.1168                | ✗   | ✗   | ✗   | ✗   | ✗   |
@@ -360,6 +362,7 @@ The list below contains all multiplicity free fusion rings up to 9 particles. Cl
 | [ $$ \text{FR}^{9,6}_{16} $$ ]({% link pages/FRPages/FR_9_1_6_16.md %})                                                                             | 9       | 163.373                | ✗   | ✗   | ✗   | ✗   | ✗   |
 | [ $$ \text{FR}^{9,8}_{1} :\  \bbz_9 $$ ]({% link pages/FRPages/FR_9_1_8_1.md %})                                                              | 9       | 9.                     | ✓    | ✓    | ✓    | ✓    | ✓    |
 | [ $$ \text{FR}^{9,8}_{2} :\  \bbz_3\times \bbz_3 $$ ]({% link pages/FRPages/FR_9_1_8_2.md %})                                           | 9       | 9.                     | ✓    | ✓    | ✓    | ✓    | ✓    |
+{: .datatable }
 
 # References
 

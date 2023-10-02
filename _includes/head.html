@@ -84,4 +84,24 @@
       gtag('config', '{{ site.gtag }}');
     </script>
     {%- endif %}
+
+    <!--The lines below help include JQuery DataTables into Markdown files-->
+    {%- if page.datatable == true -%}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!--Add JQuery-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> <!--add style sheet-->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script> <!--add dataTables-->
+    <script>
+        $(document).ready( function () {
+        $('table.datatable').DataTable();
+        } );
+        $.extend( $.fn.dataTable.defaults, {
+          "lengthMenu": [ [ 25, 50, 100, -1 ], [ 25, 50, 100, "All"] ],
+          "order": [],
+          "pageLength": 50,
+          "orderClasses": true,
+          fixedHeader: true
+        } );
+    </script>
+    {% endif %}
+
   </head>
