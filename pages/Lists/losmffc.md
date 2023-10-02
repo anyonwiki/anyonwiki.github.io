@@ -7,7 +7,7 @@ title: List of Small Multiplicity-Free Fusion Categories
 We will work hard to make the information below accessible in a user friendly way but for now we'll just provide the solutions and an explanation on how to use them.
 
 
-The solutions of the pentagon and hexagon equations for all multiplicity free fusion categories up to and including rank 6 can in the can be downloaded from the following links
+The solutions of the pentagon and hexagon equations for all multiplicity free fusion categories up to and including rank 6 can be downloaded from the following links
 
 * [Numeric solutions]({% link data/NumericCategories.zip%})
 * [Symbolic solutions]({% link data/Categories.zip %})
