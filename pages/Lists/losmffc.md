@@ -446,34 +446,6 @@ Below are most fusion categories up to rank 7. The only missing ones are those f
 | $$ [\text{Fib} \times \mathbb{Z}_3]_{4,6} $$ | 6 | 10.8541 | F | T | [$$ [F-\text{symbols}]_{4} $$ ]({% link data/NumericCategories/FR_6_1_4_5/pentsol_4.txt %}) | [$$ [R-\text{symbols}]_{4,6} $$ ]({% link data/NumericCategories/FR_6_1_4_5/hexsol_4_6.txt %}) |
 | $$ [\text{Fib} \times \mathbb{Z}_3]_{5,1} $$ | 6 | 10.8541 | F | F | [$$ [F-\text{symbols}]_{5} $$ ]({% link data/NumericCategories/FR_6_1_4_5/pentsol_5.txt %}) |  |
 | $$ [\text{Fib} \times \mathbb{Z}_3]_{6,1} $$ | 6 | 10.8541 | F | F | [$$ [F-\text{symbols}]_{6} $$ ]({% link data/NumericCategories/FR_6_1_4_5/pentsol_6.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,2} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,3} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,4} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,5} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,6} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,7} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{1,8} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{2,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{2} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_2.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{2,2} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{2} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_2.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{2,3} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{2} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_2.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{2,4} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{2} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_2.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,2} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,3} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,4} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,5} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,6} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,7} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{3,8} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_3.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{4,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{4} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_4.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{4,2} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{4} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_4.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{4,3} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{4} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_4.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{4,4} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{4} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_4.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{5,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{5} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_5.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{6,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{6} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_6.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{7,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{7} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_7.txt %}) |  |
-| $$ [\text{Adj(}\text{SO}(16)_2)]_{8,1} $$ | 7 | 16. | T | F | [$$ [F-\text{symbols}]_{8} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_8.txt %}) |  |
 | $$ [\text{Adj(}\text{SO}(16)_2)]_{1,1} $$ | 7 | 16. | T | T | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) | [$$ [R-\text{symbols}]_{1,1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/hexsol_1_1.txt %}) |
 | $$ [\text{Adj(}\text{SO}(16)_2)]_{1,2} $$ | 7 | 16. | T | T | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) | [$$ [R-\text{symbols}]_{1,2} $$ ]({% link data/NumericCategories/FR_7_1_0_1/hexsol_1_2.txt %}) |
 | $$ [\text{Adj(}\text{SO}(16)_2)]_{1,3} $$ | 7 | 16. | T | T | [$$ [F-\text{symbols}]_{1} $$ ]({% link data/NumericCategories/FR_7_1_0_1/pentsol_1.txt %}) | [$$ [R-\text{symbols}]_{1,3} $$ ]({% link data/NumericCategories/FR_7_1_0_1/hexsol_1_3.txt %}) |
