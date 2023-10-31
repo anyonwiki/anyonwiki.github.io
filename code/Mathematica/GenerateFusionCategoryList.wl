@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-PacletDirectoryLoad["~/Projects"]
+PacletDirectoryLoad["~/Projects"];
 <<Anyonica`
 
 
@@ -10,8 +10,8 @@ Options[exportData] = { "OverWrite" -> False }
 exportCats[ r_FusionRing, opts:OptionsPattern[] ] :=
 Module[
 	{ cats, codes, groupedByFSymb, ring, hexSol, perm, dir },
-	cats = FusionCategories[ r ];
-	codes = FormalCode/@cats;
+	cats = FusionCategories[r];
+	codes = FormalCode /@ cats;
 	
 	ring = SortedRing @ r;
 	perm = WhichPermutation[ r, ring ];
@@ -22,6 +22,7 @@ Module[
 	];
 	
 	groupedByFSymb = GroupBy[ cats, Extract[5] @* FormalCode ];
+	(* Set export directory *)
 	dir = "/home/gert/Tests/Projects/anyonwiki.github.io/data/FusionCategories/";
 	
 	Export[ 
@@ -88,6 +89,7 @@ prepSol[sol_] :=
 	];
 
 
+(*
 Do[ 
 	PrintTemporary[r];
 	If[ 
@@ -95,22 +97,7 @@ Do[
 		exportCats[ r ]
 	],
 	{ r, Cases[ FRL, ring_ /; Mult[ring] == 1 && Rank[ring] < 8 ] }
-]
-
-
-FRBC[{3,1,0,3}]
-
-
-Block[ { r = FRBC[ { 4, 1, 2, 2 } ] },
-	WhichPermutation[ r, SortedRing[r] ]
-]
-
-
-FSymbols[SortedRing@FRBC[{4,1,2,2}]]
-
-
-ct = FusionCategories[
-fc = PermutedFusionCategory[  ]
+]*)
 
 
 TableRow[ cat_ ] := 
@@ -122,8 +109,8 @@ TableRow[ cat_ ] :=
 		
 		If[  
 			Length[ names = Names @ FusionRing[ cat ] ] != 0,
-			ns = "$ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $",
-			ns = "$ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> "$"
+			ns = "[ $ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $"<>"](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>" %)",
+			ns = "[ $ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> "$"<>"](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>" %)"
 		];
 		
 		rks = ts @ Rank @ cat;
@@ -150,7 +137,6 @@ fcToTexString[ {a_,b_,c_,d_} ]:=
 	"FR^{"<>ToString[a]<>","<>ToString[b]<>","<>ToString[c]<>"}_{"<>ToString[d]<>"}";
 
 
+
+
 StringJoin@@(TableRow /@ FCL)
-
-
-Names[ FRBC[{7,1,2,12}]]
