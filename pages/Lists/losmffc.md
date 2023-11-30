@@ -17,10 +17,13 @@ The symbolic solutions are available as part of the Anyonica package
 
 * [Anyonica](https://github.com/gert-vercleyen/Anyonica)
 
+but do take a look at the [Software]({% link pages/Lists/Software.md %}) page that contains other sources and amazing software as well!
+
 In the future we plan to:
 * create some pages that give a clearer overview of the solutions
 * add the solutions to the pages of the fusion rings
 * Keep adding categories, of course :)
+
 
 # List of multiplicity-free fusion categories up to rank 7
 Below are the multiplicity-free fusion categories up to rank 7. These should be all the solutions, both unitary and non-unitary, braided and non-braided, and for all admissible sets of possible $0$-values for the $F$-symbols. If any results seem odd, please raise an issue on the [github page](https://github.com/anyonwiki/anyonwiki.github.io).
