@@ -1,73 +1,101 @@
 (* ::Package:: *)
 
+Quit[];
+
+
 PacletDirectoryLoad["~/Projects"];
 <<Anyonica`
 
 
 (* EXPORTING DATA *)
 
-Options[exportData] = { "OverWrite" -> False }
+Options[exportData] = { "OverWrite" -> False };
 exportCats[ r_FusionRing, opts:OptionsPattern[] ] :=
 Module[
-	{ cats, codes, groupedByFSymb, ring, hexSol, perm, dir },
+	{ cats, ring, perm, dir, fileName, fileNameLong, scfn,scfnLong, fSymb, rSymb, pSymb, zipfn },
 	cats = FusionCategories[r];
-	codes = FormalCode /@ cats;
 	
 	ring = SortedRing @ r;
 	perm = WhichPermutation[ r, ring ];
 	If[ 
 		perm != Range[ Rank[ ring ] ],
 		Print["Check permuted solutions for ring with code ", FC[ring]];
-		cats = PermutedFusionCategory[ #, perm ]& /@ cats 
+		cats = PermutedFusionCategory[ #, perm ]& /@ cats (* NEED TO UPDATE PERMUTEDFUSIONCATEGORY FUNTION *)
 	];
 	
-	groupedByFSymb = GroupBy[ cats, Extract[5] @* FormalCode ];
+	(* groupedByFSymb = GroupBy[ cats, Extract[5] @* FormalCode ]; *)
 	(* Set export directory *)
-	dir = "/home/gert/Tests/Projects/anyonwiki.github.io/data/FusionCategories/";
+	dir = "~/Tests/Projects/anyonwiki.github.io/data/FusionCategories/";
+	
+	fileName[ cat_, str_String ] := 
+		StringJoin[
+			StringRiffle[ FormalCode[cat][[5;;]], "_" ],
+			"_",
+			str,
+			".txt"
+		];
+	
+	fileNameLong[ cat_, str_String ] :=
+		StringJoin[
+			dir, 
+			CodeToFileName @ ring,
+			"/cat_", 
+			StringRiffle[ FormalCode[cat][[5;;]], "_" ], 
+			"/",
+			fileName[cat, str ]
+		];
+	
+	scfn =  CodeToFileName[ring] <> "_structconst.txt";
+	scfnLong = dir <> CodeToFileName[ ring ] <> "/" <> scfn;
 	
 	Export[ 
-		dir<>CodeToFileName[ ring ]<>"/"<>CodeToFileName[ring]<>"_structconst.txt",  
+		scfnLong,  
 		NZSC[ring], 
 		"Table" 
 	];
 	
 	Do[
-		Export[ (* EXPORT F SYMBOLS *)
-			StringJoin[
-				dir,
-				CodeToFileName[ ring ],
-				"/pentsol_",
-				ToString[ FormalCode[groupedByFSymb[[i,1]]][[5]] ],
-				".txt" 
-			],
-			prepSol @ FSymbols @ groupedByFSymb[[i,1]],
-			"Table"
+		fSymb = prepSol @ FSymbols @ cat;
+		Export[ fileNameLong[ cat, "pentsol" ], fSymb, "Table" ];
+		
+		
+		If[ (* Export R-symbols if they exist *)
+			!MissingQ[RSymbols@cat], 
+			rSymb = prepSol @ RSymbols @ cat;
+			Export[ fileNameLong[ cat, "hexsol" ], rSymb, "Table" ] 
 		];
-		Do[
-			hexSol = RSymbols @ cat;
-			If[ 
-				!MissingQ[hexSol],
-				Export[ 
-					StringJoin[ 
-						dir,
-						CodeToFileName[ ring ],
-						"/hexsol_",
-						ToString[FormalCode[cat][[5]]],
-						"_",
-						ToString[FormalCode[cat][[6]]],
-						".txt"
-					],
-					prepSol @ hexSol,
-					"Table"
-				]
-			],
-			{ cat, groupedByFSymb[[i]] } 
-		]
-		,
-		{i,Length[groupedByFSymb]}
+		
+		pSymb = prepSol @ PivotalStructure @ cat;
+		Export[ fileNameLong[ cat, "pivsol" ], pSymb, "Table" ];
+		
+		zipfn = 
+			StringJoin[ 
+				dir, 
+				CodeToFileName @ ring, 
+				"/data_"<>StringRiffle[ FormalCode[cat][[5;;]], "_" ], 
+				".zip"
+			];
+		Export[
+			zipfn, 
+			If[ (* Export R-symbols if they exist *)
+				!MissingQ[RSymbols@cat], 
+				<|
+					scfn -> Import[ scfnLong ],
+					fileName[ cat, "pentsol" ] -> Import[ fileNameLong[ cat, "pentsol" ] ],
+					fileName[ cat, "hexsol" ]  -> Import[ fileNameLong[ cat, "hexsol" ] ],
+					fileName[ cat, "pivsol" ]  -> Import[ fileNameLong[ cat, "pivsol" ] ]
+				|>,
+				<|
+					scfn -> Import[ scfnLong ],
+					fileName[ cat, "pentsol" ] -> Import[ fileNameLong[ cat, "pentsol" ] ],
+					fileName[ cat, "pivsol" ]  -> Import[ fileNameLong[ cat, "pivsol" ] ]
+				|>
+			], 
+			"Rules" 
+		];
+		, { cat, cats }
 	]
-]
-
+];
 
 CodeToFileName[ ring_FusionRing ]:=
 	ToString[ FC @ ring] //
@@ -84,12 +112,11 @@ prepSol[sol_] :=
 		ToString,
 		MapAt[
 		(Sequence@@(DecimalForm/@ReIm[N[#,{Infinity,64}]]))&,
-		Append@@@List@@@sol/.(\[ScriptCapitalF]|\[ScriptCapitalR])->List,{All,-1}],
+		Append@@@List@@@sol/.(\[ScriptCapitalF]|\[ScriptCapitalR]|\[ScriptP])->List,{All,-1}],
 		{2}
 	];
 
 
-(*
 Do[ 
 	PrintTemporary[r];
 	If[ 
@@ -97,46 +124,87 @@ Do[
 		exportCats[ r ]
 	],
 	{ r, Cases[ FRL, ring_ /; Mult[ring] == 1 && Rank[ring] < 8 ] }
-]*)
+]
 
 
 TableRow[ cat_ ] := 
-	Module[ { fc, ns, rks, fpds, us, bs, fs, rs, names, ts, ss, linkDir },
+	Module[ { fc, ns, rks, fpds, uS, bS, sS, rS, mS, fs, rs, names, ts, ss, dataDir, ds, zipfn },
 		ts = ToString;
 		fc = FormalCode @ cat;
-		ss = "_{"<> ts[fc[[-2]] ] <>","<> ts[ fc[[-1]] ] <>"}";
-		linkDir = "data/NumericCategories/" <> CodeToFileName[ FusionRing @ cat ] <> "/";
+		ss = "_{"<> ts[fc[[-3]] ] <>","<> ts[ fc[[-2]] ] <>"}^{" <> ts[fc[[-1]]] <> "}";
+		
+		zipfn = 
+			StringJoin[ 
+				"data/NumericCategories/", 
+				CodeToFileName @ FusionRing @ cat, 
+				"/data_"<>StringRiffle[ FormalCode[cat][[5;;]], "_" ], 
+				".zip"
+			];
 		
 		If[  
 			Length[ names = Names @ FusionRing[ cat ] ] != 0,
-			ns = "[ $ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $"<>"](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>" %)",
-			ns = "[ $ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> "$"<>"](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>" %)"
+			ns = "[ $$ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $$ "<>" ]({% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})",
+			ns = "[ $$ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> " $$ "<>" ](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})"
 		];
 		
 		rks = ts @ Rank @ cat;
 		
-		fpds = ts @ N @ TQDS[cat];
+		fpds = ts @ N @ FPDim[cat];
 		
-		us = If[ UnitaryQ[cat], "T", "F" ];
+		uS = If[ 
+			UnitaryQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Unitary.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
 		
-		bs = If[ BraidedQ[cat], "T", "F" ];
+		bS = If[ 
+			BraidedQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Braided.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
 		
-		fs =  "[$ [F-\\text{symbols}]_{"<> ts[fc[[5]]]<> "} $ ]({% link "<> linkDir <> "pentsol_" <> ts[ fc[[5]] ]<>".txt" <>" %})";
+		sS = If[ 
+			SphericalQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Spherical.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
 		
-		rs =  
-			If[
-				BraidedQ[cat],
-				"[$ [R-\\text{symbols}]"<> ss <> " $ ]({% link "<> linkDir <> "hexsol_" <> ts[fc[[5]]] <> "_" <> ts[fc[[6]]] <> ".txt" <> " %})",
-				""
-			];
+		rS = If[ 
+			RibbonQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Ribbon.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
 		
-		"| " <> StringRiffle[ { ns, rks,  fpds, us, bs, fs, rs}, " | "  ] <> " |\n"	
+		mS = If[ 
+			ModularQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Modular.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		ds = "[data]({% link " <> zipfn <> " %})";
+		
+		"| " <> StringRiffle[ { ns, rks, fpds, ds, bS, uS, sS, rS, mS}, " | "  ] <> " |\n"	
 	];
 	
 fcToTexString[ {a_,b_,c_,d_} ]:=
-	"FR^{"<>ToString[a]<>","<>ToString[b]<>","<>ToString[c]<>"}_{"<>ToString[d]<>"}";
+	"FR^{" <> ToString[a] <> "," <> ToString[b] <> "," <> ToString[c] <> "}_{" <> ToString[d] <> "}";
 
 
+FixLatex[str_String] := 
+	str //
+	StringReplace["\\unicode{22ca}" -> "\\rtimes "] //
+	StringReplace[Shortest["\\text{$\\times $"~~x__~~"}"] :> "\\times \\text{"<>x<>"}" ] //
+	StringReplace[Shortest["\\left.\\text{"~~x__~~"}"~~y__~~"\\right)"] :>"\\text{"<>x<>"} "<>y<>")" ] //
+	StringReplace[Shortest["\\text{"~~x__~~"$\\times $"~~y__~~"}"] :> "\\text{"<>x<>"} \\times \\text{" <> y <> "}"] //
+	StringReplace[Shortest["\\text{"~~P___~~"SU(2}"] :> "\\text{"<>P<>"SU}(2" ]//
+	StringReplace[{"\\mathbb{Z}"->"\:2124", "\\text{}" ->""}] //
+	StringReplace["Rep(}" -> "Rep}("] //
+	StringReplace["TY(}" -> "TY}("] //
+	StringReplace["HI(}" -> "HI}("] //
+	StringReplace["Adj(}" -> "Adj}("] 
 
 
-StringJoin@@(TableRow /@ FCL)
+FCL[[630]]
+
+
+StringJoin@@(FixLatex@*TableRow /@ FCL )
