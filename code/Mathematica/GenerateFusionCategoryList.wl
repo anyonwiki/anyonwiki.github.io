@@ -19,8 +19,7 @@ Module[
 	perm = WhichPermutation[ r, ring ];
 	If[ 
 		perm != Range[ Rank[ ring ] ],
-		Print["Check permuted solutions for ring with code ", FC[ring]];
-		cats = PermutedFusionCategory[ #, perm ]& /@ cats (* NEED TO UPDATE PERMUTEDFUSIONCATEGORY FUNTION *)
+		cats = PermutedFusionCategory[ #, perm ]& /@ cats
 	];
 	
 	(* groupedByFSymb = GroupBy[ cats, Extract[5] @* FormalCode ]; *)
@@ -117,14 +116,21 @@ prepSol[sol_] :=
 	];
 
 
+Monitor[
 Do[ 
-	PrintTemporary[r];
 	If[ 
 		FusionCategories[r] =!= {},
 		exportCats[ r ]
 	],
 	{ r, Cases[ FRL, ring_ /; Mult[ring] == 1 && Rank[ring] < 8 ] }
+],r
 ]
+
+
+exportCats[FRL[[6]]]
+
+
+pcats = PermutedFusionCategory[ #, {1,3,2}]& /@ FusionCategories[FRL[[6]]];
 
 
 TableRow[ cat_ ] := 
@@ -202,9 +208,6 @@ FixLatex[str_String] :=
 	StringReplace["TY(}" -> "TY}("] //
 	StringReplace["HI(}" -> "HI}("] //
 	StringReplace["Adj(}" -> "Adj}("] 
-
-
-FCL[[630]]
 
 
 StringJoin@@(FixLatex@*TableRow /@ FCL )
