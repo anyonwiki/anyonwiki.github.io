@@ -127,12 +127,6 @@ Do[
 ]
 
 
-exportCats[FRL[[6]]]
-
-
-pcats = PermutedFusionCategory[ #, {1,3,2}]& /@ FusionCategories[FRL[[6]]];
-
-
 TableRow[ cat_ ] := 
 	Module[ { fc, ns, rks, fpds, uS, bS, sS, rS, mS, fs, rs, names, ts, ss, dataDir, ds, zipfn },
 		ts = ToString;
@@ -149,7 +143,7 @@ TableRow[ cat_ ] :=
 		
 		If[  
 			Length[ names = Names @ FusionRing[ cat ] ] != 0,
-			ns = "[ $$ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $$ "<>" ]({% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})",
+			ns = "[ $$ [" <> fixSongName @ ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $$ "<>" ]({% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})",
 			ns = "[ $$ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> " $$ "<>" ](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})"
 		];
 		
@@ -194,6 +188,26 @@ TableRow[ cat_ ] :=
 	
 fcToTexString[ {a_,b_,c_,d_} ]:=
 	"FR^{" <> ToString[a] <> "," <> ToString[b] <> "," <> ToString[c] <> "}_{" <> ToString[d] <> "}";
+	
+fixSongName[ songName_String ] :=
+	If[ 
+		StringMatchQ[ songName, "\!\(\*TemplateBox[List["~~x__],
+		songName // 
+		StringReplace[
+		"\!\(\*TemplateBox[List["~~Shortest[x__]~~"\"\","~~Shortest[y__]~~"\"\","~~z__~~"], \"Subsuperscript\", Rule[SyntaxForm, SubsuperscriptBox]]\)":>x<>"@"<>y<>"@"<>z]//
+		StringReplace[{"\\\\("->"(","\\\\)"->")","\\\\!"->""}] //
+		StringReplace["(\\\\*SubscriptBox[" ~~ Shortest[x__] ~~ ", (" ~~Shortest[ y__] ~~ ")])" :> 
+		    x <> "_{" <> y <> "}"]//
+		StringReplace["*StyleBox["~~x__~~y_?DigitQ~~Shortest[z__]~~"False]]" :> "\\mathbf{"<>y<>"}"]//
+		StringReplace[{"[DoubleStruckCapitalZ]"->"\\mathbb{Z}", "[LeftTriangleEqual]"->"\\trianglelefteq","[Cross]"->"\\times"}]//
+		StringReplace[{"\\"->"","\""->""}]//
+		StringReplace[{"("->"",")"->""}]//
+		StringReplace[{"["->"\\left[","]"->"\\right]"}]//
+		StringReplace[{"mathbb"->"\\mathbb","tria"->"\\tria","times"->"\\times"}]//
+		StringReplace[x__~~"@"~~y__~~"@"~~z__:>x<>"_{"<>y<>"}^{"<>z<>"}"],
+		songName
+	]
+
 
 
 FixLatex[str_String] := 
@@ -210,4 +224,4 @@ FixLatex[str_String] :=
 	StringReplace["Adj(}" -> "Adj}("] 
 
 
-StringJoin@@(FixLatex@*TableRow /@ FCL )
+StringJoin@@(FixLatex@*TableRow /@ FCL[[-100;;]] )
