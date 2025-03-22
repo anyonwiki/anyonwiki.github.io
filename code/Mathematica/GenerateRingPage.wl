@@ -132,7 +132,7 @@ sectionMultTable[ ring_FusionRing ] := Module[{
 Options[ sectionQuantumDimensions ] = {"SimplifyBy" -> Identity};
 
 sectionQuantumDimensions[ring_FusionRing,opts:OptionsPattern[]] := 
-With[{qds = QD[ring],tqds = TQDS[ring]},
+With[{qds = FPDims[ring],tqds = FPDim[ring]},
 	With[{
 	sqds = EchoFunction[ "QDs", Identity ][OptionValue["SimplifyBy"] /@ qds ],
 	stqds = EchoFunction["TQDS",Identity][OptionValue["SimplifyBy"] @ tqds] },
@@ -224,9 +224,6 @@ sortedCharacterTable[ ring_ ] := Module[{
 ]
 
 
-sectionModularData[r, "SimplifyBy" -> ToRadicals@*RootReduce]
-
-
 (*====================================================================*)
 Options[sectionModularData] = Options[sectionCharacters];
 sectionModularData[ ring_, opts:OptionsPattern[] ] := 
@@ -258,7 +255,7 @@ ModularTable[ring_,simplify_] :=
 
 modDataRow[ring_,simplify_][modData_] := 
 Module[{ 
-	qdim = simplify[ Sqrt[TQDS[ring]] ],
+	qdim = simplify[ Sqrt[FPDim[ring]] ],
 	SMat,
 	TMat,
 	simplermat},
@@ -414,24 +411,160 @@ MapString[ map_ ] :=
 	];
 
 
-sectionCategorifications[ring_FusionRing] := 
-With[{
-	fc = FC[ring]},
+Options[sectionCategorifications] = { "SimplifyBy" -> Identity};
+sectionCategorifications[ring_FusionRing, OptionsPattern[]] := 
+Module[{fc, notcatString, catString, modularString, modCats, modString },
+
+	fc = FC @ ring;
+	
+	catString = 
+		If[ 
+			FusionCategories[ring] === {}
+			, (* THEN *)
+			If[ 
+				Rank[ring] <= 7 && Mult[ring] == 1, 
+				"This fusion ring is not categorifiable.",
+				"We have no data on categorifications of this fusion ring." 
+			]
+			, (* ELSE *)
+			"The fusion ring has the following categorifications:\n\n" <> 
+			"|Category|Data| | | | | |\n" <>
+			"|:----|:----|:----:|:----:|:----:|:----:|:----:|\n" <>
+			StringJoin @@ ( FusionTableRow /@ FusionCategories[ring] ) <>
+			"\n\n"
+		];
+		Echo[OptionValue["SimplifyBy"];
+	modCats = Select[ FusionCategories[ring], ModularQ ];
+	modString = 
+		If[ 
+			Length @ modCats == 0,
+			"None of these fusion categories are modular.",
+			StringJoin[
+				"Of these categories, 
+				"ToString[ Length @ modCats ], 
+				" are modular. They have the following data:\n\n",
+				"|Category|Data| | | |\n" <>
+				"|:----|:----|:----:|:----:|:----:|\n" <>
+				StringJoin @@ ( modDataCatRow[ #, OptionValue["SimplifyBy"] ]& /@ modCats ),
+				"\n\n"
+			]
+		];
+	
 	StringJoin[
 		"# Categorifications\n\n",
-		Which[ 
-			(MemberQ[ fc ] @ notcat) && CommutativeQ[ring],
-				"This fusion ring has no categorifications because of the [Zero spectrum criterion]({% link pages/Concepts/CategorifiabilityCriteria.md %})",
-			(MemberQ[ fc ] @ notuncat) && CommutativeQ[ring],
-				"This fusion ring has no unitary categorifications because of the [commutative Schur product criterion]({% link pages/Concepts/CategorifiabilityCriteria.md %})",
-			True,
-				""
-		]
+		catString,
+		modString
 	]
 ];
 
-notcat = Developer`ToPackedArray @ Import["/home/gertvercleyen/Projects/anyoncatalog/FusionRings/notcat.wdx"];
-notuncat = Developer`ToPackedArray @ Import["/home/gertvercleyen/Projects/anyoncatalog/FusionRings/notuncat.wdx"];
+FusionTableRow[ cat_ ] := 
+	Module[ { fc, ns, rks, fpds, uS, bS, sS, rS, mS, fs, rs, names, ts, ss, dataDir, ds, zipfn },
+		ts = ToString;
+		fc = FormalCode @ cat;
+		ss = "_{"<> ts[fc[[-3]] ] <>","<> ts[ fc[[-2]] ] <>"}^{" <> ts[fc[[-1]]] <> "}";
+		
+		zipfn = 
+			StringJoin[ 
+				"data/NumericCategories/", 
+				CodeToFileName @ FusionRing @ cat, 
+				"/data_"<>StringRiffle[ FormalCode[cat][[5;;]], "_" ], 
+				".zip"
+			];
+		
+		If[  
+			Length[ names = Names @ FusionRing[ cat ] ] != 0,
+			ns = "[ $$ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $$ "<>" ]({% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})",
+			ns = "[ $$ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> " $$ "<>" ](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})"
+		];
+		
+		uS = If[ 
+			UnitaryQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Unitary.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		bS = If[ 
+			BraidedQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Braided.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		sS = If[ 
+			SphericalQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Spherical.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		rS = If[ 
+			RibbonQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Ribbon.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		mS = If[ 
+			ModularQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Modular.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		ds = "[data]({% link " <> zipfn <> " %})";
+		
+		"| " <> StringRiffle[ { ns, ds, bS, uS, sS, rS, mS}, " | "  ] <> " |\n"
+	] // FixLatex;
+	
+fcToTexString[ {a_,b_,c_,d_} ]:=
+	"FR^{" <> ToString[a] <> "," <> ToString[b] <> "," <> ToString[c] <> "}_{" <> ToString[d] <> "}";
+
+modDataCatRow[ cat_, simplify_ ] := 
+	Module[ { fc, ns, rks, fpds, uS, bS, sS, rS, mS, fs, rs, names, ts, ss, dataDir, ds, zipfn, sMat, twists, sMatString, twistsString },
+		ts = ToString;
+		fc = FormalCode @ cat;
+		ss = "_{"<> ts[fc[[-3]] ] <>","<> ts[ fc[[-2]] ] <>"}^{" <> ts[fc[[-1]]] <> "}";
+		
+		zipfn = 
+			StringJoin[ 
+				"data/NumericCategories/", 
+				CodeToFileName @ FusionRing @ cat, 
+				"/data_"<>StringRiffle[ FormalCode[cat][[5;;]], "_" ], 
+				".zip"
+			];
+		
+		If[  
+			Length[ names = Names @ FusionRing[ cat ] ] != 0,
+			ns = "[ $$ [" <> ts[ TeXForm @ names[[1]] ] <> "]"<> ss <> " $$ "<>" ]({% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})",
+			ns = "[ $$ [" <> fcToTexString[ fc[[;;4]] ]<>"]" <> ss <> " $$ "<>" ](% link pages/FRPages/"<>CodeToFileName[ FusionRing @ cat]<>".md %})"
+		];
+
+		uS = If[ 
+			UnitaryQ[cat], 
+			"{::nomarkdown} <img src=\"/images/Unitary.png\" style=\"width:auto;height:40px;\"> {:/}", 
+			"" 
+		];
+		
+		{ sMat, twists } =  ModularData @ cat;
+		
+		{ sMatString, twistsString } = 
+				modDataRow[ FusionRing @ cat, simplify ][ <| "SMatrix" -> sMat, "Twists" -> { Values @ twists } |> ];
+			
+		ds = "[data]({% link " <> zipfn <> " %})";
+		
+		"| " <> StringRiffle[ { ns, ds, uS, sMatString, twistsString }, " | "  ] <> " |\n"
+	] // FixLatex;
+
+
+FixLatex[str_String] := 
+	str //
+	StringReplace["\\unicode{22ca}" -> "\\rtimes "] //
+	StringReplace[Shortest["\\text{$\\times $"~~x__~~"}"] :> "\\times \\text{"<>x<>"}" ] //
+	StringReplace[Shortest["\\left.\\text{"~~x__~~"}"~~y__~~"\\right)"] :>"\\text{"<>x<>"} "<>y<>")" ] //
+	StringReplace[Shortest["\\text{"~~x__~~"$\\times $"~~y__~~"}"] :> "\\text{"<>x<>"} \\times \\text{" <> y <> "}"] //
+	StringReplace[Shortest["\\text{"~~P___~~"SU(2}"] :> "\\text{"<>P<>"SU}(2" ]//
+	StringReplace[ "\\text{}" ->""] //
+	StringReplace["Rep(}" -> "Rep}("] //
+	StringReplace["TY(}" -> "TY}("] //
+	StringReplace["HI(}" -> "HI}("] //
+	StringReplace["Adj(}" -> "Adj}("];
+
 
 
 sectionData[ring_FusionRing] := Module[{ dir, mtLink, qdsLink, characterLink, smatrixlinks, twistfactorslinks, nMats },
