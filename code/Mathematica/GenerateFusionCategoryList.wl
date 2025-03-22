@@ -224,4 +224,4 @@ FixLatex[str_String] :=
 	StringReplace["Adj(}" -> "Adj}("] 
 
 
-StringJoin@@(FixLatex@*TableRow /@ FCL[[-100;;]] )
+StringJoin@@(FixLatex@*TableRow /@ FCL )
