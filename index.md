@@ -6,7 +6,9 @@ Welcome to AnyonWiki. We are migrating content from [the old wiki](http://www.th
 
 
 Some pages that are currently being worked on:
-* [List of Small Multiplicity Free Fusion Categories]
+* [List of Small Multiplicity Free Fusion Categories]({% link pages/Lists/losmffc.md %})
+* [List of Small Multiplicity Free Fusion Rings]({% link pages/Lists/losmffr.md %})
+* [List of Series of Fusion Rings]({% link pages/Lists/lofrseries.md %})
 * [Categorifiability Criteria]({% link pages/Concepts/CategorifiabilityCriteria.md %})
 * [Software]({% link pages/Lists/Software.md %})
 * [Conventions Used on this Wiki]({% link pages/Lists/Conventions.md %})
