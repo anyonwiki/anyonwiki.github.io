@@ -26,4 +26,4 @@ The wiki is built upon many hours of research by various researchers. Several pa
 
 At the moment, we're investigating how we can create a fair DOI for the website that includes its contributors in a fair manner, but this needs some proper brainstorming.
 
-[^1] Here you have to remove the X's to get the actual email address.
+[^1]: Here you have to remove the X's to get the actual email address.
