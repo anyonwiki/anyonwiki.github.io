@@ -9,8 +9,8 @@ All numeric solutions of the pentagon and hexagon equations for all multiplicity
 
 * [Numeric solutions]({% link data/NumericCategories.zip%})
 
-The numeric solutions are organized as follows. For each fusion ring there is a folder that contains several files named ```pentsol_i.txt``` and ```hexsol_i_j.txt```. The index ```i``` labels a solution to the pentagon equations and the index ```j``` labels a solution to the hexagon equations with $F$-symbols coming from ```pentsol_i.txt```. The pentsol files contain rows of tab-separated numbers of which the first 6 correspond to the anyon labels and the last two to the real and imaginary parts of the F-symbol. The same format is used for the hexsol files.
-Every folder contains a file with structure constants that define the labeling of the particles so one can find out how to permute the labels of the solutions, if necessary. Normally all rings and categories in these files should be labeled the same way as on this web site.
+The numeric solutions are organized as follows. For each fusion ring there is a folder that contains several files named ```pentsol_i.txt```, ```hexsol_i_j.txt```, and ```pivsol_i_j.txt```. The index ```i``` labels a solution to the pentagon equations and the index ```j``` labels a solution to the hexagon equations with $F$-symbols coming from ```pentsol_i.txt```. The pentsol files contain rows of tab-separated numbers of which the first 6 correspond to the object labels and the last two to the real and imaginary parts of the corresponding F-symbol. A similar convention is used for the solutions to the hexagon and pivotal equations.
+Every folder contains a file with structure constants that define the labeling of the objects so one can find out how to permute the labels of the solutions, if necessary. Normally all rings and categories in these files should be labeled the same way as on this web site.
 
 The symbolic solutions are available as part of the Anyonica package
 
