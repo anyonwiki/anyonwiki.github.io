@@ -15,9 +15,7 @@ Some pages that might be of interest are
 * [Conventions Used on this Wiki]({% link pages/Lists/Conventions.md %})
 
 # Contributing to the wiki
-You can contribute in multiple ways to the anyonwiki: 
-1. Whenever you notice a result that seems strange, you can raise an issue on the [github page](https://github.com/anyonwiki/anyonwiki.github.io) or send an email to gXerXt.verXclXeyen@protonmail.com[^1]. 
-2. You can edit individual pages by forking the github repository and editing the pages on your own fork. Once you're happy, create a pull request, and we will review the changes. If you plan to contribute a lot, contact gXerXt.verXclXeyen@protonmail.com[^1]. 
+You can contribute in multiple ways to the anyonwiki. Whenever you notice a result that seems strange, you can raise an issue on the [github page](https://github.com/anyonwiki/anyonwiki.github.io) or send an email to gXerXt.verXclXeyen@protonmail.com[^1]. You can also edit individual pages by forking the github repository and editing the pages on your own fork. Once you're happy, create a pull request, and we will review the changes. If you plan to contribute a lot, contact gXerXt.verXclXeyen@protonmail.com[^1]. 
 
 While the wiki is mainly maintained by G. Vercleyen, any contributions are more than welcome. **Note that the anyonwiki does not claim to be error-free!** Use all data at your own risk, and please report any concerns. 
 
