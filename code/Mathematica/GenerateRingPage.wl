@@ -566,9 +566,8 @@ FixLatex[str_String] :=
 	StringReplace["Adj(}" -> "Adj}("];
 
 
-
 sectionData[ring_FusionRing] := Module[{ dir, mtLink, qdsLink, characterLink, smatrixlinks, twistfactorslinks, nMats },
-	dir= "data/FusionRings/"<> frPrefix[ring] <> "/";
+	dir= "data/FusionRings/" <> frPrefix[ring] <> "/";
 	nMats = Length @ MD[ring];
 	
 	mtLink = link[ "Multiplication Table", dir <> "multtab.csv" ];
@@ -606,7 +605,8 @@ sectionData[ring_FusionRing] := Module[{ dir, mtLink, qdsLink, characterLink, sm
 
 
 
-QuietEcho[ 
+
+(*QuietEcho[ 
 	Export[ 
 		"/home/gertvercleyen/Projects/anyonwiki.github.io/pages/FRPages/"<>ringFileName[#],
 		RingPage[#],
@@ -619,7 +619,7 @@ QuietEcho@Table[
 Print[r];
 RingPage[r],
 {r,Cases[FRL,r_/;Mult[r]===1]}];
-
+*)
 
 
 (* Fix sections on Adjoint subring table *)

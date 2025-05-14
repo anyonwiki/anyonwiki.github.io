@@ -49,7 +49,8 @@ exportMatrixString[ mat_?MatrixQ ] := With[{
 ];
 	
 (* Multiplication table *)
-exportTensorString[ tab_ ] := With[{
+exportTensorString[ tab_ ] := 
+	With[{
 		matrixToSparseFormat = Most[ ArrayRules[ SparseArray[ # ] ] ]/.HoldPattern[ {a__} -> x_ ] :> { a, x }&,
 		rowToString = Append[ Riffle[ ToString /@ #, ", "], "\n" ]&
 	},
@@ -61,35 +62,42 @@ exportTensorString[ tab_ ] := With[{
 	]
 ]
 
-exportRingData[ dir_String ][ ring_FusionRing ] := Module[{
+exportRingData[ dir_String ][ r_FusionRing ] := Module[{
 	ets = exportTensorString,
 	ems = exportMatrixString,
-	els = exportListString,
-	stNames = STNames[ MD[ ring ] ],
-	stData = STData[ MD[ ring ] ],
-	QDData = Append[ N[ TQDS[ring], 16 ] ] @ N[ QD[ring], 16 ],
-	pref = frPrefix[ring]
+	els = exportListString, 
+	stNames, 
+	stData,
+	QDData,
+	pref,
+	ring
 	},
+	ring = SortedRing[r];	
+	stNames = STNames[ MD[ ring ] ];
+	stData  = STData[ MD[ ring ] ];
+	QDData  = Append[ N[ FPDim[ring], 16 ] ] @ N[ FPDims[ring], 16 ];
+	pref = frPrefix[ring];
+	
 	CreateDirectory[ FileNameJoin[ { dir, pref } ] ];
 	(* Export multtab *)
 	Export[
 		FileNameJoin[ { dir, pref, "multtab.csv" } ],
 		ets[ MT[ ring ] ],
-		"CSV"
+		"Text"
 	];
 	
 	(* Export quantum dimensions *)
 	Export[
 		FileNameJoin[ { dir, pref, "qdims.csv" } ],
 		els[ QDData ],
-		"CSV"
+		"Text"
 	];
 	
 	(* Export character data *)
 	Export[
 		FileNameJoin[ { dir, pref, "chars.csv" } ],
 		ems[ N[FRC[ ring ], 16 ] ],
-		"CSV"
+		"Text"
 	];
 
 	(* Export S and T matrices *)
@@ -97,7 +105,7 @@ exportRingData[ dir_String ][ ring_FusionRing ] := Module[{
 		Export[
 			FileNameJoin[ { dir, pref, #1 <> ".csv" } ], 
 			#2,
-			"CSV"
+			"Text"
 		]&,
 		{ stNames, stData }
 	];
@@ -123,4 +131,7 @@ STData[ modularData_ ] := With[{
 ]
 
 
-exportRingData["~/Projects/anyonwiki.github.io/data/FusionRings"] /@ FRL;
+exportRingData["~/Projects/anyonwiki.github.io/data/FusionRings"] /@ Cases[FRL,r_/;Mult[r]===1];
+
+
+exportRingData["~/Tests/anyonwiki.github.io/data/FusionRings"] /@ FRL[[;;100]];
