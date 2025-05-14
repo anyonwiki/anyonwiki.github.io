@@ -20,7 +20,7 @@ but do take a look at the [Software]({% link pages/Lists/Software.md %}) page th
 
 
 # List of multiplicity-free fusion categories up to rank 7
-Below are the multiplicity-free fusion categories up to rank 7. These should be all the solutions, both unitary and non-unitary, braided and non-braided, and for all admissible sets of possible $0$-values for the $F$-symbols. If any results seem odd, please raise an issue on the [github page](https://github.com/anyonwiki/anyonwiki.github.io).
+Below are the multiplicity-free fusion categories up to rank 7. These should be all the solutions, both unitary and non-unitary, braided and non-braided, and for all admissible sets of possible $0$-values for the $F$-symbols. If any results seem odd, please raise an issue on the [github page](https://github.com/anyonwiki/anyonwiki.github.io). The data on this page comes from the following [thesis](https://arxiv.org/abs/2405.20075).
 
 | Name | Rank | $$\mathcal{D}_{FP}^2$$ | Data |  |  |  |  |  |
 |:----|:----|:----|:----|:----:|:----:|:----:|:----:|:----:|
