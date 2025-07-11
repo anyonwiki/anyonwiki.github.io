@@ -20,8 +20,12 @@ You can contribute in multiple ways to the anyonwiki. Whenever you notice a resu
 While the wiki is mainly maintained by G. Vercleyen, any contributions are more than welcome. **Note that the anyonwiki does not claim to be error-free!** Use all data at your own risk, and please report any concerns. 
 
 # Citing the wiki
+The anyonwiki as a whole can be cited via the following DOI
+
+[![DOI](https://zenodo.org/badge/650073657.svg)](https://doi.org/10.5281/zenodo.15863113)
+
+
 The wiki is built upon many hours of research by various researchers. Several pages contain links to papers at the bottom. If you feel that your paper should be referenced then either raise an issue on github or send an email to gXerXt.verXclXeyen@protonmail.com[^1].
 
-At the moment, we're investigating how we can create a fair DOI for the website that includes its contributors in a fair manner, but this needs some proper brainstorming.
 
 [^1]: Here you have to remove the X's to get the actual email address.
