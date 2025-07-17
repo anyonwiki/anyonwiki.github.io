@@ -7,6 +7,9 @@ PacletDirectoryLoad["~/Projects"];
 <<Anyonica`
 
 
+FC @ FCBC[{7,1,4,3,1,0,1}]
+
+
 (* EXPORTING DATA *)
 
 Options[exportData] = { "OverWrite" -> False };
@@ -119,7 +122,7 @@ prepSol[sol_] :=
 Monitor[
 Do[
 	If[
-		FusionCategories[r] =!= {},
+		FusionCategories[r] =!= {} && Not[MissingQ @ FusionCategories[r] ],
 		exportCats[ r ]
 	],
 	{ r, Cases[ FRL, ring_ /; Mult[ring] == 1 && Rank[ring] < 8 ] }
