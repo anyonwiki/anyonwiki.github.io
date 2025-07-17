@@ -999,10 +999,6 @@ Below are the multiplicity-free fusion categories up to rank 7. These should be 
 | $$ \text{FC}^{7, 1, 6}_{1, 3, 0, 2} $$ | [ $$ [\mathbb{Z}_7]_{3,0}^{2} $$  ]({% link pages/FRPages/FR_7_1_6_1.md %}) | 7 | 7. | [data]({% link data/NumericCategories/FR_7_1_6_1/data_3_0_2.zip %}) |  |  |  |  |  |
 | $$ \text{FC}^{7, 1, 6}_{1, 3, 0, 3} $$ | [ $$ [\mathbb{Z}_7]_{3,0}^{3} $$  ]({% link pages/FRPages/FR_7_1_6_1.md %}) | 7 | 7. | [data]({% link data/NumericCategories/FR_7_1_6_1/data_3_0_3.zip %}) |  |  |  |  |  |
 | $$ \text{FC}^{7, 1, 6}_{1, 3, 0, 4} $$ | [ $$ [\mathbb{Z}_7]_{3,0}^{4} $$  ]({% link pages/FRPages/FR_7_1_6_1.md %}) | 7 | 7. | [data]({% link data/NumericCategories/FR_7_1_6_1/data_3_0_4.zip %}) |  |  |  |  |  |
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 {: .datatable }
 
 In the future we plan to:
