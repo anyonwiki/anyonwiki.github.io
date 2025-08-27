@@ -13,11 +13,11 @@ The numeric solutions are organized as follows. For each fusion ring there is a 
 All rings and categories in these files should be labeled the same way as on this web site.
 
 The symbolic solutions are available as part of the Anyonica and the TensorCategories.jl packages.
-Any category with formal name $$ \text{FC}^{a,b,c,d}_{e,f,g} $$ can be obtained be evaluating the following code
-* [Anyonica](https://github.com/gert-vercleyen/Anyonica): ```FusionCategoryByCode[{a,b,c,d,e,f,g}]```
+Any category with formal name $$ \text{FC}^{a,b,c}_{d,e,f,g} $$ can be obtained be evaluating the following code
+* [Anyonica](https://github.com/gert-vercleyen/Anyonica): ```FusionCategoryByCode[{a,b,c,d,e,f,g}]``` or ```FCBC[{a,b,c,d,e,f,g}]```
 * [TensorCategories.jl](https://github.com/FabianMaeurer/TensorCategories.jl): ```anyonwiki(a,b,c,d,e,f,g)```
 
-but do take a look at the [Software]({% link pages/Lists/Software.md %}) page that contains other sources and amazing software as well!
+Do take a look at the [Software]({% link pages/Lists/Software.md %}) page that contains other sources and excellent software as well!
 
 
 # List of multiplicity-free fusion categories up to rank 7
