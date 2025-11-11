@@ -24,11 +24,9 @@ Do take a look at the [Software]({% link pages/Lists/Software.md %}) page that c
 Below are the multiplicity-free fusion categories up to rank 7. These should be all the solutions, both unitary and non-unitary, braided and non-braided, and for all admissible sets of possible $0$-values for the $F$-symbols. If any results seem odd, please raise an issue on the [github page](https://github.com/anyonwiki/anyonwiki.github.io). The data on this page comes from the following [thesis](https://arxiv.org/abs/2405.20075).
 
 The following symbols label a corresponding property of the fusion category:  
-* {::nomarkdown} <img src="/images/Braided.png" style="width:auto;height:40px;"> {:/}: braided
-* {::nomarkdown} <img src="/images/Unitary.png" style="width:auto;height:40px;"> {:/}: unitary
-* {::nomarkdown} <img src="/images/Spherical.png" style="width:auto;height:40px;"> {:/}: spherical
-* {::nomarkdown} <img src="/images/Ribbon.png" style="width:auto;height:40px;"> {:/}: riboon
-* {::nomarkdown} <img src="/images/Modular.png" style="width:auto;height:40px;"> {:/}: modular 
+
+| braided | unitary | spherical | ribbon | modular | 
+| {::nomarkdown} <img src="/images/Braided.png" style="width:auto;height:40px;"> {:/} | {::nomarkdown} <img src="/images/Unitary.png" style="width:auto;height:40px;"> {:/} | {::nomarkdown} <img src="/images/Spherical.png" style="width:auto;height:40px;"> {:/} | {::nomarkdown} <img src="/images/Ribbon.png" style="width:auto;height:40px;"> {:/} | {::nomarkdown} <img src="/images/Modular.png" style="width:auto;height:40px;"> {:/} |
 
 | Formal Name | Name | Rank | $$\mathcal{D}_{FP}^2$$ | Data |  |  |  |  |  |
 |:----|:----|:----|:----|:----:|:----:|:----:|:----:|:----:|
