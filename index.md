@@ -17,7 +17,7 @@ Some pages that might be of interest are
 * [List of Small Multiplicity Free Fusion Rings]({% link pages/Lists/losmffr.md %})
 * [List of Series of Fusion Rings]({% link pages/Lists/lofrseries.md %})
 * [Categorifiability Criteria]({% link pages/Concepts/CategorifiabilityCriteria.md %})
-* [Software]({% link pages/Lists/Software.md %})
+* [Other Software and Websites]({% link pages/Lists/Software.md %})
 * [Conventions Used on this Wiki]({% link pages/Lists/Conventions.md %})
 
 # Contributing to the wiki
