@@ -9,7 +9,19 @@ Welcome to AnyonWiki. This is a website devoted to gathering information and dat
 * If you use any of the data of the fusion rings from the wiki please cite the paper [On Low Rank Fusion Rings](https://pubs.aip.org/aip/jmp/article/64/9/091703/2912575/On-low-rank-fusion-rings).
 * If you use any of the data of the fusion categories please cite the paper [On Low-Rank Multiplicity-Free Fusion Categories](https://arxiv.org/abs/2405.20075)
 * If you use data from other pages, please check whether there is a link to a paper to cite: several pages contain links to papers at the bottom. If you feel that your paper should be referenced then either raise an issue on github or send an email to gXerXt.verXclXeyen@protonmail.com[^1].
-* The anyonwiki as a whole can be cited via the following DOI [![DOI](https://zenodo.org/badge/650073657.svg)](https://doi.org/10.5281/zenodo.15863113)
+* The anyonwiki as a whole can be cited via the following BibTeX entry
+```
+@software{gert_vercleyen_anyonwiki,
+  author       = {Vercleyen, Gert and Slingerland, Joost},
+  title        = {anyonwiki/anyonwiki.github.io},
+  month        = jun,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {1.0.2},
+  doi          = {10.5281/zenodo.15863113},
+  url          = {anyonwiki.github.io},
+}
+```
 
 # Useful resources
 Some pages that might be of interest are
