@@ -5,6 +5,12 @@ title: Home
 # Welcome
 Welcome to AnyonWiki. This is a website devoted to gathering information and data on anyon models, fusion categories, and other related structures. 
 
+# Citing the wiki
+* If you use any of the data of the fusion rings from the wiki please cite the paper [On Low Rank Fusion Rings](https://pubs.aip.org/aip/jmp/article/64/9/091703/2912575/On-low-rank-fusion-rings).
+* If you use any of the data of the fusion categories please cite the paper [On Low-Rank Multiplicity-Free Fusion Categories](https://arxiv.org/abs/2405.20075)
+* If you use data from other pages, please check whether there is a link to a paper to cite: several pages contain links to papers at the bottom. If you feel that your paper should be referenced then either raise an issue on github or send an email to gXerXt.verXclXeyen@protonmail.com[^1].
+* The anyonwiki as a whole can be cited via the following DOI [![DOI](https://zenodo.org/badge/650073657.svg)](https://doi.org/10.5281/zenodo.15863113)
+
 # Useful resources
 Some pages that might be of interest are
 * [List of Small Multiplicity Free Fusion Categories]({% link pages/Lists/losmffc.md %})
@@ -19,13 +25,7 @@ You can contribute in multiple ways to the anyonwiki. Whenever you notice a resu
 
 While the wiki is mainly maintained by G. Vercleyen, any contributions are more than welcome. **Note that the anyonwiki does not claim to be error-free!** Use all data at your own risk, and please report any concerns. 
 
-# Citing the wiki
-The anyonwiki as a whole can be cited via the following DOI
 
-[![DOI](https://zenodo.org/badge/650073657.svg)](https://doi.org/10.5281/zenodo.15863113)
-
-
-The wiki is built upon many hours of research by various researchers. Several pages contain links to papers at the bottom. If you feel that your paper should be referenced then either raise an issue on github or send an email to gXerXt.verXclXeyen@protonmail.com[^1].
 
 
 [^1]: Here you have to remove the X's to get the actual email address.
