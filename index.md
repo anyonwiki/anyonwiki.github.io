@@ -2,7 +2,13 @@
 layout: default
 title: Home
 ---
-# Welcome
+# The wiki is moving 
+<img width="2230" height="1440" alt="anyonwiki_moving" src="https://github.com/user-attachments/assets/614c353c-4424-4ec0-97ac-35e443a016b1" />
+
+Hey all. Thank you so much for your help and support over the last years. Because we want to add more advanced features to the AnyonWiki, we've decided to move to a [new domain](https://anyonwiki.org). We will keep the old wiki online for a little bit longer but we strongly recommend visiting the new website. :)
+
+# The AnyonWiki
+
 Welcome to AnyonWiki. This is a website devoted to gathering information and data on anyon models, fusion categories, and other related structures. 
 
 # Citing the wiki
